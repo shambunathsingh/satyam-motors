@@ -1,0 +1,21 @@
+<?php
+// app/Services/Msg91.php
+
+namespace App\Services;
+
+class Msg91
+{
+    protected $apiKey;
+
+    public function __construct($apiKey)
+    {
+        $this->apiKey = $apiKey;
+    }
+
+    public function sendSMS($phoneNumber, $message)
+    {
+        // You will implement your logic here to send SMS using the Msg91 API
+        // For now, let's just simulate sending by printing the message
+        echo "Sending SMS to $phoneNumber: $message\n";
+    }
+}
