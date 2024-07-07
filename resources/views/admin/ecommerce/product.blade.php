@@ -2,48 +2,6 @@
 
 @section('content')
 
-    @php
-        function parseImages($images)
-        {
-            $parsedImages = [];
-
-            // Check if the images string contains multiple images with metadata
-            if (strpos($images, '|') !== false) {
-                $parts = explode('|', $images);
-                foreach ($parts as $part) {
-                    $imgData = explode('!', $part);
-                    $url = trim($imgData[0]);
-                    $alt = $title = $desc = $caption = '';
-
-                    foreach ($imgData as $data) {
-                        if (strpos($data, 'alt : ') !== false) {
-                            $alt = trim(str_replace('alt : ', '', $data));
-                        } elseif (strpos($data, 'title : ') !== false) {
-                            $title = trim(str_replace('title : ', '', $data));
-                        } elseif (strpos($data, 'desc : ') !== false) {
-                            $desc = trim(str_replace('desc : ', '', $data));
-                        } elseif (strpos($data, 'caption : ') !== false) {
-                            $caption = trim(str_replace('caption : ', '', $data));
-                        }
-                    }
-
-                    $parsedImages[] = [
-                        'url' => $url,
-                        'alt' => $alt,
-                        'title' => $title,
-                        'desc' => $desc,
-                        'caption' => $caption,
-                    ];
-                }
-            } else {
-                // Single image path without metadata
-                $parsedImages[] = ['url' => $images, 'alt' => '', 'title' => '', 'desc' => '', 'caption' => ''];
-            }
-
-            return $parsedImages;
-        }
-    @endphp
-
     <div class="page-content " style="min-height: 758px;">
 
         <div id="main">
@@ -53,8 +11,6 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active"><span style="color: black; margin-right: 3px;"><i
                                 class="fa fa-home"></i></span>Dashboard</li>
-
-                    <li class="breadcrumb-item ">Ecommerce</li>
                     <li class="breadcrumb-item ">Products</li>
 
 
@@ -132,17 +88,16 @@
                                                     <i class="fa-solid fa-plus btn-icon"></i>
                                                     <p>Create</p>
                                                 </a>
-                                                <a class="export d-flex align-items-center" style="cursor: pointer;"
+                                                {{-- <a class="export d-flex align-items-center" style="cursor: pointer;"
                                                     data-toggle="modal" data-target="#exampleModal">
                                                     <i class="fas fa-cloud-upload btn-icon"></i>
                                                     <p>Import</p>
-                                                </a>
-                                                <a href="{{ route('admin.ecommerce.export_product') }}"
+                                                </a> --}}
+                                                {{-- <a href="{{ route('admin.ecommerce.export_product') }}"
                                                     class="export d-flex align-items-center">
                                                     <i class="fa-solid fa-cloud-download btn-icon"></i>
                                                     <p>Export</p>
-                                                    {{-- <i class="fa-solid fa-angle-down"></i> --}}
-                                                </a>
+                                                </a> --}}
                                                 <a class="relode d-flex align-items-center" style="cursor: pointer;"
                                                     onclick="location.reload();">
                                                     <i class="fa-solid fa-rotate-right btn-icon"></i>
@@ -174,8 +129,8 @@
                                                 aria-label="IDorderby asc">ID
                                             </th>
                                             <th title="Name" class="text-start column-key-name sorting" tabindex="0"
-                                                aria-controls="botble-page-tables-page-table" rowspan="1"
-                                                colspan="1" aria-label="Nameorderby asc">
+                                                aria-controls="botble-page-tables-page-table" rowspan="1" colspan="1"
+                                                aria-label="Nameorderby asc">
                                                 Thumbnail</th>
                                             <th title="Template" class="text-start column-key-template sorting"
                                                 tabindex="0" aria-controls="botble-page-tables-page-table"
@@ -185,27 +140,12 @@
                                             <th title="Template" class="text-start column-key-template sorting"
                                                 tabindex="0" aria-controls="botble-page-tables-page-table"
                                                 rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">Price
+                                                style="">Owner
                                             </th>
                                             <th title="Template" class="text-start column-key-template sorting"
                                                 tabindex="0" aria-controls="botble-page-tables-page-table"
                                                 rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">Stock Status
-                                            </th>
-                                            <th title="Template" class="text-start column-key-template sorting"
-                                                tabindex="0" aria-controls="botble-page-tables-page-table"
-                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">Quantity
-                                            </th>
-                                            <th title="Template" class="text-start column-key-template sorting"
-                                                tabindex="0" aria-controls="botble-page-tables-page-table"
-                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">SKU
-                                            </th>
-                                            <th title="Template" class="text-start column-key-template sorting"
-                                                tabindex="0" aria-controls="botble-page-tables-page-table"
-                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">Order
+                                                style="">Model
                                             </th>
                                             <th title="Created At" width="100px"
                                                 class="text-center column-key-created_at sorting" tabindex="0"
@@ -242,23 +182,6 @@
                                                 <td class="column-key-id sorting_1">{{ $item->id }}</td>
                                                 <td class=" text-start column-key-name">
                                                     <div class="image-container">
-                                                        {{-- @php
-                                                            $images = parseImages($item->images);
-                                                            $firstImage = $images[0] ?? null;
-                                                        @endphp
-                                                        @if ($firstImage)
-                                                            <div class="image-container">
-                                                                <img src="{{ $firstImage['url'] }}"
-                                                                    alt="{{ $firstImage['alt'] }}"
-                                                                    title="{{ $firstImage['title'] }}" width="150">
-                                                                @if ($firstImage['desc'])
-                                                                    <p>{{ $firstImage['desc'] }}</p>
-                                                                @endif
-                                                                @if ($firstImage['caption'])
-                                                                    <caption>{{ $firstImage['caption'] }}</caption>
-                                                                @endif
-                                                            </div>
-                                                        @endif --}}
                                                         @if ($item['featured_image'])
                                                             <img src="{{ asset('uploads/' . $item['featured_image']) }}"
                                                                 width="150">
@@ -270,33 +193,14 @@
                                                         href="{{ route('admin.ecommerce.edit_product', ['id' => $item->id]) }}">{{ $item->name }}</a>
                                                 </td>
                                                 <td class=" text-start column-key-template" style="">
-                                                    {{ $item->sale_price }}
+                                                    {{ $item->owner_name }}
                                                 </td>
                                                 <td class=" text-start column-key-template" style="">
-                                                    {{ $item->stock_status }}
-                                                </td>
-                                                <td class=" text-start column-key-template" style="">
-                                                    {{ $item->quantity }}
-                                                </td>
-                                                <td class=" text-start column-key-template" style="">
-                                                    {{ $item->sku }}
-                                                </td>
-                                                <td class=" text-center column-key-created_at" style="">
-                                                    0
+                                                    {{ $item->model }}
                                                 </td>
                                                 <td class=" text-center column-key-created_at" style="">
                                                     {{ $item->created_at->format('d-m-Y') }}
                                                 </td>
-                                                {{-- <td class=" text-center column-key-status" style="">
-                                                    <span class="label-success status-label">{{ $item->status }}</span>
-                                                </td> --}}
-                                                {{-- <td class=" text-center language-header no-sort" style="">
-                                                    <div class="text-center language-column">
-                                                        <a href="">
-                                                            <i class="fa fa-check text-success"></i>
-                                                        </a>
-                                                    </div>
-                                                </td> --}}
                                                 <td class=" text-center">
                                                     <div class="table-actions">
 

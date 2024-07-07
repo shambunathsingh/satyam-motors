@@ -59,7 +59,7 @@ class AuthController extends Controller
             $title = "Carzex - Dashboard";
 
             // Add your admin dashboard logic here
-            return view('admin.dashboard', ['title' => $title]);
+            return redirect()->route('admin.dashboard');
         }
 
         return redirect('admin/register')->withErrors('Error');

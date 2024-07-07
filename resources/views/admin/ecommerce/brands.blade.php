@@ -11,7 +11,7 @@
                     <li class="breadcrumb-item active"><span style="color: black; margin-right: 3px;"><i
                                 class="fa fa-home"></i></span>Dashboard</li>
 
-                    <li class="breadcrumb-item ">Ecommerce</li>
+                    {{-- <li class="breadcrumb-item ">Ecommerce</li> --}}
                     <li class="breadcrumb-item ">Brands</li>
 
 
@@ -89,11 +89,6 @@
                                                     <i class="fa-solid fa-plus btn-icon"></i>
                                                     <p>Create</p>
                                                 </a>
-                                                <!-- <a href="#" class="export d-flex align-items-center">
-                                                                                                                                                            <i class="fa-solid fa-download btn-icon"></i>
-                                                                                                                                                            <p>Export</p>
-                                                                                                                                                            <i class="fa-solid fa-angle-down"></i>
-                                                                                                                                                        </a> -->
                                                 <a class="relode d-flex align-items-center" style="cursor: pointer;"
                                                     onclick="location.reload();">
                                                     <i class="fa-solid fa-rotate-right btn-icon"></i>
@@ -138,12 +133,11 @@
                                                 aria-controls="botble-page-tables-page-table" rowspan="1"
                                                 colspan="1" style="width: 100px;" aria-label="Statusorderby asc">
                                                 Status</th>
-                                            <th title="<img src=&quot;{{ asset('storage/posts/us.png') }}&quot; title=&quot;English&quot; width=&quot;16&quot; alt=&quot;English&quot;>"
+                                            <th title="<img src=&quot;{{ asset('/images/us.svg') }}&quot; title=&quot;English&quot; width=&quot;16&quot; alt=&quot;English&quot;>"
                                                 class="text-center language-header no-sort sorting_disabled"
                                                 width="40px" rowspan="1" colspan="1" style="width: 40px;"
-                                                aria-label=""><img
-                                                    src="{{ asset('storage/posts/us.png') }}"
-                                                    title="English" width="16" alt="English"></th>
+                                                aria-label=""><img src="{{ asset('/images/us.svg') }}" title="English"
+                                                    width="16" alt="English"></th>
                                             <th title="Operations" width="134px" class="text-center sorting_disabled"
                                                 rowspan="1" colspan="1" style="width: 134px;"
                                                 aria-label="Operations">Operations</th>
@@ -157,14 +151,15 @@
                                                         <div class="checkbox checkbox-primary table-checkbox">
                                                             <input type="checkbox" class="checkboxes"
                                                                 name="{{ $item->id }}[]" value="">
+
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="column-key-id sorting_1">{{ $item->id }}</td>
                                                 <td class=" text-start column-key-name"><a
                                                         href="{{ route('admin.ecommerce.edit_product_brands', ['id' => $item->id]) }}">{{ $item->name }}</a>
-                                                    {{-- <img src="{{ asset('storage/logos/' . $item->logo) }}" width="150"
-                                                        alt="Banner Image"> --}}
+                                                    <img src="{{ asset('uploads/' . $item->icon) }}" alt=""
+                                                        width="100" height="100">
                                                 </td>
                                                 <td class=" text-center column-key-created_at" style="">
                                                     {{ $item->created_at->format('d-m-Y') }}</td>

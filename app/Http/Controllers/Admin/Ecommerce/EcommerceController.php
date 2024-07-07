@@ -24,13 +24,13 @@ class EcommerceController extends Controller
 {
     public function product_categories()
     {
-        $title = "Carzex - Categories";
+        $title = "Satyam Motors | Categories";
 
         // Fetch all categories
         $categories_list = Category::all();
 
         // Return the view with the categories data
-        return view('admin.ecommerce.product_category', ['title' => $title, 'categories' => $categories_list]);
+        return view('admin.category.index', ['title' => $title, 'categories' => $categories_list]);
     }
 
     public function product_attributes()
@@ -71,50 +71,38 @@ class EcommerceController extends Controller
 
     public function product()
     {
-        $title = "Carzex - Products";
+        $title = "Satyam Motors | Products";
         $product_list = Product::all();
-    
+
         return view('admin.ecommerce.product', [
             'title' => $title,
             'products' => $product_list
         ]);
     }
-    
+
 
     public function create_product()
     {
-        $title = "Carzex - Create Product";
+        $title = "Satyam Motors | Create Product";
 
         $cat_list = Category::all();
         $brand_list = Brands::all();
-        $pcollection_list = ProductCollection::all();
-        $label_list = ProductLabel::all();
-        $tag_list = ProductTags::all();
-        $tax_list = Taxes::all();
 
         return view('admin.product.add', [
             'title' => $title,
             'category' => $cat_list,
             'brands' => $brand_list,
-            'collections' => $pcollection_list,
-            'labels' => $label_list,
-            'tags' => $tag_list,
-            'taxes' => $tax_list,
         ]);
     }
 
     public function edit_product($id)
     {
-        $title = "Carzex - Edit Product";
 
         $product = Product::find($id);
+        $title = "Satyma Motors | Edit " . $product->name;
 
         $cat_list = Category::all();
         $brand_list = Brands::all();
-        $pcollection_list = ProductCollection::all();
-        $label_list = ProductLabel::all();
-        $tag_list = ProductTags::all();
-        $tax_list = Taxes::all();
         $product_images = ProductImages::where('product_id', $id)->get();
 
         return view('admin.product.edit',
@@ -123,10 +111,6 @@ class EcommerceController extends Controller
                 'title' => $title,
                 'category' => $cat_list,
                 'brands' => $brand_list,
-                'collections' => $pcollection_list,
-                'labels' => $label_list,
-                'tags' => $tag_list,
-                'taxes' => $tax_list,
                 'productImages' => $product_images,
             ]
         );
@@ -164,7 +148,7 @@ class EcommerceController extends Controller
     // product brands
     public function brands()
     {
-        $title = "Carzex - Brands";
+        $title = "Satyam Motors | Brands";
 
         $brands_list = Brands::all();
 
@@ -174,7 +158,7 @@ class EcommerceController extends Controller
 
     public function create_product_brands()
     {
-        $title = "Carzex - New Brand";
+        $title = "Satyam Motors | New Brand";
 
 
         return view('admin.ecommerce.add_brands', ['title' => $title]);
@@ -447,7 +431,7 @@ class EcommerceController extends Controller
 
 
 
-      // Advanced Settings                    || ==========================================================================================>
+    // Advanced Settings                    || ==========================================================================================>
     public function advancedSettings()
     {
         $title = "Carzex - Advanced Settings ";
@@ -455,7 +439,7 @@ class EcommerceController extends Controller
         // Pass the variables to the view using the compact function
         return view('admin.ecommerce.advancedSettings', compact('title'));
     }
-      // tracking Settings                    || ==========================================================================================>
+    // tracking Settings                    || ==========================================================================================>
     public function trackingSettings()
     {
         $title = "Carzex - Advanced Settings ";
@@ -463,15 +447,11 @@ class EcommerceController extends Controller
         // Pass the variables to the view using the compact function
         return view('admin.ecommerce.trackingSettings', compact('title'));
     }
-     public function reports()
+    public function reports()
     {
         $title = "Carzex - Advanced Settings ";
 
         // Pass the variables to the view using the compact function
         return view('admin.ecommerce.reports', compact('title'));
     }
-    
 }
-
-
-

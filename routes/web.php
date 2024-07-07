@@ -260,23 +260,24 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('show-invoices/{id}', [InvoiceController::class, 'showPdf'])->name('show_invoices');
 
 
-            Route::post('store-product-categories', [ProductController::class, 'store_pcategory'])->name('save_pcategories');
+            // Route::post('store-product-categories', [ProductController::class, 'store_pcategory'])->name('save_pcategories');
 
-            Route::get('product-categories/create', [ProductController::class, 'create_pcategory'])->name('create_pcategory');
-            Route::post('update-product-categories/{id}', [ProductController::class, 'update_pcategory'])->name('update_pcategory');
-            Route::get('delete-product/{id}', [ProductController::class, 'delete_product'])->name('delete_product');
+            // Route::get('product-categories/create', [ProductController::class, 'create_pcategory'])->name('create_pcategory');
+            // Route::post('update-product-categories/{id}', [ProductController::class, 'update_pcategory'])->name('update_pcategory');
+            // Route::get('delete-product/{id}', [ProductController::class, 'delete_product'])->name('delete_product');
 
-            Route::get('/fetch-category-data/{id}', [CategoryController::class, 'fetchCategoryData'])->name('fetch.category.data');
+            // Route::get('/fetch-category-data/{id}', [CategoryController::class, 'fetchCategoryData'])->name('fetch.category.data');
 
             // Product categories
             Route::get('product-categories', [EcommerceController::class, 'product_categories'])->name('product_categories');
             Route::post('store-product-categories', [ProductController::class, 'store_pcategory'])->name('save_pcategories');
 
             Route::get('product-categories/create', [ProductController::class, 'create_pcategory'])->name('create_pcategory');
+            Route::get('edit-product-categories/{id}', [ProductController::class, 'edit_pcategory'])->name('edit_pcategory');
             Route::post('update-product-categories/{id}', [ProductController::class, 'update_pcategory'])->name('update_pcategory');
-            Route::get('delete-product/{id}', [ProductController::class, 'delete_product'])->name('delete_product');
+            Route::get('delete-category/{id}', [ProductController::class, 'delete_pcategory'])->name('delete_pcategory');
 
-            Route::get('/fetch-category-data/{id}', [CategoryController::class, 'fetchCategoryData'])->name('fetch.category.data');
+            // Route::get('/fetch-category-data/{id}', [CategoryController::class, 'fetchCategoryData'])->name('fetch.category.data');
 
 
 
@@ -335,6 +336,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('update-brand/{id}', [ProductController::class, 'update_brand'])->name('update_brand');
             Route::get('delete-brand/{id}', [ProductController::class, 'delete_brand'])->name('delete_brand');
 
+
+            // 
             Route::get('contact', [EcommerceController::class, 'contact'])->name('contact');
             Route::get('contact/delete-contact/{id}', [EcommerceController::class, 'delete_contact'])->name('delete_contact');
             Route::get('contact/edit-contact/{id}', [EcommerceController::class, 'edit_contact'])->name('edit_contact');

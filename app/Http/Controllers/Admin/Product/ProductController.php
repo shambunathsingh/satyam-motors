@@ -44,65 +44,48 @@ class ProductController extends Controller
     public function create_pcategory(Request $request)
     {
 
-        $title = "Carzex - Categories";
+        $title = "Satyam Motors | New Categories";
 
-        // Fetch all categories
-        $categories_list = Category::all();
 
         // Return the view with the categories data
-        return view('admin.ecommerce.product_category', ['title' => $title, 'categories' => $categories_list]);
+        return view('admin.category.add', ['title' => $title]);
+    }
+
+    public function edit_pcategory($id)
+    {
+
+        $pcategory = Category::findOrFail($id);
+
+        $title = "Satyam Motors | Edit " . $pcategory->name;
+
+
+        // Return the view with the categories data
+        return view('admin.category.edit', ['title' => $title, 'category' => $pcategory]);
     }
 
     public function store_pcategory(Request $request)
     {
         $request->validate([
             'name' => 'required|string',
-            'parent_id' => '',
-            'description' => '',
-            'icon' => '',
-            'order' => '',
-            'icon_image' => 'nullable|image|mimes:jpeg,png,jpg',
-            'background_image' => 'nullable|image|mimes:jpeg,png,jpg',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg',
             'status' => 'required|string',
-            'is_main' => '',
-            'is_featured' => '',
-            'background_color' => '',
         ]);
 
         $pcategory = new Category();
         $pcategory->name = $request->name;
-        $pcategory->parent_id = $request->parent_id;
-        $pcategory->description = $request->description;
-        $pcategory->icon = $request->icon;
-        $pcategory->order = $request->order;
         $pcategory->status = $request->status;
-        $pcategory->is_main = $request->is_main;
-        $pcategory->is_featured = $request->is_featured;
-        $pcategory->slug = Category::generateSlug($request->name);
+        // $pcategory->slug = Category::generateSlug($request->name);
 
         // Upload icon image if available
-        if ($request->hasFile('icon_image')) {
-            $file = $request->file('icon_image');
+        if ($request->hasFile('logo')) {
+            $file = $request->file('logo');
             if ($file->isValid()) {
-                $url = FileUpload::upload($file, "p_category");
+                $url = FileUpload::upload($file, "Categories");
                 $pcategory->image = $url;
             } else {
                 return redirect()->back()->withErrors(['icon_image' => 'Invalid icon image file']);
             }
         }
-
-        // Upload background image if available
-        if ($request->hasFile('background_image')) {
-            $backgroundImageFile = $request->file('background_image');
-            if ($backgroundImageFile->isValid()) {
-                $backgroundImageUrl = FileUpload::upload($backgroundImageFile, "p_category");
-                $pcategory->background_image = $backgroundImageUrl;
-            } else {
-                return redirect()->back()->withErrors(['background_image' => 'Invalid background image file']);
-            }
-        }
-
-        $pcategory->background_color = $request->background_color;
 
         // Save the category
         if ($pcategory->save()) {
@@ -121,53 +104,27 @@ class ProductController extends Controller
 
         $request->validate([
             'name' => 'required|string',
-            'parent_id' => '',
-            'description' => '',
-            'icon' => '',
-            'order' => '',
-            'icon_image' => 'nullable|image|mimes:jpeg,png,jpg',
-            'background_image' => 'nullable|image|mimes:jpeg,png,jpg',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg',
             'status' => 'required|string',
-            'is_main' => '',
-            'is_featured' => '',
-            'background_color' => '',
         ]);
 
 
         $pcategory = Category::findOrFail($id);
 
         $pcategory->name = $request->name;
-        $pcategory->parent_id = $request->parent_id;
-        $pcategory->description = $request->description;
-        $pcategory->icon = $request->icon;
-        $pcategory->order = $request->order;
         $pcategory->status = $request->status;
-        $pcategory->is_main = $request->is_main;
-        $pcategory->is_featured = $request->is_featured;
-        $pcategory->slug = Category::generateSlug($request->name);
+        // $pcategory->slug = Category::generateSlug($request->name);
 
         // Upload icon image if available
-        if ($request->hasFile('icon_image')) {
-            $file = $request->file('icon_image');
+        if ($request->hasFile('logo')) {
+            $file = $request->file('logo');
             if ($file->isValid()) {
-                $url = FileUpload::upload($file, "p_category");
+                $url = FileUpload::upload($file, "Categories");
                 $pcategory->image = $url;
             } else {
                 return redirect()->back()->withErrors(['icon_image' => 'Invalid icon image file']);
             }
         }
-
-        // Upload background image if available
-        if ($request->hasFile('background_image')) {
-            $backgroundImageFile = $request->file('background_image');
-            if ($backgroundImageFile->isValid()) {
-                $backgroundImageUrl = FileUpload::upload($backgroundImageFile, "p_category");
-                $pcategory->background_image = $backgroundImageUrl;
-            } else {
-                return redirect()->back()->withErrors(['background_image' => 'Invalid background image file']);
-            }
-        }
-        $pcategory->background_color = $request->background_color;
 
         // Update the category
         if ($pcategory->save()) {
@@ -303,64 +260,34 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'description' => '',
-            'content' => '',
+            'reg_no' => '',
+            'reg_rto' => '',
+            'manfacture_date' => '',
+            'reg_date' => '',
+            'owner_name' => '',
+            'rc_blacklist_status' => '',
+            'make' => '',
+            'model' => '',
+            'vehicle_class' => '',
+            'wheel_base' => '',
+            'chasis_no' => '',
+            'engine_no' => '',
+            'fuel_type' => '',
+            'fuel_norm' => '',
             'images.*' => 'image|mimes:jpeg,png,jpg',
-            'sku' => '',
-            'price' => '',
-            'sale_price' => '',
-            'cost_per_item' => '',
-            'start_date' => '',
-            'end_date' => '',
-            'with_storehouse_management' => '',
-            'quantity' => '',
-            'allow_checkout_when_out_of_stock' => '',
-            'stock_status' => '',
-            'weight' => '',
-            'length' => '',
-            'wide' => '',
-            'height' => '',
-            'attr_name' => '',
-            'attr_value' => '',
-            'global_option' => '',
-            'option_name' => '',
-            'option_value' => '',
-            'related_products' => '',
-            'cross_sale_products' => '',
-            'faq_question' => '',
-            'faq_answer' => '',
-            'seo_title' => '',
-            'seo_description' => '',
-            'layout' => '',
-            'is_popular' => '',
-            'status' => '',
-            'store_id' => '',
-            'is_featured' => '',
             'categories' => '',
             'brand_id' => '',
+            'status' => '',
             'featured_image' => 'image|mimes:jpeg,png,jpg',
-            'product_collections' => '',
-            'product_labels' => '',
-            'taxes' => '',
         ]);
 
         $product = new Product();
         $product->name = $request->name;
-        $product->description = $request->description;
-        $product->content = $request->content;
-        $product->slug = Product::generateSlug($request->name);
+        $product->reg_no = $request->reg_no;
+        $product->reg_rto = $request->reg_rto;
+        // $product->slug = Product::generateSlug($request->name);
 
-        if ($request->hasFile('images')) {
-            $fileUrls = [];
-            foreach ($request->file('images') as $file) {
-                if ($file->isValid()) {
-                    $url = FileUpload::upload($file, "products");
-                    $fileUrls[] = $url;
-                }
-            }
-            $product->images = implode(',', $fileUrls);
-        }
-
+        
         if ($request->hasFile('featured_image')) {
             $featured_image_file = $request->file('featured_image');
             if ($featured_image_file->isValid()) {
@@ -369,83 +296,39 @@ class ProductController extends Controller
             }
         }
 
-        $product->sku = $request->sku;
-        $product->price = $request->price;
-        $product->sale_price = $request->sale_price;
-        $product->cost_per_item = $request->cost_per_item;
-        $product->start_date = $request->start_date;
-        $product->end_date = $request->end_date;
-        $product->with_storehouse_management = $request->with_storehouse_management;
-        $product->quantity = $request->quantity;
-        $product->allow_checkout_when_out_of_stock = $request->allow_checkout_when_out_of_stock;
-        $product->stock_status = $request->stock_status;
-        $product->weight = $request->weight;
-        $product->length = $request->length;
-        $product->wide = $request->wide;
-        $product->height = $request->height;
-
-        if ($request->attr_name == '') {
-            $product->attr_name = $request->attr_name;
-        } else {
-            $product->attr_name = implode(',', $request->attr_name);
-        }
-
-        if ($request->attr_value == '') {
-            $product->attr_value = $request->attr_value;
-        } else {
-            $product->attr_value = implode(',', $request->attr_value);
-        }
-
-        $product->global_option = $request->global_option;
-
-
-        if ($request->option_name == '') {
-            $product->option_name = $request->option_name;
-        } else {
-            $product->option_name = implode(',', $request->option_name);
-        }
-
-        if ($request->option_value == '') {
-            $product->option_value = $request->option_value;
-        } else {
-            $product->option_value = implode(',', $request->option_value);
-        }
-
-        $product->related_products = $request->related_products;
-        $product->cross_sale_products = $request->cross_sale_products;
-
-
-        if ($request->faq_question == '') {
-            $product->faq_question = $request->faq_question;
-        } else {
-            $product->faq_question = implode(',', $request->faq_question);
-        }
-
-
-        if ($request->faq_answer == '') {
-            $product->faq_answer = $request->faq_answer;
-        } else {
-            $product->faq_answer = implode(',', $request->faq_answer);
-        }
-
-        $product->seo_title = $request->seo_title;
-        $product->seo_description = $request->seo_description;
-        $product->layout = $request->layout;
-        $product->is_popular = $request->is_popular;
-        $product->status = $request->status;
-        $product->store_id = $request->store_id;
-        $product->is_featured = $request->is_featured;
+        $product->manfacture_date = $request->manfacture_date;
+        $product->reg_date = $request->reg_date;
+        $product->owner_name = $request->owner_name;
+        $product->rc_blacklist_status = $request->rc_blacklist_status;
+        $product->make = $request->make;
+        $product->model = $request->model;
+        $product->vehicle_class = $request->vehicle_class;
+        $product->wheel_base = $request->wheel_base;
+        $product->chasis_no = $request->chasis_no;
+        $product->engine_no = $request->engine_no;
+        $product->fuel_type = $request->fuel_type;
+        $product->fuel_norm = $request->fuel_norm;
         $product->categories = $request->categories;
         $product->brand_id = $request->brand_id;
-        $product->product_collections = $request->product_collections;
-        $product->product_labels = $request->product_labels;
-        $product->taxes = $request->taxes;
-
-
+        $product->status = $request->status;
+        
+        
         // dd($request);
         // exit;
-
+        
         $product->save();
+        
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $file) {
+                if ($file->isValid()) {
+                    $url = FileUpload::upload($file, "Product_images");
+                    $productImage = new ProductImages();
+                    $productImage->product_id = $product->id;
+                    $productImage->images = $url;
+                    $productImage->save();
+                }
+            }
+        }
 
         return redirect()->back()->with('success', 'Product created successfully.');
     }
@@ -490,58 +373,38 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'description' => '',
-            'content' => '',
+            'reg_no' => '',
+            'reg_rto' => '',
+            'manfacture_date' => '',
+            'reg_date' => '',
+            'owner_name' => '',
+            'rc_blacklist_status' => '',
+            'make' => '',
+            'model' => '',
+            'vehicle_class' => '',
+            'wheel_base' => '',
+            'chasis_no' => '',
+            'engine_no' => '',
+            'fuel_type' => '',
+            'fuel_norm' => '',
             'images.*' => 'image|mimes:jpeg,png,jpg',
-            'sku' => '',
-            'price' => '',
-            'sale_price' => '',
-            'cost_per_item' => '',
-            'start_date' => '',
-            'end_date' => '',
-            'with_storehouse_management' => '',
-            'quantity' => '',
-            'allow_checkout_when_out_of_stock' => '',
-            'stock_status' => '',
-            'weight' => '',
-            'length' => '',
-            'wide' => '',
-            'height' => '',
-            'attr_name' => '',
-            'attr_value' => '',
-            'global_option' => '',
-            'option_name' => '',
-            'option_value' => '',
-            'related_products' => '',
-            'cross_sale_products' => '',
-            'faq_question' => '',
-            'faq_answer' => '',
-            'seo_title' => '',
-            'seo_description' => '',
-            'layout' => '',
-            'is_popular' => '',
-            'status' => '',
-            'store_id' => '',
-            'is_featured' => '',
             'categories' => '',
             'brand_id' => '',
+            'status' => '',
             'featured_image' => 'image|mimes:jpeg,png,jpg',
-            'product_collections' => '',
-            'product_labels' => '',
-            'taxes' => '',
         ]);
 
         $product = Product::findOrFail($id);
 
         $product->name = $request->name;
-        $product->description = $request->description;
-        $product->content = $request->content;
-        $product->slug = Product::generateSlug($request->name);
+        $product->reg_no = $request->reg_no;
+        $product->reg_rto = $request->reg_rto;
+        // $product->slug = Product::generateSlug($request->name);
 
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $file) {
                 if ($file->isValid()) {
-                    $url = FileUpload::upload($file, "products");
+                    $url = FileUpload::upload($file, "Product_images");
                     $productImage = new ProductImages();
                     $productImage->product_id = $product->id;
                     $productImage->images = $url;
@@ -558,71 +421,25 @@ class ProductController extends Controller
             }
         }
 
-        $product->sku = $request->sku;
-        $product->price = $request->price;
-        $product->sale_price = $request->sale_price;
-        $product->cost_per_item = $request->cost_per_item;
-        $product->start_date = $request->start_date;
-        $product->end_date = $request->end_date;
-        $product->with_storehouse_management = $request->with_storehouse_management;
-        $product->quantity = $request->quantity;
-        $product->allow_checkout_when_out_of_stock = $request->allow_checkout_when_out_of_stock;
-        $product->stock_status = $request->stock_status;
-        $product->weight = $request->weight;
-        $product->length = $request->length;
-        $product->wide = $request->wide;
-        $product->height = $request->height;
-
-        if ($request->attr_name) {
-            $product->attr_name = implode(',', $request->attr_name);
-        } else {
-            $product->attr_name = $request->attr_name;
-        }
-
-        if ($request->attr_value) {
-            $product->attr_value = implode(',', $request->attr_value);
-        } else {
-            $product->attr_value = $request->attr_value;
-        }
-
-        $product->global_option = $request->global_option;
-
-        if ($request->option_name) {
-            $product->option_name = implode(',', $request->option_name);
-        } else {
-            $product->option_name = $request->option_name;
-        }
-
-        if ($request->option_value) {
-            $product->option_value = implode(',', $request->option_value);
-        } else {
-            $product->option_value = $request->option_value;
-        }
-
-        if ($request->faq_question) {
-            $product->faq_question = implode(',', $request->faq_question);
-        } else {
-            $product->faq_question = $request->faq_question;
-        }
-
-        if ($request->faq_answer) {
-            $product->faq_answer = implode(',', $request->faq_answer);
-        } else {
-            $product->faq_answer = $request->faq_answer;
-        }
-
-        $product->seo_title = $request->seo_title;
-        $product->seo_description = $request->seo_description;
-        $product->layout = $request->layout;
-        $product->is_popular = $request->is_popular;
-        $product->status = $request->status;
-        $product->store_id = $request->store_id;
-        $product->is_featured = $request->is_featured;
+        $product->manfacture_date = $request->manfacture_date;
+        $product->reg_date = $request->reg_date;
+        $product->owner_name = $request->owner_name;
+        $product->rc_blacklist_status = $request->rc_blacklist_status;
+        $product->make = $request->make;
+        $product->model = $request->model;
+        $product->vehicle_class = $request->vehicle_class;
+        $product->wheel_base = $request->wheel_base;
+        $product->chasis_no = $request->chasis_no;
+        $product->engine_no = $request->engine_no;
+        $product->fuel_type = $request->fuel_type;
+        $product->fuel_norm = $request->fuel_norm;
         $product->categories = $request->categories;
         $product->brand_id = $request->brand_id;
-        $product->product_collections = $request->product_collections;
-        $product->product_labels = $request->product_labels;
-        $product->taxes = $request->taxes;
+        $product->status = $request->status;
+
+
+        // dd($request);
+        // exit;
 
         $product->save();
 
@@ -703,45 +520,22 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'description' => '',
+            'logo' => 'image|mimes:jpeg,png,jpg',
             'status' => '',
-            'website' => '',
-            'order' => '',
-            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'featured' => '',
         ]);
 
         $brand = new Brands();
         $brand->name = $request->name;
-        $brand->description = $request->description;
         $brand->status = $request->status;
-        $brand->website = $request->website;
-        $brand->order = $request->order;
-
-        // Check if logo file is present
-        // if ($request->hasFile('logo')) {
-        //     $logo = $request->file('logo');
-        //     $logoName = $logo->getClientOriginalName(); // You may customize the filename as needed
-        //     $logo->storeAs('public/logos', $logoName); // Store the logo in the storage folder, change 'logos' to your desired directory
-        //     $brand->logo = $logoName; // Save the filename to the database
-        // }
-
 
         // Updated code for image upload
         if ($request->hasFile('logo')) {
             $file = $request->file('logo');
             if ($file->isValid()) {
-
-                $logoName = $file->getClientOriginalName();
-                $url = FileUpload::upload($file, "logos");
-
-                $brand->logo = $url;
+                $url = FileUpload::upload($file, "Brands");
+                $brand->icon = $url;
             }
         }
-
-        $brand->featured = $request->featured;
-
-        // dd($brand);
 
         $brand->save();
 
@@ -753,47 +547,21 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'description' => '',
+            'logo' => 'image|mimes:jpeg,png,jpg',
             'status' => '',
-            'website' => '',
-            'order' => '',
-            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // If logo is optional, you can remove this validation if you don't want to update logo every time.
-            'featured' => '',
         ]);
 
         $brand = Brands::findOrFail($id);
 
-        // Update other fields
         $brand->name = $request->name;
-        $brand->description = $request->description;
         $brand->status = $request->status;
-        $brand->website = $request->website;
-        $brand->order = $request->order;
-        $brand->featured = $request->featured;
-
-        // Check if a new logo is uploaded
-        // if ($request->hasFile('logo')) {
-        //     // Delete old logo if it exists
-        //     // if ($brand->logo) {
-        //     //     Storage::delete('/public/app/logos/' . $brand->logo);
-        //     // }
-
-        //     // Store new logo
-        //     $logo = $request->file('logo');
-        //     $logoName = $logo->getClientOriginalName();
-        //     $logo->storeAs('public/logos', $logoName); // You might adjust the storage path as needed
-        //     $brand->logo = $logoName;
-        // }
 
         // Updated code for image upload
         if ($request->hasFile('logo')) {
             $file = $request->file('logo');
             if ($file->isValid()) {
-
-                $logoName = $file->getClientOriginalName();
-                $url = FileUpload::upload($file, "logos");
-
-                $brand->logo = $url;
+                $url = FileUpload::upload($file, "Brands");
+                $brand->icon = $url;
             }
         }
 
@@ -1260,8 +1028,10 @@ class ProductController extends Controller
         $image = ProductImages::findOrFail($imageId);
         if ($image) {
             // Delete the image from storage if needed
-            // Example: Storage::delete('uploads/' . $image->images);
-            Storage::delete('uploads/' . $image->images);
+            $uploadedpath = "uploads/$image->images";
+            if (file_exists($uploadedpath)) {
+                unlink($uploadedpath);
+            }
 
             // Delete the image record from database
             $image->delete();

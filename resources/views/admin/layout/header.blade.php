@@ -5,7 +5,8 @@
                 <div class="navbrand">
                     <div class="logo">
                         <a href="#" class="nav-brand">
-                            <img src="/images/carzex-logo-png.png" alt="">
+                            {{-- <img src="/images/carzex-logo-png.png" alt=""> --}}
+                            ADMIN
                         </a>
                         <div class="toggle-bar">
                             <a href="#" class="toggle"><i class="fa-solid fa-bars"></i></a>

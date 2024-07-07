@@ -13,9 +13,6 @@
                                 Dashboard
                                 /</a>
                         </li>
-                        <li><a class="breadcrumb-item">Ecommerce
-                                /</a>
-                        </li>
                         <li><a href="{{ route('admin.ecommerce.brands') }}" class="breadcrumb-item">Brands
                                 /</a>
                         </li>
@@ -63,7 +60,7 @@
 
                                     </div>
 
-                                    <div class="form-group mb-3">
+                                    {{-- <div class="form-group mb-3">
                                         <grammarly-extension data-grammarly-shadow-root="true"
                                             style="position: absolute; top: 0px; left: 0px; pointer-events: none;"
                                             class="dnXmp"></grammarly-extension>
@@ -77,21 +74,21 @@
                                         <small class="charcounter">
                                             (400 character(s) remain)
                                         </small>
-                                    </div>
+                                    </div> --}}
 
-                                    <div class="form-group mb-3">
+                                    {{-- <div class="form-group mb-3">
 
                                         <label for="description" class="control-label">Website</label>
                                         <input type="text" class="form-control" name="website"
                                             placeholder="Ex: https://example.com" value="{{ $brand->website }}">
-                                    </div>
+                                    </div> --}}
 
-                                    <div class="form-group mb-3">
+                                    {{-- <div class="form-group mb-3">
 
                                         <label for="description" class="control-label">Order</label>
                                         <input type="text" class="form-control" name="order"
                                             value="{{ $brand->order }}">
-                                    </div>
+                                    </div> --}}
 
                                 </div>
 
@@ -130,10 +127,8 @@
                                 </div>
                                 <div class="widget-body">
                                     <div class="ui-select-wrapper form-group ">
-                                        <select class="form-control ui-select" v-pre="" id="status"
-                                            name="status">
-                                            <option value="published"
-                                                {{ $brand->status == 'published' ? 'selected' : '' }}>
+                                        <select class="form-control ui-select" v-pre="" id="status" name="status">
+                                            <option value="published" {{ $brand->status == 'published' ? 'selected' : '' }}>
                                                 Published</option>
                                             <option value="draft" {{ $brand->status == 'draft' ? 'selected' : '' }}>Draft
                                             </option>
@@ -154,33 +149,28 @@
                         <div class="form-side-meta-boxes">
                             <div class="widget meta-boxes">
                                 <div class="widget-title">
-                                    <h4><label for="image" class="control-label">Logo</label></h4>
+                                    <h4><label for="image" class="control-label">Icon</label></h4>
                                 </div>
                                 <div class="widget-body">
                                     <div class="image-box">
                                         <div class="preview-image-wrapper">
-                                            <img src="{{ asset('storage/logos/' . $brand->logo) }}"
-                                                data-default="{{ asset('storage/logos/' . $brand->logo) }}"
-                                                alt="Preview image" width="150" class="preview_image">
-                                            <a title="Remove image" class="btn_remove_image"><i
-                                                    class="fa fa-times"></i></a>
+                                            <img src="{{ asset('uploads/' . $brand->icon) }}" alt="Preview image"
+                                                width="150" height="150" class="preview_image">
+                                            <a title="Remove image" class="btn_remove_image"><i class="fa fa-times"></i></a>
+                                            <input type="file" name="logo" class="featured_image_input"
+                                                style="display: none">
                                         </div>
                                         <div class="image-box-actions">
-                                            <a href="#" id="choose_image_btn" data-result="image"
-                                                data-action="select-image" data-allow-thumb="1" class="btn_gallery">
+                                            <a style="cursor: pointer;" data-result="image" data-action="select-image"
+                                                data-allow-thumb="1" class="btn_gallery">
                                                 Choose image
                                             </a>
                                         </div>
                                     </div>
-                                    <!-- Hidden file input -->
-                                    <input type="file" name="logo" class="image-data" id="logo_input"
-                                        style="display:none;">
                                 </div>
-
                             </div>
-
                         </div>
-                        <div class="form-side-meta-boxes">
+                        {{-- <div class="form-side-meta-boxes">
                             <div class="widget meta-boxes">
                                 <div class="widget-title">
                                     <h4><label for="is_featured" class="control-label">Is
@@ -193,7 +183,7 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -209,6 +199,8 @@
 @endsection
 
 @section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script>
         ClassicEditor
             .create(document.querySelector('#description'))
@@ -217,12 +209,32 @@
             });
     </script>
 
+    {{-- Featured Image --}}
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // When "Choose image" is clicked, trigger the file input click event
-            document.getElementById("choose_image_btn").addEventListener("click", function(e) {
-                e.preventDefault(); // Prevent the default action of the link
-                document.getElementById("logo_input").click(); // Simulate a click on the file input
+        $(document).ready(function() {
+            // Trigger file input when "Choose image" is clicked
+            $('.btn_gallery').on('click', function() {
+                $(this).closest('.image-box').find('.featured_image_input').click();
+            });
+
+            // Show preview image after file selection
+            $('.featured_image_input').on('change', function() {
+                const input = this;
+                if (input.files && input.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        $(input).closest('.image-box').find('.preview_image').attr('src', e.target
+                            .result);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            });
+
+            // Remove image and reset file input
+            $('.btn_remove_image').on('click', function() {
+                const imageBox = $(this).closest('.image-box');
+                imageBox.find('.preview_image').attr('src', '');
+                imageBox.find('.featured_image_input').val('');
             });
         });
     </script>
