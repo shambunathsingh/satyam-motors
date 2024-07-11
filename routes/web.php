@@ -35,6 +35,7 @@ use App\Models\Cart\Cart;
 use App\Http\Controllers\Admin\Payments\PaymentsController;
 use App\Http\Controllers\CashfreePaymentController;
 use App\Http\Controllers\Admin\Marketplaces\MarketplaceController;
+use App\Http\Controllers\Admin\Document\DocumentController;
 use App\Models\ImageTest;
 
 // Route::get('search/update_flash_sales', [FlashSalesController::class, 'search_flash_sales_products'])->name('admin.ecommerce.update_flash_sales');
@@ -95,7 +96,7 @@ Route::middleware(['guest:web'])->group(function () {
     Route::get('about-us', [HomeController::class, 'about'])->name('about');
     Route::get('contact-us', [HomeController::class, 'contact'])->name('contact');
     Route::get('brand-category', [HomeController::class, 'brandCategory'])->name('b_category');
-    Route::get('single-brand-category', [HomeController::class, 'singeleBrandCategory'])->name('s_category');
+    Route::get('single-brand-category/{id}', [HomeController::class, 'singeleBrandCategory'])->name('s_category');
     Route::get('car-listing-no-sidebar', [HomeController::class, 'carListingNoSidebar'])->name('car_list_no_sidebar');
     Route::get('car-detail', [HomeController::class, 'carDetails'])->name('car_details');
     Route::get('faq', [HomeController::class, 'faq'])->name('faq');
@@ -204,13 +205,13 @@ Route::group(['middleware' => 'auth'], function () {
         });
 
         // Category Section
-        // Route::get('categories', [CategoryController::class, 'index'])->name('category');
-        // Route::get('add-categories', [CategoryController::class, 'add'])->name('add_category');
-        // Route::post('create-categories', [CategoryController::class, 'store'])->name('create_category');
+        Route::get('document-verification', [DocumentController::class, 'index'])->name('documents');
+        Route::get('add-document-verification', [DocumentController::class, 'add'])->name('add_documents');
+        Route::post('create-document-verification', [DocumentController::class, 'store'])->name('create_documents');
 
-        // Route::get('edit-categories/{id}', [CategoryController::class, 'edit'])->name('edit_category');
-        // Route::put('update-categories/{id}', [CategoryController::class, 'update'])->name('update_category');
-        // Route::get('delete-categories/{id}', [CategoryController::class, 'delete'])->name('delete_category');
+        Route::get('edit-document-verification/{id}', [DocumentController::class, 'edit'])->name('edit_documents');
+        Route::post('update-document-verification/{id}', [DocumentController::class, 'update'])->name('update_documents');
+        Route::get('delete-document-verification/{id}', [DocumentController::class, 'delete'])->name('delete_documents');
 
         // Page Section
         Route::group(['prefix' => 'pages/', 'as' => 'page.'], function () {

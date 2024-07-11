@@ -6,35 +6,35 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ 'Satyam Motors | ' . $title ?? 'All types of commercial vehicles Dealer, Sale, Purchase ,Finance' }}
+    </title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
 
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/css/all.min.css" rel="stylesheet">
 
-    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
 
-    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery.fancybox.min.css" rel="stylesheet">
 
-    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="/assets/css/fontawesome.min.css" rel="stylesheet">
 
-    <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/slick-theme.css">
 
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link href="/assets/css/boxicons.min.css" rel="stylesheet">
 
-    <link href="assets/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/css/nice-select.css" rel="stylesheet">
 
-    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <title>Satyam Motors - All types of commercial vehicles Dealer, Sale, Purchase ,Finance</title>
-    <!-- <link rel="icon" href="assets/img/sm-logo.svg" type="image/gif" sizes="20x20"> -->
+    <!-- <link rel="icon" href="/assets/img/sm-logo.svg" type="image/gif" sizes="20x20"> -->
 </head>
 
 <body class="tt-magic-cursor">
@@ -122,9 +122,9 @@
                             <p>By sign up,you agree to the <a href="#">‘terms & conditons’</a></p>
                         </div>
                         <ul class="social-icon">
-                            <li><a href="#"><img src="assets/img/home1/icon/google.svg" alt></a></li>
-                            <li><a href="#"><img src="assets/img/home1/icon/facebook.svg" alt></a></li>
-                            <li><a href="#"><img src="assets/img/home1/icon/twiter.svg" alt></a></li>
+                            <li><a href="#"><img src="/assets/img/home1/icon/google.svg" alt></a></li>
+                            <li><a href="#"><img src="/assets/img/home1/icon/facebook.svg" alt></a></li>
+                            <li><a href="#"><img src="/assets/img/home1/icon/twiter.svg" alt></a></li>
                         </ul>
                     </form>
                 </div>
@@ -177,9 +177,9 @@
                             <p>By sign up,you agree to the <a href="#">‘terms & conditons’</a></p>
                         </div>
                         <ul class="social-icon">
-                            <li><a href="#"><img src="assets/img/home1/icon/google.svg" alt></a></li>
-                            <li><a href="#"><img src="assets/img/home1/icon/facebook.svg" alt></a></li>
-                            <li><a href="#"><img src="assets/img/home1/icon/twiter.svg" alt></a></li>
+                            <li><a href="#"><img src="/assets/img/home1/icon/google.svg" alt></a></li>
+                            <li><a href="#"><img src="/assets/img/home1/icon/facebook.svg" alt></a></li>
+                            <li><a href="#"><img src="/assets/img/home1/icon/twiter.svg" alt></a></li>
                         </ul>
                     </form>
                 </div>
@@ -460,7 +460,7 @@
     </div>
     <div class="top-bar">
         <div class="company-logo">
-            <!-- <a href="index.html"><img src="assets/img/logo.svg" alt></a> -->
+            <!-- <a href="index.html"><img src="/assets/img/logo.svg" alt></a> -->
         </div>
         <div class="search-area">
             <form>
@@ -517,36 +517,36 @@
     @yield('scripts')
 
     <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
 
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
 
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/slick.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/slick.js"></script>
 
-    <script src="assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/waypoints.min.js"></script>
 
-    <script src="assets/js/wow.min.js"></script>
+    <script src="/assets/js/wow.min.js"></script>
 
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="/assets/js/jquery.counterup.min.js"></script>
 
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
 
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
 
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/simpleParallax.min.js"></script>
-    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+    <script src="/assets/js/simpleParallax.min.js"></script>
+    <script src="/assets/js/TweenMax.min.js"></script>
 
-    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="/assets/js/jquery.marquee.min.js"></script>
 
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="/assets/js/jquery.nice-select.min.js"></script>
 
-    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="/assets/js/jquery.fancybox.min.js"></script>
 
-    <script src="assets/js/custom.js"></script>
+    <script src="/assets/js/custom.js"></script>
 </body>
 
 

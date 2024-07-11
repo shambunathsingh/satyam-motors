@@ -17,6 +17,8 @@ use App\Models\ProductTags\ProductTags;
 use App\Models\Taxes\Taxes;
 use Illuminate\Http\Request;
 use App\Models\Contact\ContactReply;
+use App\Models\Document\Document;
+use App\Models\ExtProductImage;
 use App\Models\ProductImages\ProductImages;
 use PhpParser\Node\Stmt\Label;
 
@@ -87,11 +89,13 @@ class EcommerceController extends Controller
 
         $cat_list = Category::all();
         $brand_list = Brands::all();
+        $document_list = Document::all();
 
         return view('admin.product.add', [
             'title' => $title,
             'category' => $cat_list,
             'brands' => $brand_list,
+            'documents' => $document_list,
         ]);
     }
 
@@ -103,7 +107,9 @@ class EcommerceController extends Controller
 
         $cat_list = Category::all();
         $brand_list = Brands::all();
+        $document_list = Document::all();
         $product_images = ProductImages::where('product_id', $id)->get();
+        $ext_product_images = ExtProductImage::where('product_id', $id)->get();
 
         return view('admin.product.edit',
             compact('product'),
@@ -111,7 +117,9 @@ class EcommerceController extends Controller
                 'title' => $title,
                 'category' => $cat_list,
                 'brands' => $brand_list,
+                'documents' => $document_list,
                 'productImages' => $product_images,
+                'extproductImages' => $ext_product_images,
             ]
         );
     }

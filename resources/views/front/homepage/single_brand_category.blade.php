@@ -20,10 +20,10 @@
                                             <a href="#">
                                                 <div class="review-top">
                                                     <div class="logo">
-                                                        <img src="assets/img/home1/icon/trstpilot-logo.svg" alt>
+                                                        <img src="/assets/img/home1/icon/trstpilot-logo.svg" alt>
                                                     </div>
                                                     <div class="star">
-                                                        <img src="assets/img/home1/icon/trustpilot-star.svg" alt>
+                                                        <img src="/assets/img/home1/icon/trustpilot-star.svg" alt>
                                                     </div>
                                                 </div>
                                                 <div class="content">
@@ -38,7 +38,7 @@
                                             <a href="#">
                                                 <div class="review-top">
                                                     <div class="logo">
-                                                        <img src="assets/img/home1/icon/google-logo.svg" alt>
+                                                        <img src="/assets/img/home1/icon/google-logo.svg" alt>
                                                     </div>
                                                     <div class="star">
                                                         <ul>
@@ -64,7 +64,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-5 d-lg-flex d-none align-items-center justify-content-end">
                             <div class="banner-img">
-                                <img src="assets/img/inner-page/inner-banner-img.png" alt>
+                                <img src="/assets/img/inner-page/inner-banner-img.png" alt>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -173,16 +173,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-01.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-01.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-02.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-02.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -248,16 +248,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-02.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-02.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-01.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-01.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -295,7 +295,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -323,16 +323,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-02.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-02.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-01.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-01.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -370,7 +370,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -398,16 +398,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-02.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-02.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-01.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-01.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -445,7 +445,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -473,16 +473,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-05.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-05.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-06.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-06.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -520,7 +520,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -548,16 +548,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-06.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-06.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-05.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-05.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -595,7 +595,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -623,16 +623,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-07.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-07.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-06.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-06.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -670,7 +670,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -698,16 +698,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-08.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-08.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-07.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-07.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -745,7 +745,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -773,16 +773,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-09.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-09.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-07.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-07.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -820,7 +820,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -848,16 +848,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-10.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-10.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-08.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-08.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -895,7 +895,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -923,16 +923,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-11.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-11.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-10.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-10.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-06.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-06.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -970,7 +970,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -998,16 +998,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-12.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-12.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-10.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-10.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-03.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-03.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-06.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-06.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -1045,7 +1045,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -1073,16 +1073,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-13.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-13.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-12.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-12.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-11.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-11.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -1120,7 +1120,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -1148,16 +1148,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-13.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-13.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-11.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-11.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-10.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-10.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-08.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-08.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -1195,7 +1195,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -1223,16 +1223,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-14.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-14.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-15.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-15.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-02.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-02.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-04.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-04.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -1270,7 +1270,7 @@
                     <div class="product-card">
                         <div class="product-img">
                             <div class="number-of-img">
-                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                 10
                             </div>
                             <a href="#" class="fav">
@@ -1298,16 +1298,16 @@
                             <div class="swiper product-img-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-16.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-16.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-15.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-15.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-12.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-12.png" alt="image">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="assets/img/inner-page/car-product-11.png" alt="image">
+                                        <img src="/assets/img/inner-page/car-product-11.png" alt="image">
                                     </div>
                                 </div>
                             </div>
@@ -1446,12 +1446,12 @@
                     <div class="customer-feedback-left">
                         <a href="#" class="trustpilot">
                             <h5>Excellent!</h5>
-                            <img class="star" src="assets/img/home1/icon/trustpilot-star3.svg" alt>
+                            <img class="star" src="/assets/img/home1/icon/trustpilot-star3.svg" alt>
                             <span>Based On <strong>2348</strong> Reviews</span>
-                            <img class="logo" src="assets/img/home1/icon/trustpilot-log3.svg" alt>
+                            <img class="logo" src="/assets/img/home1/icon/trustpilot-log3.svg" alt>
                         </a>
                         <a href="#" class="google">
-                            <img class="logo" src="assets/img/home1/icon/google3.svg" alt>
+                            <img class="logo" src="/assets/img/home1/icon/google3.svg" alt>
                             <div class="star">
                                 <ul>
                                     <li class="active"><i class="bi bi-star-fill"></i></li>
@@ -1485,7 +1485,7 @@
                                                 <span>Great Services!</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/google3.svg" alt>
+                                                <img src="/assets/img/home1/icon/google3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency to the actively encourage customers to leave
@@ -1499,11 +1499,11 @@
                                     <div class="feedback-card">
                                         <div class="feedback-top">
                                             <div class="stat-area">
-                                                <img src="assets/img/home1/icon/trustpilot-star.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-star.svg" alt>
                                                 <span>Trusted Company</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/trustpilot-log3.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-log3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency customer feedback is an invaluable source of
@@ -1530,7 +1530,7 @@
                                                 <span>Great Services!</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/google3.svg" alt>
+                                                <img src="/assets/img/home1/icon/google3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency to the actively encourage customers to leave
@@ -1544,11 +1544,11 @@
                                     <div class="feedback-card">
                                         <div class="feedback-top">
                                             <div class="stat-area">
-                                                <img src="assets/img/home1/icon/trustpilot-star.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-star.svg" alt>
                                                 <span>Trusted Company</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/trustpilot-log3.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-log3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency customer feedback is an invaluable source of
@@ -1594,18 +1594,18 @@
                     </div>
                     <div class="partner-slider">
                         <h2 class="marquee_text2">
-                            <img src="assets/img/home1/company-logo-01.png" alt>
-                            <img src="assets/img/home1/company-logo-02.png" alt>
-                            <img src="assets/img/home1/company-logo-03.png" alt>
-                            <img src="assets/img/home1/company-logo-04.png" alt>
-                            <img src="assets/img/home1/company-logo-05.png" alt>
-                            <img src="assets/img/home1/company-logo-06.png" alt>
-                            <img src="assets/img/home1/company-logo-01.png" alt>
-                            <img src="assets/img/home1/company-logo-02.png" alt>
-                            <img src="assets/img/home1/company-logo-03.png" alt>
-                            <img src="assets/img/home1/company-logo-04.png" alt>
-                            <img src="assets/img/home1/company-logo-05.png" alt>
-                            <img src="assets/img/home1/company-logo-06.png" alt>
+                            <img src="/assets/img/home1/company-logo-01.png" alt>
+                            <img src="/assets/img/home1/company-logo-02.png" alt>
+                            <img src="/assets/img/home1/company-logo-03.png" alt>
+                            <img src="/assets/img/home1/company-logo-04.png" alt>
+                            <img src="/assets/img/home1/company-logo-05.png" alt>
+                            <img src="/assets/img/home1/company-logo-06.png" alt>
+                            <img src="/assets/img/home1/company-logo-01.png" alt>
+                            <img src="/assets/img/home1/company-logo-02.png" alt>
+                            <img src="/assets/img/home1/company-logo-03.png" alt>
+                            <img src="/assets/img/home1/company-logo-04.png" alt>
+                            <img src="/assets/img/home1/company-logo-05.png" alt>
+                            <img src="/assets/img/home1/company-logo-06.png" alt>
                         </h2>
                     </div>
                 </div>

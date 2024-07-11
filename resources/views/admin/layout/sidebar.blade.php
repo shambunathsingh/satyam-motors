@@ -6,10 +6,10 @@
                             class="link-name">
                             dashboard</span></a></a>
                 </li>
-                {{-- <li class="mainlink "><a class="collapsed" href="{{ route('admin.page.pages') }}"><i
-                            class="fa-solid fa-book"></i><span class="link-name">pages</span></a>
+                <li class="mainlink "><a href="{{ route('admin.documents') }}"><i class="fa-solid fa-book"></i><span
+                            class="link-name">Documents</span></a>
 
-                </li> --}}
+                </li>
                 <li class="mainlink"><a href="{{ route('admin.ecommerce.brands') }}"
                         class="link-body-emphasis d-inline-flex text-decoration-none rounded"><span><i
                                 class="fa fa-registered"></i></span>

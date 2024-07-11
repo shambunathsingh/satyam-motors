@@ -547,21 +547,21 @@
                         <li class="menu-single-item">
                             <h6>Browse by Brand</h6>
                             <ul>
-                                <li><a href="">Merchedes Benz (10) <img
+                                <li><a href="{{ route('s_category') }}">Merchedes Benz (10) <img
                                             src="assets/img/menu-icon/merchedes.svg" alt></a></li>
-                                <li><a href="">Volkswagen (10) <img
+                                <li><a href="{{ route('s_category') }}">Volkswagen (10) <img
                                             src="assets/img/menu-icon/volkswagen.svg" alt></a></li>
-                                <li><a href="">Ferrari (10) <img
+                                <li><a href="{{ route('s_category') }}">Ferrari (10) <img
                                             src="assets/img/menu-icon/ferrari.svg" alt></a></li>
-                                <li><a href="">Mazda (10) <img
+                                <li><a href="{{ route('s_category') }}">Mazda (10) <img
                                             src="assets/img/menu-icon/mazda.svg" alt></a></li>
-                                <li><a href="">Mitsubishi (10) <img
+                                <li><a href="{{ route('s_category') }}">Mitsubishi (10) <img
                                             src="assets/img/menu-icon/mitsubishi.svg" alt></a></li>
-                                <li><a href="">Lamborghini (10) <img
+                                <li><a href="{{ route('s_category') }}">Lamborghini (10) <img
                                             src="assets/img/menu-icon/lamborghini.svg" alt></a></li>
-                                <li><a href="">Tesla (10) <img
+                                <li><a href="{{ route('s_category') }}">Tesla (10) <img
                                             src="assets/img/menu-icon/tesla.svg" alt></a></li>
-                                <li><a href="">Toyota (10) <img
+                                <li><a href="{{ route('s_category') }}">Toyota (10) <img
                                             src="assets/img/menu-icon/toyota.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -572,14 +572,14 @@
                         <li class="menu-single-item">
                             <h6>Popular Models</h6>
                             <ul>
-                                <li><a href="">Toyota Camry</a></li>
-                                <li><a href="">Ford Mustang</a></li>
-                                <li><a href="">Volkswagen Golf</a></li>
-                                <li><a href="">Mercedes C-Class</a></li>
-                                <li><a href="">Audi A4</a></li>
-                                <li><a href="">Jeep Wrangler</a></li>
-                                <li><a href="">Mazda CX-5</a></li>
-                                <li><a href="">Chevrolet Corvette</a></li>
+                                <li><a href="{{ route('s_category') }}">Toyota Camry</a></li>
+                                <li><a href="{{ route('s_category') }}">Ford Mustang</a></li>
+                                <li><a href="{{ route('s_category') }}">Volkswagen Golf</a></li>
+                                <li><a href="{{ route('s_category') }}">Mercedes C-Class</a></li>
+                                <li><a href="{{ route('s_category') }}">Audi A4</a></li>
+                                <li><a href="{{ route('s_category') }}">Jeep Wrangler</a></li>
+                                <li><a href="{{ route('s_category') }}">Mazda CX-5</a></li>
+                                <li><a href="{{ route('s_category') }}">Chevrolet Corvette</a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -589,21 +589,21 @@
                         <li class="menu-single-item">
                             <h6>Popular Cities </h6>
                             <ul>
-                                <li><a href="">Panama City (10)<img
+                                <li><a href="{{ route('s_category') }}">Panama City (10)<img
                                             src="assets/img/menu-icon/panama.svg" alt></a></li>
-                                <li><a href="">Sydne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Sydne City (10)<img
                                             src="assets/img/menu-icon/sydne.svg" alt></a></li>
-                                <li><a href="">Melbourne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Melbourne City (10)<img
                                             src="assets/img/menu-icon/melbourne.svg" alt></a></li>
-                                <li><a href="">New Delhi (10)<img
+                                <li><a href="{{ route('s_category') }}">New Delhi (10)<img
                                             src="assets/img/menu-icon/delhi.svg" alt></a></li>
-                                <li><a href="">New York (10)<img
+                                <li><a href="{{ route('s_category') }}">New York (10)<img
                                             src="assets/img/menu-icon/newYork.svg" alt></a></li>
-                                <li><a href="">Menchester City (10)<img
+                                <li><a href="{{ route('s_category') }}">Menchester City (10)<img
                                             src="assets/img/menu-icon/menchester.svg" alt></a></li>
-                                <li><a href="">City of Greece (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Greece (10)<img
                                             src="assets/img/menu-icon/greece.svg" alt></a></li>
-                                <li><a href="">City of Abu-dabi (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Abu-dabi (10)<img
                                             src="assets/img/menu-icon/abudabi.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -622,21 +622,21 @@
                         <li class="menu-single-item">
                             <h6>Browse by Brand</h6>
                             <ul>
-                                <li><a href="">Merchedes Benz (10) <img
+                                <li><a href="{{ route('s_category') }}">Merchedes Benz (10) <img
                                             src="assets/img/menu-icon/merchedes.svg" alt></a></li>
-                                <li><a href="">Volkswagen (10) <img
+                                <li><a href="{{ route('s_category') }}">Volkswagen (10) <img
                                             src="assets/img/menu-icon/volkswagen.svg" alt></a></li>
-                                <li><a href="">Ferrari (10) <img
+                                <li><a href="{{ route('s_category') }}">Ferrari (10) <img
                                             src="assets/img/menu-icon/ferrari.svg" alt></a></li>
-                                <li><a href="">Mazda (10) <img
+                                <li><a href="{{ route('s_category') }}">Mazda (10) <img
                                             src="assets/img/menu-icon/mazda.svg" alt></a></li>
-                                <li><a href="">Mitsubishi (10) <img
+                                <li><a href="{{ route('s_category') }}">Mitsubishi (10) <img
                                             src="assets/img/menu-icon/mitsubishi.svg" alt></a></li>
-                                <li><a href="">Lamborghini (10) <img
+                                <li><a href="{{ route('s_category') }}">Lamborghini (10) <img
                                             src="assets/img/menu-icon/lamborghini.svg" alt></a></li>
-                                <li><a href="">Tesla (10) <img
+                                <li><a href="{{ route('s_category') }}">Tesla (10) <img
                                             src="assets/img/menu-icon/tesla.svg" alt></a></li>
-                                <li><a href="">Toyota (10) <img
+                                <li><a href="{{ route('s_category') }}">Toyota (10) <img
                                             src="assets/img/menu-icon/toyota.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -647,14 +647,14 @@
                         <li class="menu-single-item">
                             <h6>Popular Models</h6>
                             <ul>
-                                <li><a href="">Toyota Camry</a></li>
-                                <li><a href="">Ford Mustang</a></li>
-                                <li><a href="">Volkswagen Golf</a></li>
-                                <li><a href="">Mercedes C-Class</a></li>
-                                <li><a href="">Audi A4</a></li>
-                                <li><a href="">Jeep Wrangler</a></li>
-                                <li><a href="">Mazda CX-5</a></li>
-                                <li><a href="">Chevrolet Corvette</a></li>
+                                <li><a href="{{ route('s_category') }}">Toyota Camry</a></li>
+                                <li><a href="{{ route('s_category') }}">Ford Mustang</a></li>
+                                <li><a href="{{ route('s_category') }}">Volkswagen Golf</a></li>
+                                <li><a href="{{ route('s_category') }}">Mercedes C-Class</a></li>
+                                <li><a href="{{ route('s_category') }}">Audi A4</a></li>
+                                <li><a href="{{ route('s_category') }}">Jeep Wrangler</a></li>
+                                <li><a href="{{ route('s_category') }}">Mazda CX-5</a></li>
+                                <li><a href="{{ route('s_category') }}">Chevrolet Corvette</a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -664,21 +664,21 @@
                         <li class="menu-single-item">
                             <h6>Popular Cities </h6>
                             <ul>
-                                <li><a href="">Panama City (10)<img
+                                <li><a href="{{ route('s_category') }}">Panama City (10)<img
                                             src="assets/img/menu-icon/panama.svg" alt></a></li>
-                                <li><a href="">Sydne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Sydne City (10)<img
                                             src="assets/img/menu-icon/sydne.svg" alt></a></li>
-                                <li><a href="">Melbourne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Melbourne City (10)<img
                                             src="assets/img/menu-icon/melbourne.svg" alt></a></li>
-                                <li><a href="">New Delhi (10)<img
+                                <li><a href="{{ route('s_category') }}">New Delhi (10)<img
                                             src="assets/img/menu-icon/delhi.svg" alt></a></li>
-                                <li><a href="">New York (10)<img
+                                <li><a href="{{ route('s_category') }}">New York (10)<img
                                             src="assets/img/menu-icon/newYork.svg" alt></a></li>
-                                <li><a href="">Menchester City (10)<img
+                                <li><a href="{{ route('s_category') }}">Menchester City (10)<img
                                             src="assets/img/menu-icon/menchester.svg" alt></a></li>
-                                <li><a href="">City of Greece (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Greece (10)<img
                                             src="assets/img/menu-icon/greece.svg" alt></a></li>
-                                <li><a href="">City of Abu-dabi (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Abu-dabi (10)<img
                                             src="assets/img/menu-icon/abudabi.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -694,7 +694,7 @@
                 <ul class="sub-menu">
                     <li><a href="{{ route('about') }}">About Us</a></li>
                     <!-- <li><a href="{{ route('b_category') }}">Brand Category</a></li>
-<li><a href="">Single Brand Category</a></li> -->
+<li><a href="{{ route('s_category') }}">Single Brand Category</a></li> -->
                     <li>
                         <a href="#">Car Listing System</a>
                         <i class="bi bi-plus dropdown-icon"></i>
@@ -931,8 +931,7 @@
                     <div class="row row-cols-lg-3 row-cols-md-4 row-cols-sm-3 row-cols-2 g-4 justify-content-center">
                         @foreach ($brand as $item)
                             <div class="col">
-                                <a href="{{ route('s_category', ['id' => $item->id]) }}"
-                                    class="car-category text-center">
+                                <a href="{{ route('s_category') }}" class="car-category text-center">
                                     <div class="icon">
                                         <img src="{{ asset('uploads/' . $item->icon) }}" alt>
                                     </div>
@@ -944,7 +943,7 @@
                             </div>
                         @endforeach
                         {{-- <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/toyota.svg" alt>
                                 </div>
@@ -955,7 +954,7 @@
                             </a>
                         </div>
                         <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/tesla.svg" alt>
                                 </div>
@@ -966,7 +965,7 @@
                             </a>
                         </div>
                         <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/mazda.svg" alt>
                                 </div>
@@ -977,7 +976,7 @@
                             </a>
                         </div>
                         <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/audi.svg" alt>
                                 </div>
@@ -988,7 +987,7 @@
                             </a>
                         </div>
                         <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/tata.svg" alt>
                                 </div>
@@ -999,7 +998,7 @@
                             </a>
                         </div>
                         <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/mercedes.svg" alt>
                                 </div>
@@ -1010,7 +1009,7 @@
                             </a>
                         </div>
                         <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/mitsubidhi.svg" alt>
                                 </div>
@@ -1021,7 +1020,7 @@
                             </a>
                         </div>
                         <div class="col">
-                            <a href="" class="car-category text-center">
+                            <a href="{{ route('s_category') }}" class="car-category text-center">
                                 <div class="icon">
                                     <img src="assets/img/home2/icon/nissan.svg" alt>
                                 </div>
@@ -3702,63 +3701,63 @@
                             </div>
                             <div class="menu-container">
                                 <ul>
-                                    <li><a href="">Toyota
+                                    <li><a href="{{ route('s_category') }}">Toyota
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">BMW
+                                    <li><a href="{{ route('s_category') }}">BMW
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">Chevrolet
+                                    <li><a href="{{ route('s_category') }}">Chevrolet
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">Hyundai
+                                    <li><a href="{{ route('s_category') }}">Hyundai
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">Mercedes-Benz
+                                    <li><a href="{{ route('s_category') }}">Mercedes-Benz
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">Jeep
+                                    <li><a href="{{ route('s_category') }}">Jeep
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">Suzuki
+                                    <li><a href="{{ route('s_category') }}">Suzuki
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">Tesla
+                                    <li><a href="{{ route('s_category') }}">Tesla
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M9.1605 0H0.849401C0.626751 0 0.413219 0.0884475 0.255781 0.245885C0.0983438 0.403323 0.00989626 0.616854 0.00989626 0.839505C0.00989626 1.06216 0.0983438 1.27569 0.255781 1.43312C0.413219 1.59056 0.626751 1.67901 0.849401 1.67901H7.13309L0.256291 8.55665C0.17611 8.63409 0.112154 8.72673 0.0681567 8.82915C0.0241591 8.93157 0.00100033 9.04173 3.16969e-05 9.1532C-0.000936937 9.26467 0.020304 9.37522 0.062515 9.47839C0.104726 9.58156 0.167062 9.67529 0.245885 9.75412C0.324709 9.83294 0.418441 9.89527 0.521613 9.93748C0.624785 9.9797 0.735331 10.0009 0.846799 9.99997C0.958268 9.999 1.06843 9.97584 1.17085 9.93184C1.27327 9.88785 1.36591 9.82389 1.44335 9.74371L8.32099 2.86649V9.1506C8.32099 9.37325 8.40944 9.58678 8.56688 9.74422C8.72431 9.90166 8.93785 9.9901 9.1605 9.9901C9.38315 9.9901 9.59668 9.90166 9.75412 9.74422C9.91155 9.58678 10 9.37325 10 9.1506V0.839505C10 0.616854 9.91155 0.403323 9.75412 0.245885C9.59668 0.0884475 9.38315 0 9.1605 0Z" />
                                             </svg>
                                         </a></li>
-                                    <li><a href="">Mazda
+                                    <li><a href="{{ route('s_category') }}">Mazda
                                             <svg width="10" height="10" viewBox="0 0 10 10"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path

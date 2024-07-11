@@ -23,21 +23,21 @@
                         <li class="menu-single-item">
                             <h6>Browse by Brand</h6>
                             <ul>
-                                <li><a href="">Merchedes Benz (10) <img
+                                <li><a href="{{ route('s_category') }}">Merchedes Benz (10) <img
                                             src="assets/img/menu-icon/merchedes.svg" alt></a></li>
-                                <li><a href="">Volkswagen (10) <img
+                                <li><a href="{{ route('s_category') }}">Volkswagen (10) <img
                                             src="assets/img/menu-icon/volkswagen.svg" alt></a></li>
-                                <li><a href="">Ferrari (10) <img
+                                <li><a href="{{ route('s_category') }}">Ferrari (10) <img
                                             src="assets/img/menu-icon/ferrari.svg" alt></a></li>
-                                <li><a href="">Mazda (10) <img
+                                <li><a href="{{ route('s_category') }}">Mazda (10) <img
                                             src="assets/img/menu-icon/mazda.svg" alt></a></li>
-                                <li><a href="">Mitsubishi (10) <img
+                                <li><a href="{{ route('s_category') }}">Mitsubishi (10) <img
                                             src="assets/img/menu-icon/mitsubishi.svg" alt></a></li>
-                                <li><a href="">Lamborghini (10) <img
+                                <li><a href="{{ route('s_category') }}">Lamborghini (10) <img
                                             src="assets/img/menu-icon/lamborghini.svg" alt></a></li>
-                                <li><a href="">Tesla (10) <img
+                                <li><a href="{{ route('s_category') }}">Tesla (10) <img
                                             src="assets/img/menu-icon/tesla.svg" alt></a></li>
-                                <li><a href="">Toyota (10) <img
+                                <li><a href="{{ route('s_category') }}">Toyota (10) <img
                                             src="assets/img/menu-icon/toyota.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -48,14 +48,14 @@
                         <li class="menu-single-item">
                             <h6>Popular Models</h6>
                             <ul>
-                                <li><a href="">Toyota Camry</a></li>
-                                <li><a href="">Ford Mustang</a></li>
-                                <li><a href="">Volkswagen Golf</a></li>
-                                <li><a href="">Mercedes C-Class</a></li>
-                                <li><a href="">Audi A4</a></li>
-                                <li><a href="">Jeep Wrangler</a></li>
-                                <li><a href="">Mazda CX-5</a></li>
-                                <li><a href="">Chevrolet Corvette</a></li>
+                                <li><a href="{{ route('s_category') }}">Toyota Camry</a></li>
+                                <li><a href="{{ route('s_category') }}">Ford Mustang</a></li>
+                                <li><a href="{{ route('s_category') }}">Volkswagen Golf</a></li>
+                                <li><a href="{{ route('s_category') }}">Mercedes C-Class</a></li>
+                                <li><a href="{{ route('s_category') }}">Audi A4</a></li>
+                                <li><a href="{{ route('s_category') }}">Jeep Wrangler</a></li>
+                                <li><a href="{{ route('s_category') }}">Mazda CX-5</a></li>
+                                <li><a href="{{ route('s_category') }}">Chevrolet Corvette</a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -65,21 +65,21 @@
                         <li class="menu-single-item">
                             <h6>Popular Cities </h6>
                             <ul>
-                                <li><a href="">Panama City (10)<img
+                                <li><a href="{{ route('s_category') }}">Panama City (10)<img
                                             src="assets/img/menu-icon/panama.svg" alt></a></li>
-                                <li><a href="">Sydne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Sydne City (10)<img
                                             src="assets/img/menu-icon/sydne.svg" alt></a></li>
-                                <li><a href="">Melbourne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Melbourne City (10)<img
                                             src="assets/img/menu-icon/melbourne.svg" alt></a></li>
-                                <li><a href="">New Delhi (10)<img
+                                <li><a href="{{ route('s_category') }}">New Delhi (10)<img
                                             src="assets/img/menu-icon/delhi.svg" alt></a></li>
-                                <li><a href="">New York (10)<img
+                                <li><a href="{{ route('s_category') }}">New York (10)<img
                                             src="assets/img/menu-icon/newYork.svg" alt></a></li>
-                                <li><a href="">Menchester City (10)<img
+                                <li><a href="{{ route('s_category') }}">Menchester City (10)<img
                                             src="assets/img/menu-icon/menchester.svg" alt></a></li>
-                                <li><a href="">City of Greece (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Greece (10)<img
                                             src="assets/img/menu-icon/greece.svg" alt></a></li>
-                                <li><a href="">City of Abu-dabi (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Abu-dabi (10)<img
                                             src="assets/img/menu-icon/abudabi.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -98,21 +98,21 @@
                         <li class="menu-single-item">
                             <h6>Browse by Brand</h6>
                             <ul>
-                                <li><a href="">Merchedes Benz (10) <img
+                                <li><a href="{{ route('s_category') }}">Merchedes Benz (10) <img
                                             src="assets/img/menu-icon/merchedes.svg" alt></a></li>
-                                <li><a href="">Volkswagen (10) <img
+                                <li><a href="{{ route('s_category') }}">Volkswagen (10) <img
                                             src="assets/img/menu-icon/volkswagen.svg" alt></a></li>
-                                <li><a href="">Ferrari (10) <img
+                                <li><a href="{{ route('s_category') }}">Ferrari (10) <img
                                             src="assets/img/menu-icon/ferrari.svg" alt></a></li>
-                                <li><a href="">Mazda (10) <img
+                                <li><a href="{{ route('s_category') }}">Mazda (10) <img
                                             src="assets/img/menu-icon/mazda.svg" alt></a></li>
-                                <li><a href="">Mitsubishi (10) <img
+                                <li><a href="{{ route('s_category') }}">Mitsubishi (10) <img
                                             src="assets/img/menu-icon/mitsubishi.svg" alt></a></li>
-                                <li><a href="">Lamborghini (10) <img
+                                <li><a href="{{ route('s_category') }}">Lamborghini (10) <img
                                             src="assets/img/menu-icon/lamborghini.svg" alt></a></li>
-                                <li><a href="">Tesla (10) <img
+                                <li><a href="{{ route('s_category') }}">Tesla (10) <img
                                             src="assets/img/menu-icon/tesla.svg" alt></a></li>
-                                <li><a href="">Toyota (10) <img
+                                <li><a href="{{ route('s_category') }}">Toyota (10) <img
                                             src="assets/img/menu-icon/toyota.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -123,14 +123,14 @@
                         <li class="menu-single-item">
                             <h6>Popular Models</h6>
                             <ul>
-                                <li><a href="">Toyota Camry</a></li>
-                                <li><a href="">Ford Mustang</a></li>
-                                <li><a href="">Volkswagen Golf</a></li>
-                                <li><a href="">Mercedes C-Class</a></li>
-                                <li><a href="">Audi A4</a></li>
-                                <li><a href="">Jeep Wrangler</a></li>
-                                <li><a href="">Mazda CX-5</a></li>
-                                <li><a href="">Chevrolet Corvette</a></li>
+                                <li><a href="{{ route('s_category') }}">Toyota Camry</a></li>
+                                <li><a href="{{ route('s_category') }}">Ford Mustang</a></li>
+                                <li><a href="{{ route('s_category') }}">Volkswagen Golf</a></li>
+                                <li><a href="{{ route('s_category') }}">Mercedes C-Class</a></li>
+                                <li><a href="{{ route('s_category') }}">Audi A4</a></li>
+                                <li><a href="{{ route('s_category') }}">Jeep Wrangler</a></li>
+                                <li><a href="{{ route('s_category') }}">Mazda CX-5</a></li>
+                                <li><a href="{{ route('s_category') }}">Chevrolet Corvette</a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -140,21 +140,21 @@
                         <li class="menu-single-item">
                             <h6>Popular Cities </h6>
                             <ul>
-                                <li><a href="">Panama City (10)<img
+                                <li><a href="{{ route('s_category') }}">Panama City (10)<img
                                             src="assets/img/menu-icon/panama.svg" alt></a></li>
-                                <li><a href="">Sydne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Sydne City (10)<img
                                             src="assets/img/menu-icon/sydne.svg" alt></a></li>
-                                <li><a href="">Melbourne City (10)<img
+                                <li><a href="{{ route('s_category') }}">Melbourne City (10)<img
                                             src="assets/img/menu-icon/melbourne.svg" alt></a></li>
-                                <li><a href="">New Delhi (10)<img
+                                <li><a href="{{ route('s_category') }}">New Delhi (10)<img
                                             src="assets/img/menu-icon/delhi.svg" alt></a></li>
-                                <li><a href="">New York (10)<img
+                                <li><a href="{{ route('s_category') }}">New York (10)<img
                                             src="assets/img/menu-icon/newYork.svg" alt></a></li>
-                                <li><a href="">Menchester City (10)<img
+                                <li><a href="{{ route('s_category') }}">Menchester City (10)<img
                                             src="assets/img/menu-icon/menchester.svg" alt></a></li>
-                                <li><a href="">City of Greece (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Greece (10)<img
                                             src="assets/img/menu-icon/greece.svg" alt></a></li>
-                                <li><a href="">City of Abu-dabi (10)<img
+                                <li><a href="{{ route('s_category') }}">City of Abu-dabi (10)<img
                                             src="assets/img/menu-icon/abudabi.svg" alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
@@ -170,7 +170,7 @@
                 <ul class="sub-menu">
                     <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="{{ route('b_category') }}">Brand Category</a></li>
-                    <li><a href="">Single Brand Category</a></li>
+                    <li><a href="{{ route('s_category') }}">Single Brand Category</a></li>
                     <li>
                         <a>Car Listing System</a>
                         <i class="d-lg-flex d-none bi bi-chevron-right dropdown-icon"></i>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand\Brands;
 use App\Models\Cart\Cart;
 use App\Models\Category\Category;
 use App\Models\Page\Page;
@@ -27,7 +28,11 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('front.homepage.index');
+
+        $brand = Brands::all();
+        $categories = Category::all();
+
+        return view('front.homepage.index', ['brand' => $brand, 'categories' => $categories]);
     }
 
     public function about()
@@ -37,12 +42,22 @@ class HomeController extends Controller
 
     public function brandCategory()
     {
-        return view('front.homepage.brand_category');
+        $title = "All Brands";
+
+        $categories = Category::all();
+
+        // dd($categories);
+        // exit;
+
+        return view('front.homepage.brand_category', ['title' => $title, 'categories' => $categories]);
     }
 
-    public function singeleBrandCategory()
+    public function singeleBrandCategory($id)
     {
-        return view('front.homepage.single_brand_category');
+        $categories = Category::findOrFail($id);
+        $title = "Brands | " . $categories->name;
+
+        return view('front.homepage.single_brand_category', ['title' => $title,]);
     }
 
     public function carListingNoSidebar()

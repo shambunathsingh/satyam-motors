@@ -147,7 +147,7 @@
 
 
                                     <div class="form-group mb-3">
-                                        <label for="images[]" class="control-label">Images</label>
+                                        <label for="images[]" class="control-label">Interior Images</label>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper">
                                                 <div data-name="images[]"
@@ -155,7 +155,27 @@
                                                     <p style="color: rgb(195, 207, 216);">Using button <strong>Select
                                                             image</strong> to add more images.</p>
                                                 </div>
-                                                <input type="file" name="images[]" multiple style="display: none;">
+                                                <input type="file" name="int_images[]" multiple style="display: none;">
+                                                <ul data-name="images[]" data-allow-thumb="1"
+                                                    class="list-unstyled list-gallery-media-images ui-sortable">
+                                                    <!-- Existing images go here -->
+                                                </ul>
+                                            </div>
+                                            <a data-name="images[]" style="cursor: pointer;"
+                                                class="add-new-gallery-image js-btn-trigger-add-image">Add image</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="images[]" class="control-label">Exterior Images</label>
+                                        <div class="gallery-images-wrapper list-images">
+                                            <div class="images-wrapper">
+                                                <div data-name="images[]"
+                                                    class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image hidden">
+                                                    <p style="color: rgb(195, 207, 216);">Using button <strong>Select
+                                                            image</strong> to add more images.</p>
+                                                </div>
+                                                <input type="file" name="ext_images[]" multiple style="display: none;">
                                                 <ul data-name="images[]" data-allow-thumb="1"
                                                     class="list-unstyled list-gallery-media-images ui-sortable">
                                                     <!-- Existing images go here -->
@@ -314,6 +334,48 @@
                                                                         <input type="checkbox" value="{{ $cat->id }}"
                                                                             name="categories">
                                                                         {{ $cat->name }}
+                                                                    </label>
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                    <div id="mCSB_1_scrollbar_vertical"
+                                                        class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical"
+                                                        style="display: block;">
+                                                        <div class="mCSB_draggerContainer">
+                                                            <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                                                                style="position: absolute; min-height: 30px; display: block; height: 66px; max-height: 310px; top: 0px;">
+                                                                <div class="mCSB_dragger_bar" style="line-height: 30px;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mCSB_draggerRail"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget meta-boxes">
+                                    <div class="widget-title">
+                                        <h4><label for="categories[]" class="control-label">Documents</label></h4>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="form-group form-group-no-margin ">
+                                            <div class="multi-choices-widget list-item-checkbox mCustomScrollbar _mCS_1"
+                                                style="padding: 0px;">
+                                                <div id="mCSB_1"
+                                                    class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside"
+                                                    style="max-height: 320px;" tabindex="0">
+                                                    <div id="mCSB_1_container" class="mCSB_container"
+                                                        style="position:relative; top:0; left:0;" dir="ltr">
+                                                        <ul>
+                                                            @foreach ($documents as $doc)
+                                                                <li value="{{ $doc->id }}">
+                                                                    <label class="mb-2">
+                                                                        <input type="checkbox" value="{{ $doc->id }}"
+                                                                            name="documents">
+                                                                        {{ $doc->name }}
                                                                     </label>
                                                                 </li>
                                                             @endforeach

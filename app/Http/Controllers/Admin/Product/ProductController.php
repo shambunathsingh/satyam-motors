@@ -6,6 +6,7 @@ use App\Actions\File\FileUpload;
 use App\Http\Controllers\Controller;
 use App\Models\Brand\Brands;
 use App\Models\Category\Category;
+use App\Models\ExtProductImage;
 use App\Models\ImageTest;
 use App\Models\Product\Product;
 use App\Models\ProductCollection\ProductCollection;
@@ -274,8 +275,10 @@ class ProductController extends Controller
             'engine_no' => '',
             'fuel_type' => '',
             'fuel_norm' => '',
-            'images.*' => 'image|mimes:jpeg,png,jpg',
+            'int_images.*' => 'image|mimes:jpeg,png,jpg',
+            'ext_images.*' => 'image|mimes:jpeg,png,jpg',
             'categories' => '',
+            'documents' => '',
             'brand_id' => '',
             'status' => '',
             'featured_image' => 'image|mimes:jpeg,png,jpg',
@@ -309,6 +312,7 @@ class ProductController extends Controller
         $product->fuel_type = $request->fuel_type;
         $product->fuel_norm = $request->fuel_norm;
         $product->categories = $request->categories;
+        $product->documents = $request->documents;
         $product->brand_id = $request->brand_id;
         $product->status = $request->status;
         
@@ -318,14 +322,26 @@ class ProductController extends Controller
         
         $product->save();
         
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $file) {
+        if ($request->hasFile('int_images')) {
+            foreach ($request->file('int_images') as $file) {
                 if ($file->isValid()) {
                     $url = FileUpload::upload($file, "Product_images");
                     $productImage = new ProductImages();
                     $productImage->product_id = $product->id;
                     $productImage->images = $url;
                     $productImage->save();
+                }
+            }
+        }
+        
+        if ($request->hasFile('ext_images')) {
+            foreach ($request->file('ext_images') as $file) {
+                if ($file->isValid()) {
+                    $url = FileUpload::upload($file, "Ext_Product_images");
+                    $extproductImage = new ExtProductImage();
+                    $extproductImage->product_id = $product->id;
+                    $extproductImage->images = $url;
+                    $extproductImage->save();
                 }
             }
         }
@@ -387,8 +403,10 @@ class ProductController extends Controller
             'engine_no' => '',
             'fuel_type' => '',
             'fuel_norm' => '',
-            'images.*' => 'image|mimes:jpeg,png,jpg',
+            'int_images.*' => 'image|mimes:jpeg,png,jpg',
+            'ext_images.*' => 'image|mimes:jpeg,png,jpg',
             'categories' => '',
+            'documents' => '',
             'brand_id' => '',
             'status' => '',
             'featured_image' => 'image|mimes:jpeg,png,jpg',
@@ -409,6 +427,18 @@ class ProductController extends Controller
                     $productImage->product_id = $product->id;
                     $productImage->images = $url;
                     $productImage->save();
+                }
+            }
+        }
+
+        if ($request->hasFile('ext_images')) {
+            foreach ($request->file('ext_images') as $file) {
+                if ($file->isValid()) {
+                    $url = FileUpload::upload($file, "Ext_Product_images");
+                    $extproductImage = new ExtProductImage();
+                    $extproductImage->product_id = $product->id;
+                    $extproductImage->images = $url;
+                    $extproductImage->save();
                 }
             }
         }
@@ -434,6 +464,7 @@ class ProductController extends Controller
         $product->fuel_type = $request->fuel_type;
         $product->fuel_norm = $request->fuel_norm;
         $product->categories = $request->categories;
+        $product->documents = $request->documents;
         $product->brand_id = $request->brand_id;
         $product->status = $request->status;
 

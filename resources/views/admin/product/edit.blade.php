@@ -190,6 +190,45 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group mb-3">
+                                        <label for="images[]" class="control-label">Exterior Images</label>
+                                        <div class="gallery-images-wrapper list-images">
+                                            <div class="images-wrapper">
+                                                <div data-name="images[]"
+                                                    class="text-center cursor-pointer js-btn-trigger-add-image default-placeholder-gallery-image hidden">
+                                                    @foreach ($extproductImages as $image)
+                                                        <div class="image-container"
+                                                            style="display: inline-block; margin-right: 10px;">
+                                                            <img src="{{ asset('uploads/' . $image->images) }}"
+                                                                alt="Product Image" width="100" height="100">
+                                                            <div class="image-actions">
+                                                                <!-- Hidden input field for image ID -->
+                                                                <input type="hidden" class="image-id"
+                                                                    value="{{ $image->id }}">
+                                                                <!-- Delete Button -->
+                                                                <button type="button" style="background:darkred;"
+                                                                    class="btn btn-sm btn-danger mt-2 delete-image">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+
+                                                    <p style="color: rgb(195, 207, 216);">Using button <strong>Select
+                                                            image</strong> to add more images.</p>
+                                                </div>
+                                                <input type="file" name="ext_images[]" multiple
+                                                    style="display: none;">
+                                                <ul data-name="images[]" data-allow-thumb="1"
+                                                    class="list-unstyled list-gallery-media-images ui-sortable">
+                                                    <!-- Existing images go here -->
+                                                </ul>
+                                            </div>
+                                            <a data-name="images[]" style="cursor: pointer;"
+                                                class="add-new-gallery-image js-btn-trigger-add-image">Add image</a>
+                                        </div>
+                                    </div>
+
                                     {{-- <input class="form-control" name="product_type" type="hidden" value="physical"> --}}
                                     <div class="clearfix"></div>
                                 </div>
@@ -266,6 +305,49 @@
                                                                             value="{{ $cat->id }}" name="categories"
                                                                             {{ $product->categories == $cat->id ? 'checked' : '' }}>
                                                                         {{ $cat->name }}
+                                                                    </label>
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                    <div id="mCSB_1_scrollbar_vertical"
+                                                        class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical"
+                                                        style="display: block;">
+                                                        <div class="mCSB_draggerContainer">
+                                                            <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                                                                style="position: absolute; min-height: 30px; display: block; height: 66px; max-height: 310px; top: 0px;">
+                                                                <div class="mCSB_dragger_bar" style="line-height: 30px;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mCSB_draggerRail"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget meta-boxes">
+                                    <div class="widget-title">
+                                        <h4><label for="categories[]" class="control-label">Documents</label></h4>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="form-group form-group-no-margin ">
+                                            <div class="multi-choices-widget list-item-checkbox mCustomScrollbar _mCS_1"
+                                                style="padding: 0px;">
+                                                <div id="mCSB_1"
+                                                    class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside"
+                                                    style="max-height: 320px;" tabindex="0">
+                                                    <div id="mCSB_1_container" class="mCSB_container"
+                                                        style="position:relative; top:0; left:0;" dir="ltr">
+                                                        <ul>
+                                                            @foreach ($documents as $doc)
+                                                                <li value="{{ $doc->id }}">
+                                                                    <label class="mb-2">
+                                                                        <input type="checkbox"
+                                                                            value="{{ $doc->id }}" name="documents"
+                                                                            {{ $product->documents == $doc->id ? 'checked' : '' }}>
+                                                                        {{ $doc->name }}
                                                                     </label>
                                                                 </li>
                                                             @endforeach
