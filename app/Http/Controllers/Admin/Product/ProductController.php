@@ -68,7 +68,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,svg',
             'status' => 'required|string',
         ]);
 
@@ -105,7 +105,7 @@ class ProductController extends Controller
 
         $request->validate([
             'name' => 'required|string',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,svg',
             'status' => 'required|string',
         ]);
 
@@ -278,6 +278,7 @@ class ProductController extends Controller
             'int_images.*' => 'image|mimes:jpeg,png,jpg',
             'ext_images.*' => 'image|mimes:jpeg,png,jpg',
             'categories' => '',
+            'is_featured' => '',
             'documents' => '',
             'brand_id' => '',
             'status' => '',
@@ -312,6 +313,7 @@ class ProductController extends Controller
         $product->fuel_type = $request->fuel_type;
         $product->fuel_norm = $request->fuel_norm;
         $product->categories = $request->categories;
+        $product->is_featured = $request->is_featured;
         $product->documents = $request->documents;
         $product->brand_id = $request->brand_id;
         $product->status = $request->status;
@@ -406,6 +408,7 @@ class ProductController extends Controller
             'int_images.*' => 'image|mimes:jpeg,png,jpg',
             'ext_images.*' => 'image|mimes:jpeg,png,jpg',
             'categories' => '',
+            'is_featured' => '',
             'documents' => '',
             'brand_id' => '',
             'status' => '',
@@ -464,6 +467,7 @@ class ProductController extends Controller
         $product->fuel_type = $request->fuel_type;
         $product->fuel_norm = $request->fuel_norm;
         $product->categories = $request->categories;
+        $product->is_featured = $request->is_featured;
         $product->documents = $request->documents;
         $product->brand_id = $request->brand_id;
         $product->status = $request->status;
@@ -551,7 +555,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'logo' => 'image|mimes:jpeg,png,jpg',
+            'logo' => 'image|mimes:jpeg,png,jpg,svg',
             'status' => '',
         ]);
 
@@ -578,7 +582,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'logo' => 'image|mimes:jpeg,png,jpg',
+            'logo' => 'image|mimes:jpeg,png,jpg,svg',
             'status' => '',
         ]);
 

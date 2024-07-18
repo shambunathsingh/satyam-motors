@@ -2,6 +2,7 @@
 
 namespace App\Models\Product;
 
+use App\Models\Brand\Brands;
 use App\Models\Category\Category;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -60,5 +61,10 @@ class Product extends Model
     public function order()
     {
         return $this->belongsTo(order::class);
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brands::class, 'brand_id');
     }
 }

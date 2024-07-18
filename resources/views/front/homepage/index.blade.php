@@ -549,20 +549,20 @@
                             <ul>
                                 <li><a href="">Merchedes Benz (10) <img
                                             src="assets/img/menu-icon/merchedes.svg" alt></a></li>
-                                <li><a href="">Volkswagen (10) <img
-                                            src="assets/img/menu-icon/volkswagen.svg" alt></a></li>
-                                <li><a href="">Ferrari (10) <img
-                                            src="assets/img/menu-icon/ferrari.svg" alt></a></li>
-                                <li><a href="">Mazda (10) <img
-                                            src="assets/img/menu-icon/mazda.svg" alt></a></li>
-                                <li><a href="">Mitsubishi (10) <img
-                                            src="assets/img/menu-icon/mitsubishi.svg" alt></a></li>
-                                <li><a href="">Lamborghini (10) <img
-                                            src="assets/img/menu-icon/lamborghini.svg" alt></a></li>
-                                <li><a href="">Tesla (10) <img
-                                            src="assets/img/menu-icon/tesla.svg" alt></a></li>
-                                <li><a href="">Toyota (10) <img
-                                            src="assets/img/menu-icon/toyota.svg" alt></a></li>
+                                <li><a href="">Volkswagen (10) <img src="assets/img/menu-icon/volkswagen.svg"
+                                            alt></a></li>
+                                <li><a href="">Ferrari (10) <img src="assets/img/menu-icon/ferrari.svg"
+                                            alt></a></li>
+                                <li><a href="">Mazda (10) <img src="assets/img/menu-icon/mazda.svg" alt></a>
+                                </li>
+                                <li><a href="">Mitsubishi (10) <img src="assets/img/menu-icon/mitsubishi.svg"
+                                            alt></a></li>
+                                <li><a href="">Lamborghini (10) <img src="assets/img/menu-icon/lamborghini.svg"
+                                            alt></a></li>
+                                <li><a href="">Tesla (10) <img src="assets/img/menu-icon/tesla.svg" alt></a>
+                                </li>
+                                <li><a href="">Toyota (10) <img src="assets/img/menu-icon/toyota.svg" alt></a>
+                                </li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -589,22 +589,22 @@
                         <li class="menu-single-item">
                             <h6>Popular Cities </h6>
                             <ul>
-                                <li><a href="">Panama City (10)<img
-                                            src="assets/img/menu-icon/panama.svg" alt></a></li>
-                                <li><a href="">Sydne City (10)<img
-                                            src="assets/img/menu-icon/sydne.svg" alt></a></li>
-                                <li><a href="">Melbourne City (10)<img
-                                            src="assets/img/menu-icon/melbourne.svg" alt></a></li>
-                                <li><a href="">New Delhi (10)<img
-                                            src="assets/img/menu-icon/delhi.svg" alt></a></li>
-                                <li><a href="">New York (10)<img
-                                            src="assets/img/menu-icon/newYork.svg" alt></a></li>
+                                <li><a href="">Panama City (10)<img src="assets/img/menu-icon/panama.svg"
+                                            alt></a></li>
+                                <li><a href="">Sydne City (10)<img src="assets/img/menu-icon/sydne.svg"
+                                            alt></a></li>
+                                <li><a href="">Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg"
+                                            alt></a></li>
+                                <li><a href="">New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt></a>
+                                </li>
+                                <li><a href="">New York (10)<img src="assets/img/menu-icon/newYork.svg"
+                                            alt></a></li>
                                 <li><a href="">Menchester City (10)<img
                                             src="assets/img/menu-icon/menchester.svg" alt></a></li>
-                                <li><a href="">City of Greece (10)<img
-                                            src="assets/img/menu-icon/greece.svg" alt></a></li>
-                                <li><a href="">City of Abu-dabi (10)<img
-                                            src="assets/img/menu-icon/abudabi.svg" alt></a></li>
+                                <li><a href="">City of Greece (10)<img src="assets/img/menu-icon/greece.svg"
+                                            alt></a></li>
+                                <li><a href="">City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg"
+                                            alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -624,20 +624,20 @@
                             <ul>
                                 <li><a href="">Merchedes Benz (10) <img
                                             src="assets/img/menu-icon/merchedes.svg" alt></a></li>
-                                <li><a href="">Volkswagen (10) <img
-                                            src="assets/img/menu-icon/volkswagen.svg" alt></a></li>
-                                <li><a href="">Ferrari (10) <img
-                                            src="assets/img/menu-icon/ferrari.svg" alt></a></li>
-                                <li><a href="">Mazda (10) <img
-                                            src="assets/img/menu-icon/mazda.svg" alt></a></li>
-                                <li><a href="">Mitsubishi (10) <img
-                                            src="assets/img/menu-icon/mitsubishi.svg" alt></a></li>
-                                <li><a href="">Lamborghini (10) <img
-                                            src="assets/img/menu-icon/lamborghini.svg" alt></a></li>
-                                <li><a href="">Tesla (10) <img
-                                            src="assets/img/menu-icon/tesla.svg" alt></a></li>
-                                <li><a href="">Toyota (10) <img
-                                            src="assets/img/menu-icon/toyota.svg" alt></a></li>
+                                <li><a href="">Volkswagen (10) <img src="assets/img/menu-icon/volkswagen.svg"
+                                            alt></a></li>
+                                <li><a href="">Ferrari (10) <img src="assets/img/menu-icon/ferrari.svg"
+                                            alt></a></li>
+                                <li><a href="">Mazda (10) <img src="assets/img/menu-icon/mazda.svg" alt></a>
+                                </li>
+                                <li><a href="">Mitsubishi (10) <img src="assets/img/menu-icon/mitsubishi.svg"
+                                            alt></a></li>
+                                <li><a href="">Lamborghini (10) <img src="assets/img/menu-icon/lamborghini.svg"
+                                            alt></a></li>
+                                <li><a href="">Tesla (10) <img src="assets/img/menu-icon/tesla.svg" alt></a>
+                                </li>
+                                <li><a href="">Toyota (10) <img src="assets/img/menu-icon/toyota.svg" alt></a>
+                                </li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -664,22 +664,22 @@
                         <li class="menu-single-item">
                             <h6>Popular Cities </h6>
                             <ul>
-                                <li><a href="">Panama City (10)<img
-                                            src="assets/img/menu-icon/panama.svg" alt></a></li>
-                                <li><a href="">Sydne City (10)<img
-                                            src="assets/img/menu-icon/sydne.svg" alt></a></li>
-                                <li><a href="">Melbourne City (10)<img
-                                            src="assets/img/menu-icon/melbourne.svg" alt></a></li>
-                                <li><a href="">New Delhi (10)<img
-                                            src="assets/img/menu-icon/delhi.svg" alt></a></li>
-                                <li><a href="">New York (10)<img
-                                            src="assets/img/menu-icon/newYork.svg" alt></a></li>
+                                <li><a href="">Panama City (10)<img src="assets/img/menu-icon/panama.svg"
+                                            alt></a></li>
+                                <li><a href="">Sydne City (10)<img src="assets/img/menu-icon/sydne.svg"
+                                            alt></a></li>
+                                <li><a href="">Melbourne City (10)<img src="assets/img/menu-icon/melbourne.svg"
+                                            alt></a></li>
+                                <li><a href="">New Delhi (10)<img src="assets/img/menu-icon/delhi.svg" alt></a>
+                                </li>
+                                <li><a href="">New York (10)<img src="assets/img/menu-icon/newYork.svg"
+                                            alt></a></li>
                                 <li><a href="">Menchester City (10)<img
                                             src="assets/img/menu-icon/menchester.svg" alt></a></li>
-                                <li><a href="">City of Greece (10)<img
-                                            src="assets/img/menu-icon/greece.svg" alt></a></li>
-                                <li><a href="">City of Abu-dabi (10)<img
-                                            src="assets/img/menu-icon/abudabi.svg" alt></a></li>
+                                <li><a href="">City of Greece (10)<img src="assets/img/menu-icon/greece.svg"
+                                            alt></a></li>
+                                <li><a href="">City of Abu-dabi (10)<img src="assets/img/menu-icon/abudabi.svg"
+                                            alt></a></li>
                                 <li class="explore-more-btn">
                                     <a href="{{ route('b_category') }}">Explore More <i
                                             class="bi bi-arrow-right"></i></a>
@@ -705,7 +705,7 @@
                         </ul>
                     </li>
                     <!-- <li><a href="special-offer.html">Special Offer</a></li> -->
-                    <li><a href="{{ route('car_details') }}">Car Details </a></li>
+                    {{-- <li><a href="">Car Details </a></li> --}}
                     <!-- <li><a href="car-auction-details.html">Car Auction Details</a></li>
 <li><a href="compare.html"> Compare Car</a></li>
 <li>
@@ -929,16 +929,17 @@
                         <h5>1. Brand Category</h5>
                     </div>
                     <div class="row row-cols-lg-3 row-cols-md-4 row-cols-sm-3 row-cols-2 g-4 justify-content-center">
-                        @foreach ($brand as $item)
+                        @foreach ($brands as $item)
                             <div class="col">
                                 <a href="{{ route('s_category', ['id' => $item->id]) }}"
                                     class="car-category text-center">
                                     <div class="icon">
-                                        <img src="{{ asset('uploads/' . $item->icon) }}" alt>
+                                        <img src="{{ asset('uploads/' . $item->icon) }}" alt
+                                            style="height: 100px; widht: 100%;">
                                     </div>
                                     <div class="content">
                                         <h6>{{ $item->name }}</h6>
-                                        <span>(5463)</span>
+                                        <span>({{ $productCounts[$item->id] ?? 0 }})</span>
                                     </div>
                                 </a>
                             </div>
@@ -1117,7 +1118,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-15">
+                                {{-- <div class="col-md-6 mb-15">
                                     <div class="form-inner">
                                         <label>Car Conditions*</label>
                                         <select class="js-example-basic-single" name="state">
@@ -1125,8 +1126,8 @@
                                             <option value="2">Old Car</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="col-md-6 mb-15">
+                                </div> --}}
+                                {{-- <div class="col-md-6 mb-15">
                                     <div class="form-inner">
                                         <label>Model*</label>
                                         <select class="js-example-basic-single" name="state">
@@ -1134,8 +1135,8 @@
                                             <option value="2">RS e tron GTzsd</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="col-lg-12 mb-30">
+                                </div> --}}
+                                {{-- <div class="col-lg-12 mb-30">
                                     <div class="form-inner">
                                         <label>Select Budget <span>(Optiona)</span></label>
                                         <select class="js-example-basic-single" name="state">
@@ -1146,10 +1147,11 @@
                                             <option value="5">Ex: 8 - 15 lakh</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-lg-12 mb-10">
                                     <div class="form-inner last">
-                                        <button class="primary-btn1" type="submit">SEARCH 12463 VEHICLES</button>
+                                        <button class="primary-btn1" type="button">SEARCH {{ $totalProducts }}
+                                            VEHICLES</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
@@ -1183,43 +1185,48 @@
                         <h2>Latest Car</h2>
                         <p>To get the most accurate and up-to-date information.</p>
                     </div>
-                    <div class="explore-more-btn">
+                    {{-- <div class="explore-more-btn">
                         <a href="car-listing-left-sidebar.html">Explore More <i class="bi bi-arrow-right"></i></a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 mb-40 wow fadeInUp" data-wow-delay="300ms">
                     <div class="swiper home4-latest-car-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                            @foreach ($latestProducts as $item)
+                                <div class="swiper-slide">
+                                    <div class="product-card4">
+                                        <div class="product-img">
+                                            <a href="" class="fav">
+                                                <svg width="14" height="13" viewBox="0 0 14 14"
                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                    <path
+                                                        d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                    </path>
                                                 </svg>
+                                            </a>
+                                            <div class="slider-btn-group">
+                                                <div class="product-stand-next swiper-arrow">
+                                                    <svg width="8" height="13" viewBox="0 0 8 13"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="product-stand-prev swiper-arrow">
+                                                    <svg width="8" height="13" viewBox="0 0 8 13"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                    </svg>
+                                                </div>
                                             </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
+                                            <div class="swiper product-img-slider">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="{{ asset('uploads/' . $item->featured_image) }}"
+                                                            style="width: 100%; height: 200px;" alt="image">
+                                                    </div>
+                                                    {{-- <div class="swiper-slide">
                                                     <img src="assets/img/home4/letest-car1.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
@@ -1227,260 +1234,42 @@
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div> --}}
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="location">
-                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
-                                        <ul class="features">
-                                            <li>
-                                                <img src="assets/img/home4/icon/miles.svg" alt>
-                                                2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
-                                                <span>Great Price</span>
-                                                <h6>$4,564.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="location">
-                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">Hyundai Sonata-2022</a></h6>
-                                        <ul class="features">
-                                            <li>
-                                                <img src="assets/img/home4/icon/miles.svg" alt>
-                                                2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
-                                                <span>Great Price</span>
-                                                <h6>$4,564.00</h6>
+                                        <div class="product-content">
+                                            {{-- <div class="location">
+                                                <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
+                                            </div> --}}
+                                            <h6><a href="{{ route('car_details', ['id' => $item->id]) }}">{{ $item->name }}</a></h6>
+                                            <ul class="features">
+                                                {{-- <li>
+                                                    <img src="assets/img/home4/icon/miles.svg" alt>
+                                                    2500 miles
+                                                </li> --}}
+                                                <li>
+                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    {{ $item->fuel_type }}
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    {{ $item->vehicle_class }}
+                                                </li>
+                                            </ul>
+                                            <div class="button-and-price">
+                                                <a class="primary-btn3" href="{{ route('car_details', ['id' => $item->id]) }}">View
+                                                    Details</a>
+                                                {{-- <div class="price-area">
+                                                    <span>Great Price</span>
+                                                    <h6>$4,564.00</h6>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="location">
-                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
-                                        <ul class="features">
-                                            <li>
-                                                <img src="assets/img/home4/icon/miles.svg" alt>
-                                                2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
-                                                <span>Great Price</span>
-                                                <h6>$4,564.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="location">
-                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
-                                        <ul class="features">
-                                            <li>
-                                                <img src="assets/img/home4/icon/miles.svg" alt>
-                                                2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
-                                                <span>Great Price</span>
-                                                <h6>$4,564.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
+                            @endforeach
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card4">
                                     <div class="product-img">
                                         <a href="#" class="fav">
@@ -1526,7 +1315,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Hyundai Sonata-2022</a></h6>
+                                        <h6><a href="">Hyundai Sonata-2022</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -1542,7 +1331,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -1551,8 +1340,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card4">
                                     <div class="product-img">
                                         <a href="#" class="fav">
@@ -1598,7 +1387,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -1614,7 +1403,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -1623,7 +1412,223 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
+                                <div class="product-card4">
+                                    <div class="product-img">
+                                        <a href="#" class="fav">
+                                            <svg width="14" height="13" viewBox="0 0 14 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                        <div class="slider-btn-group">
+                                            <div class="product-stand-next swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="product-stand-prev swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="swiper product-img-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="location">
+                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
+                                        </div>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
+                                        <ul class="features">
+                                            <li>
+                                                <img src="assets/img/home4/icon/miles.svg" alt>
+                                                2500 miles
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                Petrol + Gas
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/electric.svg" alt>
+                                                Electric
+                                            </li>
+                                        </ul>
+                                        <div class="button-and-price">
+                                            <a class="primary-btn3" href="">View
+                                                Details</a>
+                                            <div class="price-area">
+                                                <span>Great Price</span>
+                                                <h6>$4,564.00</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
+                                <div class="product-card4">
+                                    <div class="product-img">
+                                        <a href="#" class="fav">
+                                            <svg width="14" height="13" viewBox="0 0 14 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                        <div class="slider-btn-group">
+                                            <div class="product-stand-next swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="product-stand-prev swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="swiper product-img-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="location">
+                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
+                                        </div>
+                                        <h6><a href="">Hyundai Sonata-2022</a></h6>
+                                        <ul class="features">
+                                            <li>
+                                                <img src="assets/img/home4/icon/miles.svg" alt>
+                                                2500 miles
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                Petrol + Gas
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/electric.svg" alt>
+                                                Electric
+                                            </li>
+                                        </ul>
+                                        <div class="button-and-price">
+                                            <a class="primary-btn3" href="">View
+                                                Details</a>
+                                            <div class="price-area">
+                                                <span>Great Price</span>
+                                                <h6>$4,564.00</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
+                                <div class="product-card4">
+                                    <div class="product-img">
+                                        <a href="#" class="fav">
+                                            <svg width="14" height="13" viewBox="0 0 14 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                        <div class="slider-btn-group">
+                                            <div class="product-stand-next swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="product-stand-prev swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="swiper product-img-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="location">
+                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
+                                        </div>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
+                                        <ul class="features">
+                                            <li>
+                                                <img src="assets/img/home4/icon/miles.svg" alt>
+                                                2500 miles
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                Petrol + Gas
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/electric.svg" alt>
+                                                Electric
+                                            </li>
+                                        </ul>
+                                        <div class="button-and-price">
+                                            <a class="primary-btn3" href="">View
+                                                Details</a>
+                                            <div class="price-area">
+                                                <span>Great Price</span>
+                                                <h6>$4,564.00</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -1647,304 +1652,93 @@
                         <h2>Featured Cars</h2>
                         <p>To get the most accurate and up-to-date information.</p>
                     </div>
-                    <div class="explore-more-btn">
-                        <a href="{{ route('car_details') }}">Explore More <i class="bi bi-arrow-right"></i></a>
-                    </div>
+                    {{-- <div class="explore-more-btn">
+                        <a href="">Explore More <i class="bi bi-arrow-right"></i></a>
+                    </div> --}}
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 mb-40 wow fadeInUp" data-wow-delay="300ms">
                     <div class="swiper home4-featured-car-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
+                            @foreach ($featuredProducts as $item)
+                                @if ($item->is_featured == '1')
+                                    <div class="swiper-slide">
+                                        <div class="product-card4">
+                                            <div class="product-img">
+                                                <a href="#" class="fav">
+                                                    <svg width="14" height="13" viewBox="0 0 14 14"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                                <div class="slider-btn-group">
+                                                    <div class="product-stand-next swiper-arrow">
+                                                        <svg width="8" height="13" viewBox="0 0 8 13"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product-stand-prev swiper-arrow">
+                                                        <svg width="8" height="13" viewBox="0 0 8 13"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper product-img-slider">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img src="{{ asset('uploads/' . $item->featured_image) }}"
+                                                            style="width: 100%; height: 200px;" alt="image">
+                                                        </div>
+                                                        {{-- <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div> --}}
+                                                        {{-- <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div> --}}
+                                                        {{-- <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div> --}}
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="location">
+                                            <div class="product-content">
+                                                {{-- <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
-                                        <ul class="features">
-                                            <li>
+                                        </div> --}}
+                                                <h6><a href="{{ route('car_details', ['id' => $item->id]) }}">{{ $item->name }}</a></h6>
+                                                <ul class="features">
+                                                    {{-- <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
                                                 2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
+                                            </li> --}}
+                                                    <li>
+                                                        <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                        {{ $item->fuel_type }}
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/img/home4/icon/electric.svg" alt>
+                                                        {{ $item->vehicle_class }}
+                                                    </li>
+                                                </ul>
+                                                <div class="button-and-price">
+                                                    <a class="primary-btn3" href="{{ route('car_details', ['id' => $item->id]) }}">View
+                                                        Details</a>
+                                                    {{-- <div class="price-area">
                                                 <span>Great Price</span>
                                                 <h6>$4,564.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                            </div> --}}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-content">
-                                        <div class="location">
-                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">Hyundai Sonata-2022</a></h6>
-                                        <ul class="features">
-                                            <li>
-                                                <img src="assets/img/home4/icon/miles.svg" alt>
-                                                2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
-                                                <span>Great Price</span>
-                                                <h6>$4,564.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="location">
-                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">BMW 3 Series-2023</a></h6>
-                                        <ul class="features">
-                                            <li>
-                                                <img src="assets/img/home4/icon/miles.svg" alt>
-                                                2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
-                                                <span>Great Price</span>
-                                                <h6>$4,564.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="product-card4">
-                                    <div class="product-img">
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="location">
-                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
-                                        </div>
-                                        <h6><a href="{{ route('car_details') }}">Jeep Wrangler-2023</a></h6>
-                                        <ul class="features">
-                                            <li>
-                                                <img src="assets/img/home4/icon/miles.svg" alt>
-                                                2500 miles
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/fuel.svg" alt>
-                                                Petrol + Gas
-                                            </li>
-                                            <li>
-                                                <img src="assets/img/home4/icon/electric.svg" alt>
-                                                Electric
-                                            </li>
-                                        </ul>
-                                        <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
-                                                Details</a>
-                                            <div class="price-area">
-                                                <span>Great Price</span>
-                                                <h6>$4,564.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
+                                @endif
+                            @endforeach
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card4">
                                     <div class="product-img">
                                         <a href="#" class="fav">
@@ -1990,7 +1784,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">BMW 3 Series-2023</a></h6>
+                                        <h6><a href="">Hyundai Sonata-2022</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2006,7 +1800,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2015,8 +1809,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card4">
                                     <div class="product-img">
                                         <a href="#" class="fav">
@@ -2062,7 +1856,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Kia Telluride-2023</a></h6>
+                                        <h6><a href="">BMW 3 Series-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2078,7 +1872,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2087,7 +1881,223 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
+                                <div class="product-card4">
+                                    <div class="product-img">
+                                        <a href="#" class="fav">
+                                            <svg width="14" height="13" viewBox="0 0 14 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                        <div class="slider-btn-group">
+                                            <div class="product-stand-next swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="product-stand-prev swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="swiper product-img-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car1.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="location">
+                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
+                                        </div>
+                                        <h6><a href="">Jeep Wrangler-2023</a></h6>
+                                        <ul class="features">
+                                            <li>
+                                                <img src="assets/img/home4/icon/miles.svg" alt>
+                                                2500 miles
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                Petrol + Gas
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/electric.svg" alt>
+                                                Electric
+                                            </li>
+                                        </ul>
+                                        <div class="button-and-price">
+                                            <a class="primary-btn3" href="">View
+                                                Details</a>
+                                            <div class="price-area">
+                                                <span>Great Price</span>
+                                                <h6>$4,564.00</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
+                                <div class="product-card4">
+                                    <div class="product-img">
+                                        <a href="#" class="fav">
+                                            <svg width="14" height="13" viewBox="0 0 14 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                        <div class="slider-btn-group">
+                                            <div class="product-stand-next swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="product-stand-prev swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="swiper product-img-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car3.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="location">
+                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
+                                        </div>
+                                        <h6><a href="">BMW 3 Series-2023</a></h6>
+                                        <ul class="features">
+                                            <li>
+                                                <img src="assets/img/home4/icon/miles.svg" alt>
+                                                2500 miles
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                Petrol + Gas
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/electric.svg" alt>
+                                                Electric
+                                            </li>
+                                        </ul>
+                                        <div class="button-and-price">
+                                            <a class="primary-btn3" href="">View
+                                                Details</a>
+                                            <div class="price-area">
+                                                <span>Great Price</span>
+                                                <h6>$4,564.00</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
+                                <div class="product-card4">
+                                    <div class="product-img">
+                                        <a href="#" class="fav">
+                                            <svg width="14" height="13" viewBox="0 0 14 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                        <div class="slider-btn-group">
+                                            <div class="product-stand-next swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="product-stand-prev swiper-arrow">
+                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="swiper product-img-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/img/home4/letest-car2.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="location">
+                                            <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
+                                        </div>
+                                        <h6><a href="">Kia Telluride-2023</a></h6>
+                                        <ul class="features">
+                                            <li>
+                                                <img src="assets/img/home4/icon/miles.svg" alt>
+                                                2500 miles
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                Petrol + Gas
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/home4/icon/electric.svg" alt>
+                                                Electric
+                                            </li>
+                                        </ul>
+                                        <div class="button-and-price">
+                                            <a class="primary-btn3" href="">View
+                                                Details</a>
+                                            <div class="price-area">
+                                                <span>Great Price</span>
+                                                <h6>$4,564.00</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -2290,7 +2300,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2306,7 +2316,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2362,7 +2372,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2378,7 +2388,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2434,7 +2444,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2450,7 +2460,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2506,7 +2516,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2522,7 +2532,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2578,7 +2588,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2594,7 +2604,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2650,7 +2660,7 @@
                                         <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div>
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <ul class="features">
                                             <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -2666,7 +2676,7 @@
                                             </li>
                                         </ul>
                                         <div class="button-and-price">
-                                            <a class="primary-btn3" href="{{ route('car_details') }}">View
+                                            <a class="primary-btn3" href="">View
                                                 Details</a>
                                             <div class="price-area">
                                                 <span>Great Price</span>
@@ -2800,7 +2810,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        {{-- <div class="container">
             <div class="row mb-50 wow fadeInUp" data-wow-delay="200ms">
                 <div class="col-lg-12 d-flex align-items-end justify-content-between gap-3 flex-wrap">
                     <div class="section-title-2">
@@ -2808,7 +2818,7 @@
                         <p>To get the most accurate and up-to-date information.</p>
                     </div>
                     <div class="explore-more-btn">
-                        <a href="{{ route('car_details') }}">Explore More <i class="bi bi-arrow-right"></i></a>
+                        <a href="">Explore More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -2859,7 +2869,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content">
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <div class="exp-date">
                                             <p>Expected Launched <span>02 April, 2023</span></p>
                                         </div>
@@ -2937,7 +2947,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content">
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <div class="exp-date">
                                             <p>Expected Launched <span>02 April, 2023</span></p>
                                         </div>
@@ -3015,7 +3025,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content">
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <div class="exp-date">
                                             <p>Expected Launched <span>02 April, 2023</span></p>
                                         </div>
@@ -3093,7 +3103,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content">
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <div class="exp-date">
                                             <p>Expected Launched <span>02 April, 2023</span></p>
                                         </div>
@@ -3171,7 +3181,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content">
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <div class="exp-date">
                                             <p>Expected Launched <span>02 April, 2023</span></p>
                                         </div>
@@ -3249,7 +3259,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content">
-                                        <h6><a href="{{ route('car_details') }}">Tesla Model S-2023</a></h6>
+                                        <h6><a href="">Tesla Model S-2023</a></h6>
                                         <div class="exp-date">
                                             <p>Expected Launched <span>02 April, 2023</span></p>
                                         </div>
@@ -3295,7 +3305,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
 

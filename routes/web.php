@@ -98,7 +98,7 @@ Route::middleware(['guest:web'])->group(function () {
     Route::get('brand-category', [HomeController::class, 'brandCategory'])->name('b_category');
     Route::get('single-brand-category/{id}', [HomeController::class, 'singeleBrandCategory'])->name('s_category');
     Route::get('car-listing-no-sidebar', [HomeController::class, 'carListingNoSidebar'])->name('car_list_no_sidebar');
-    Route::get('car-detail', [HomeController::class, 'carDetails'])->name('car_details');
+    Route::get('car-detail/{id}', [HomeController::class, 'carDetails'])->name('car_details');
     Route::get('faq', [HomeController::class, 'faq'])->name('faq');
     Route::get('error', [HomeController::class, 'error'])->name('page_error');
     Route::get('customer-review', [HomeController::class, 'customerReview'])->name('customer_review');
@@ -166,7 +166,7 @@ Route::any('cashfree/payments/success', [CashfreePaymentController::class, 'succ
 */
 
 
-Route::get('generate-pdf', [InvoiceController::class, 'generatePdf']);
+Route::get('generate-pdf/{id}', [InvoiceController::class, 'generatePdf'])->name('generatePdf');
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('admin/login', [AuthController::class, 'index'])->name('login');

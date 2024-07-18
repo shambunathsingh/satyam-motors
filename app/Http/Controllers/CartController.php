@@ -195,7 +195,7 @@ class CartController extends Controller
                 "customer_phone" => $phone,
             ],
             "order_meta" => [
-                "return_url" => 'https://luxxport.com/cashfree/payments/success/?order_id={order_id}&order_token={order_token}'
+                "return_url" => 'https://carzex.online/cashfree/payments/success/?order_id={order_id}&order_token={order_token}'
             ]
         ]);
 

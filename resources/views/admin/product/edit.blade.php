@@ -286,6 +286,17 @@
                                 </div>
                                 <div class="widget meta-boxes">
                                     <div class="widget-title">
+                                        <h4><label for="is_featured" class="control-label">Is
+                                                featured?</label></h4>
+                                    </div>
+                                    <div class="m-1 form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" value="1"
+                                            {{ $product->is_featured == '1' ? 'checked' : '' }} id="flexSwitchCheckChecked"
+                                            name="is_featured">
+                                    </div>
+                                </div>
+                                <div class="widget meta-boxes">
+                                    <div class="widget-title">
                                         <h4><label for="categories[]" class="control-label">Vehicle Category</label></h4>
                                     </div>
                                     <div class="widget-body">

@@ -179,7 +179,7 @@
                             <li><a href="{{ route('car_list_no_sidebar') }}">Car Listing No Sidebar</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ route('car_details') }}">Car Details </a></li>
+                    <li><a href="">Car Details </a></li>
                     <a>Blog</a>
                     <i class="d-lg-flex d-none bi bi-chevron-right dropdown-icon"></i>
                     <i class="d-lg-none d-flex bi bi-plus dropdown-icon"></i>

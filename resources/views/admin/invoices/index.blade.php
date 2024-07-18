@@ -11,8 +11,7 @@
                     <li class="breadcrumb-item active"><span style="color: black; margin-right: 3px;"><i
                                 class="fa fa-home"></i></span>Dashboard</li>
 
-                    <li class="breadcrumb-item ">Locations</li>
-                    <li class="breadcrumb-item ">Import location</li>
+                    <li class="breadcrumb-item ">Invoices</li>
 
 
                 </ol>
@@ -36,10 +35,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-            
-  <div id="success-message" class="alert alert-success" role="alert" style="display: none;">
-    Successfully generated invoices!
-</div>
+
+                <div id="success-message" class="alert alert-success" role="alert" style="display: none;">
+                    Successfully generated invoices!
+                </div>
                 <div class="portlet light bordered portlet-no-padding">
 
 
@@ -86,14 +85,15 @@
                                                 </div>
                                             </div>
                                             <div class="button-grp d-flex">
-                                                <button class="btn btn-secondary action-item mx-3 btn-info" tabindex="0"
-                                                aria-controls="botble-ecommerce-tables-invoice-table" type="button" id="generate-invoices-btn">
-                                                <span>
-                                                    <span data-action="generate-invoices" data-href="">
-                                                        <i class="fas fa-file-export"></i> Generate Invoices
+                                                {{-- <button class="btn btn-secondary action-item mx-3 btn-info" tabindex="0"
+                                                    aria-controls="botble-ecommerce-tables-invoice-table" type="button"
+                                                    id="generate-invoices-btn">
+                                                    <span>
+                                                        <span data-action="generate-invoices" data-href="">
+                                                            <i class="fas fa-file-export"></i> Generate Invoices
+                                                        </span>
                                                     </span>
-                                                </span>
-                                            </button>
+                                                </button> --}}
                                                 <a class="relode d-flex align-items-center" style="cursor: pointer;"
                                                     onclick="location.reload();">
                                                     <i class="fa-solid fa-rotate-right btn-icon"></i>
@@ -120,36 +120,35 @@
                                                 colspan="1" style="width: 10px;" aria-label=""><input
                                                     class="table-check-all" data-set=".dataTable .checkboxes" name=""
                                                     type="checkbox"></th>
-                                            <th title="ID" width="20px" class="column-key-id sorting_desc"
+                                            {{-- <th title="ID" width="20px" class="column-key-id sorting_desc"
                                                 tabindex="0" aria-controls="botble-page-tables-page-table" rowspan="1"
                                                 colspan="1" style="width: 20px;" aria-sort="descending"
                                                 aria-label="IDorderby asc">ID
-                                            </th>
+                                            </th> --}}
                                             <th title="Name" class="text-start column-key-name sorting" tabindex="0"
                                                 aria-controls="botble-page-tables-page-table" rowspan="1" colspan="1"
                                                 aria-label="Nameorderby asc">
-                                                CUSTOMER
+                                                NAME
                                             </th>
-                                            <th title="Template"
+                                            {{-- <th title="Template"
                                                 class="text-start text-primary column-key-template sorting" tabindex="0"
                                                 aria-controls="botble-page-tables-page-table" rowspan="1"
                                                 colspan="1" aria-label="Templateorderby asc" style="">CODE
-                                            </th>
-                                            <th title="Template" class="text-start column-key-template sorting"
+                                            </th> --}}
+                                            {{-- <th title="Template" class="text-start column-key-template sorting"
                                                 tabindex="0" aria-controls="botble-page-tables-page-table"
                                                 rowspan="1" colspan="1" aria-label="Templateorderby asc"
                                                 style="">AMOUNT
-                                            </th>
+                                            </th> --}}
 
                                             <th title="Template" class="text-start column-key-template sorting"
-                                                tabindex="0" aria-controls="botble-page-tables-page-table"
-                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">CREATED AT
+                                                tabindex="0" aria-controls="botble-page-tables-page-table" rowspan="1"
+                                                colspan="1" aria-label="Templateorderby asc" style="">CREATED AT
                                             </th>
                                             <th title="Created At" width="100px"
                                                 class="text-center column-key-created_at sorting" tabindex="0"
-                                                aria-controls="botble-page-tables-page-table" rowspan="1"
-                                                colspan="1" style="width: 100px;" aria-label="Created Atorderby asc">
+                                                aria-controls="botble-page-tables-page-table" rowspan="1" colspan="1"
+                                                style="width: 100px;" aria-label="Created Atorderby asc">
                                                 STATUS
                                             </th>
 
@@ -164,9 +163,8 @@
                                     </thead>
                                     <tbody>
 
-                                        @foreach ($orders as $order)
+                                        @foreach ($products as $order)
                                             <tr role="row" class="odd">
-                                                <!-- Checkbox column -->
                                                 <td class="text-start no-sort dtr-control">
                                                     <div class="text-start">
                                                         <div class="checkbox checkbox-primary table-checkbox">
@@ -175,47 +173,30 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <!-- Order ID column -->
-                                                <td class="column-key-id sorting_1">{{ $order->id }}</td>
-                                                <!-- Customer name column -->
                                                 <td class="text-start column-key-template">
-                                                    {{ $order->first_name }} {{ $order->last_name }}
+                                                    {{ $order->name }}
                                                 </td>
-                                                <td class="text-start text-primary column-key-template">
-                                                    INV-{{ $order->id }}
-                                                </td>
-                                                <!-- Total Amount column -->
-                                                <td class="text-start column-key-template">
-                                                    ₹ {{ number_format( $order->totalAmount,2 )}}
-                                                </td>
-                                                <!--Created At column -->
                                                 <td class="text-start column-key-created_at">
                                                     {{ $order->created_at->format('d-m-Y') }}
                                                 </td>
                                                 <td class="text-center column-key-payment_status">
-                                                    @if ($order->is_paid == 1)
-                                                        <span class="label-success status-label">Completed</span>
-                                                    @else
-                                                        <span class="label-warning bg-warning status-label">Pending</span>
-                                                    @endif
+                                                    <span
+                                                        class="label-primary bg-primary status-label">{{ $order->status }}</span>
                                                 </td>
-                                               
+
                                                 <td class="text-end column-key-template">
                                                     <div class="table-actions">
-                                                        <a href="{{ route('admin.ecommerce.edit_invoices', ['id' => $order->id]) }}"
+                                                        <a href=""
+                                                            class="btn btn-icon btn-sm btn-success"
+                                                            style="background-color: green;" data-bs-toggle="tooltip"
+                                                            data-bs-original-title="Whatsapp">
+                                                            <i class="fa fa-message"></i>
+                                                        </a>
+                                                        <a href="{{ route('generatePdf', ['id' => $order->id]) }}"
                                                             class="btn btn-icon btn-sm btn-primary"
-                                                            data-bs-toggle="tooltip" data-bs-original-title="Edit">
-                                                            <i class="fa fa-edit"></i>
+                                                            data-bs-toggle="tooltip" data-bs-original-title="PDF">
+                                                            <i class="fa fa-file"></i>
                                                         </a>
-
-                                                        <a href="#"
-                                                            class="btn btn-icon btn-sm btn-danger bg-danger deleteDialog"
-                                                            data-bs-toggle="tooltip" data-section="" role="button"
-                                                            data-bs-original-title="Delete"
-                                                            onclick="return confirm('Are you sure you want to delete this order?');">
-                                                            <i class="fa fa-trash btn-danger"></i>
-                                                        </a>
-
                                                     </div>
                                                 </td>
                                             </tr>
@@ -319,7 +300,7 @@
 
 
     </div>
-      
+
 
 @endsection
 
@@ -330,13 +311,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $('#generate-invoices-btn').click(function () {
+        $(document).ready(function() {
+            $('#generate-invoices-btn').click(function() {
                 // Show success message
                 $('#success-message').show();
 
                 // Hide success message after 10 seconds
-                setTimeout(function () {
+                setTimeout(function() {
                     $('#success-message').fadeOut('slow');
                 }, 1000); // 10000 milliseconds = 10 seconds
             });

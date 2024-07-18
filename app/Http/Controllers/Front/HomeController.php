@@ -10,12 +10,14 @@ use App\Models\Page\Page;
 use App\Models\Page\PageInfo;
 use App\Models\Post\Post;
 use App\Models\PostCategory\PostCategory;
+use App\Models\Product\Product;
 use App\Models\ProductFeature\ProductFeatures;
 use App\Models\Video\Video;
 use App\Models\WishList\WishList;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -28,12 +30,27 @@ class HomeController extends Controller
 
     public function index()
     {
-
-        $brand = Brands::all();
+        $brands = Brands::all();
         $categories = Category::all();
+        $totalProducts = Product::count();
+        $featuredProducts = Product::all();
 
-        return view('front.homepage.index', ['brand' => $brand, 'categories' => $categories]);
+        $latestProducts = Product::orderBy('created_at', 'desc')->get();
+
+        $productCounts = Product::select('brand_id', DB::raw('count(*) as total'))
+            ->groupBy('brand_id')
+            ->pluck('total', 'brand_id');
+
+        return view('front.homepage.index', [
+            'brands' => $brands,
+            'categories' => $categories,
+            'productCounts' => $productCounts,
+            'totalProducts' => $totalProducts,
+            'latestProducts' => $latestProducts,
+            'featuredProducts' => $featuredProducts,
+        ]);
     }
+
 
     public function about()
     {
@@ -44,20 +61,27 @@ class HomeController extends Controller
     {
         $title = "All Brands";
 
-        $categories = Category::all();
+        // Eager load the products for each brand
+        $allbrands = Brands::with('products')->get();
+
+        // dd($allbrands);
+        // exit;
+
+        return view('front.homepage.brand_category', ['title' => $title, 'brands' => $allbrands]);
+    }
+
+
+    public function singeleBrandCategory($id)
+    {
+        $brand = Brands::findOrFail($id);
+        $title = "Brands | " . $brand->name;
+
+        $allProducts = Product::all();
 
         // dd($categories);
         // exit;
 
-        return view('front.homepage.brand_category', ['title' => $title, 'categories' => $categories]);
-    }
-
-    public function singeleBrandCategory($id)
-    {
-        $categories = Category::findOrFail($id);
-        $title = "Brands | " . $categories->name;
-
-        return view('front.homepage.single_brand_category', ['title' => $title,]);
+        return view('front.homepage.single_brand_category', ['title' => $title, 'brand' => $brand, 'products' => $allProducts]);
     }
 
     public function carListingNoSidebar()
@@ -65,9 +89,17 @@ class HomeController extends Controller
         return view('front.homepage.car_listing_no_sidebar');
     }
 
-    public function carDetails()
+    public function carDetails($id)
     {
-        return view('front.homepage.car_details');
+        $title = "Satyam motors";
+
+        $allProducts = Product::all();
+        $product = Product::findOrFail($id);
+
+        // dd($product);
+        // exit;
+
+        return view('front.homepage.car_details', ['title' => $title, 'product' => $product, 'allproduct' => $allProducts]);
     }
 
     public function faq()
@@ -249,9 +281,9 @@ class HomeController extends Controller
 
     public function contact()
     {
+        $title = "Contact";
 
-
-        return view('front.contact.index',);
+        return view('front.contact.index', ['title' => $title]);
     }
 
     public function team()

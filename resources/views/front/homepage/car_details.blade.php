@@ -6,7 +6,7 @@
             <div class="container-fluid">
                 <ul class="breadcrumb-list">
                     <li><a href="index.html">Home</a></li>
-                    <li>Lamborghini Aventador</li>
+                    <li>{{ $product->name }}</li>
                 </ul>
                 <div class="banner-main-content-wrap">
                     <div class="row">
@@ -17,7 +17,7 @@
                                         <div class="price">
                                             <h3>$34,637.00</h3>
                                         </div>
-                                        <div class="change-model-btn">
+                                        {{-- <div class="change-model-btn">
                                             <a href="#">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
                                                     viewBox="0 0 10 10">
@@ -27,10 +27,10 @@
                                                         d="M0 8.96444C0 9.2388 0.10789 9.50193 0.299934 9.69593C0.491979 9.88993 0.752447 9.99892 1.02404 9.99892H8.53366C8.80525 9.99892 9.06572 9.88993 9.25776 9.69593C9.44981 9.50193 9.55769 9.2388 9.55769 8.96444V4.82651C9.55769 4.73505 9.52173 4.64735 9.45772 4.58268C9.3937 4.51801 9.30688 4.48168 9.21635 4.48168C9.12582 4.48168 9.03899 4.51801 8.97498 4.58268C8.91096 4.64735 8.875 4.73505 8.875 4.82651V8.96444C8.875 9.05589 8.83904 9.1436 8.77502 9.20827C8.71101 9.27294 8.62419 9.30927 8.53366 9.30927H1.02404C0.933508 9.30927 0.846685 9.27294 0.782671 9.20827C0.718656 9.1436 0.682692 9.05589 0.682692 8.96444V1.37823C0.682692 1.28678 0.718656 1.19907 0.782671 1.1344C0.846685 1.06974 0.933508 1.03341 1.02404 1.03341H5.46154C5.55207 1.03341 5.63889 0.997075 5.70291 0.932408C5.76692 0.86774 5.80289 0.780032 5.80289 0.688578C5.80289 0.597124 5.76692 0.509415 5.70291 0.444748C5.63889 0.38008 5.55207 0.34375 5.46154 0.34375H1.02404C0.752447 0.34375 0.491979 0.45274 0.299934 0.646743C0.10789 0.840746 0 1.10387 0 1.37823V8.96444Z" />
                                                 </svg> Change Model
                                             </a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <ul class="share-and-fav">
-                                        <li>
+                                        {{-- <li>
                                             <div class="share-icon">
                                                 <svg width="12" height="12" viewBox="0 0 14 14"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@
                                                     </path>
                                                 </svg>
                                             </div>
-                                        </li>
+                                        </li> --}}
                                         <li>
                                             <div class="share-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
@@ -53,16 +53,18 @@
                                                 </li>
                                                 <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a>
                                                 </li>
-                                                <li><a href="https://www.pinterest.com/"><i
-                                                            class="bx bxl-pinterest-alt"></i></a></li>
+                                                <li>
+                                                    <a href="https://www.pinterest.com/"><i
+                                                            class="bx bxl-pinterest-alt"></i></a>
+                                                </li>
                                                 <li><a href="https://www.instagram.com/"><i
                                                             class="bx bxl-instagram"></i></a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
-                                <h1>Lamborghini Aventador</h1>
-                                <div class="location-and-notification">
+                                <h1>{{ $product->name }}</h1>
+                                {{-- <div class="location-and-notification">
                                     <ul>
                                         <li><i class="bi bi-geo-alt"></i> Sydne City, Australia</li>
                                         <li class="alart">
@@ -93,12 +95,13 @@
                                         </svg>
                                         Find Your Car
                                     </a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-5 d-lg-flex d-none align-items-center justify-content-end">
                             <div class="banner-img">
-                                <img src="assets/img/inner-page/car-dt-banner-img.png" alt>
+                                {{-- <img src="/assets/img/inner-page/car-dt-banner-img.png" alt> --}}
+                                <img src="{{ asset('uploads/' . $product->featured_image) }}" alt>
                             </div>
                         </div>
                     </div>
@@ -130,17 +133,17 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#performance">Engine & Performance</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="#car-color">Color Car</a>
-                                </li>
-                                <li class="nav-item">
+                                </li> --}}
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="#car-milage">Mileage</a>
-                                </li>
-                                <li class="nav-item">
+                                </li> --}}
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="#faqs">FAQ’s</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#qus-ans">Question & Answer</a>
+                                    <a class="nav-link" href="#qus-ans">Documentation</a>
                                 </li>
                             </ul>
                         </nav>
@@ -149,8 +152,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
-                        class="scrollspy-example" tabindex="0">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+                        tabindex="0">
                         <div class="single-item mb-50" id="car-img">
                             <div class="car-img-area">
                                 <div class="tab-content mb-30" id="myTab5Content">
@@ -158,7 +161,7 @@
                                         aria-labelledby="exterior-tab">
                                         <div class="product-img">
                                             <div class="number-of-img">
-                                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                                 10
                                             </div>
                                             <a href="#" class="fav">
@@ -186,17 +189,17 @@
                                             <div class="swiper product-img-slider">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
-                                                        <img src="assets/img/inner-page/product-img-02.png"
-                                                            alt="image">
+                                                        {{-- <img src="/assets/img/inner-page/product-img-02.png" alt="image"> --}}
+                                                        <img src="{{ asset('uploads/' . $product->featured_image) }}" alt="image">
                                                     </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="assets/img/inner-page/product-img-03.png"
+                                                    {{-- <div class="swiper-slide">
+                                                        <img src="/assets/img/inner-page/product-img-03.png"
                                                             alt="image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="assets/img/inner-page/product-img-04.png"
+                                                    </div> --}}
+                                                    {{-- <div class="swiper-slide">
+                                                        <img src="/assets/img/inner-page/product-img-04.png"
                                                             alt="image">
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -205,7 +208,7 @@
                                         aria-labelledby="interior-tab">
                                         <div class="product-img">
                                             <div class="number-of-img">
-                                                <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                                 10
                                             </div>
                                             <a href="#" class="fav">
@@ -233,14 +236,16 @@
                                             <div class="swiper product-img-slider">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
-                                                        <img src="assets/img/inner-page/interior-01.png" alt="image">
+                                                        {{-- <img src="/assets/img/inner-page/interior-01.png" alt="image"> --}}
+                                                        <img src="{{ asset('uploads/' . $product->featured_image) }}"
+                                                            alt="image">
                                                     </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="assets/img/inner-page/interior-02.png" alt="image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="assets/img/inner-page/interior-03.png" alt="image">
-                                                    </div>
+                                                    {{-- <div class="swiper-slide">
+                                                        <img src="/assets/img/inner-page/interior-02.png" alt="image">
+                                                    </div> --}}
+                                                    {{-- <div class="swiper-slide">
+                                                        <img src="/assets/img/inner-page/interior-03.png" alt="image">
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -249,11 +254,11 @@
                                         aria-labelledby="video-clip-tab">
                                         <div class="video-area">
                                             <video autoplay loop="loop" muted preload="auto" controls>
-                                                <source src="assets/video/home4/car-video.mp4" type="video/mp4">
+                                                <source src="/assets/video/home4/car-video.mp4" type="video/mp4">
                                             </video>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="color-clip" role="tabpanel"
+                                    {{-- <div class="tab-pane fade" id="color-clip" role="tabpanel"
                                         aria-labelledby="color-clip-tab">
                                         <div class="product-img2">
                                             <div class="slider-btn-group">
@@ -275,7 +280,7 @@
                                                     <div class="swiper-slide">
                                                         <div class="car-color-wrap">
                                                             <div class="car-img">
-                                                                <img src="assets/img/inner-page/color-car-05.png" alt>
+                                                                <img src="/assets/img/inner-page/color-car-05.png" alt>
                                                             </div>
                                                             <div class="content">
                                                                 <h5>Lamborghini Murciélago (Black)</h5>
@@ -285,7 +290,7 @@
                                                     <div class="swiper-slide">
                                                         <div class="car-color-wrap">
                                                             <div class="car-img">
-                                                                <img src="assets/img/inner-page/color-car-06.png" alt>
+                                                                <img src="/assets/img/inner-page/color-car-06.png" alt>
                                                             </div>
                                                             <div class="content">
                                                                 <h5>Lamborghini Murciélago (Blue)</h5>
@@ -295,7 +300,7 @@
                                                     <div class="swiper-slide">
                                                         <div class="car-color-wrap">
                                                             <div class="car-img">
-                                                                <img src="assets/img/inner-page/color-car-07.png" alt>
+                                                                <img src="/assets/img/inner-page/color-car-07.png" alt>
                                                             </div>
                                                             <div class="content">
                                                                 <h5>Lamborghini Murciélago (Pink)</h5>
@@ -305,7 +310,7 @@
                                                     <div class="swiper-slide">
                                                         <div class="car-color-wrap">
                                                             <div class="car-img">
-                                                                <img src="assets/img/inner-page/color-car-08.png" alt>
+                                                                <img src="/assets/img/inner-page/color-car-08.png" alt>
                                                             </div>
                                                             <div class="content">
                                                                 <h5>Lamborghini Murciélago (Orange)</h5>
@@ -315,7 +320,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <ul class="nav nav-tabs" id="myTab5" role="tablist">
                                     <li class="nav-item" role="presentation">
@@ -421,7 +426,7 @@
                                             </svg>
                                         </button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
+                                    {{-- <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="color-clip-tab" data-bs-toggle="tab"
                                             data-bs-target="#color-clip" type="button" role="tab"
                                             aria-controls="color-clip" aria-selected="false">
@@ -446,7 +451,7 @@
                                                     d="M0 0H1V14H19V15H1V30H0V0Z" />
                                             </svg>
                                         </button>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
@@ -456,42 +461,42 @@
                                     <h5>Car Info</h5>
                                 </div>
                                 <ul>
-                                    <li>
+                                    {{-- <li>
                                         <div class="icon">
-                                            <img src="assets/img/inner-page/icon/mileage.svg" alt>
+                                            <img src="/assets/img/inner-page/icon/mileage.svg" alt>
                                         </div>
                                         <div class="content">
                                             <h6>25,100 miles</h6>
                                             <span>Mileage</span>
                                         </div>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <div class="icon">
-                                            <img src="assets/img/inner-page/icon/engine.svg" alt>
+                                            <img src="/assets/img/inner-page/icon/engine.svg" alt>
                                         </div>
                                         <div class="content">
-                                            <h6>22,231 cc</h6>
-                                            <span>Engine</span>
+                                            <h6>{{ $product->vehicle_class }}</h6>
+                                            {{-- <span>Engine</span> --}}
                                         </div>
                                     </li>
                                     <li>
                                         <div class="icon">
-                                            <img src="assets/img/inner-page/icon/fuel.svg" alt>
+                                            <img src="/assets/img/inner-page/icon/fuel.svg" alt>
                                         </div>
                                         <div class="content">
-                                            <h6>Petrol + Gas</h6>
-                                            <span>Fuel Type</span>
+                                            <h6>{{$product->fuel_type}}</h6>
+                                            {{-- <span>Fuel Type</span> --}}
                                         </div>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <div class="icon">
-                                            <img src="assets/img/inner-page/icon/condition.svg" alt>
+                                            <img src="/assets/img/inner-page/icon/condition.svg" alt>
                                         </div>
                                         <div class="content">
                                             <h6>Used Car</h6>
                                             <span>Condition</span>
                                         </div>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
@@ -660,7 +665,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="single-item mb-50" id="car-color">
+                        {{-- <div class="single-item mb-50" id="car-color">
                             <div class="car-colors">
                                 <div class="title-and-slider-btn mb-25">
                                     <div class="title">
@@ -686,7 +691,7 @@
                                         <div class="swiper-slide">
                                             <div class="car-color-wrap">
                                                 <div class="car-img">
-                                                    <img src="assets/img/inner-page/color-car-01.png" alt>
+                                                    <img src="/assets/img/inner-page/color-car-01.png" alt>
                                                 </div>
                                                 <div class="content">
                                                     <h6>Lamborghini Murciélago (Black)</h6>
@@ -696,7 +701,7 @@
                                         <div class="swiper-slide">
                                             <div class="car-color-wrap">
                                                 <div class="car-img">
-                                                    <img src="assets/img/inner-page/color-car-02.png" alt>
+                                                    <img src="/assets/img/inner-page/color-car-02.png" alt>
                                                 </div>
                                                 <div class="content">
                                                     <h6>Lamborghini Murciélago (Blue)</h6>
@@ -706,7 +711,7 @@
                                         <div class="swiper-slide">
                                             <div class="car-color-wrap">
                                                 <div class="car-img">
-                                                    <img src="assets/img/inner-page/color-car-03.png" alt>
+                                                    <img src="/assets/img/inner-page/color-car-03.png" alt>
                                                 </div>
                                                 <div class="content">
                                                     <h6>Lamborghini Murciélago (Pink)</h6>
@@ -716,7 +721,7 @@
                                         <div class="swiper-slide">
                                             <div class="car-color-wrap">
                                                 <div class="car-img">
-                                                    <img src="assets/img/inner-page/color-car-04.png" alt>
+                                                    <img src="/assets/img/inner-page/color-car-04.png" alt>
                                                 </div>
                                                 <div class="content">
                                                     <h6>Lamborghini Murciélago (Orange)</h6>
@@ -726,8 +731,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="single-item mb-50" id="car-milage">
+                        </div> --}}
+                        {{-- <div class="single-item mb-50" id="car-milage">
                             <div class="car-milage">
                                 <div class="title mb-25">
                                     <h5>Lamborghini Mileage</h5>
@@ -743,13 +748,13 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="single-item mb-50" id="faqs">
                             <div class="faq-area">
                                 <div class="title mb-25">
-                                    <h5>FAQ’s & Latest Answer</h5>
+                                    <h5>Download Documentaion</h5>
                                 </div>
-                                <div class="faq-wrap">
+                                {{-- <div class="faq-wrap">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
                                         <div class="accordion-item">
                                             <h5 class="accordion-header" id="flush-headingOne">
@@ -816,7 +821,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="single-item mb-50" id="qus-ans">
@@ -855,7 +860,7 @@
                                     <li>
                                         <div class="single-comment-area">
                                             <div class="author-img">
-                                                <img src="assets/img/inner-page/comment-author-01.png" alt>
+                                                <img src="/assets/img/inner-page/comment-author-01.png" alt>
                                             </div>
                                             <div class="comment-content">
                                                 <div class="author-name-deg">
@@ -879,7 +884,7 @@
                                             <li>
                                                 <div class="single-comment-area">
                                                     <div class="author-img">
-                                                        <img src="assets/img/inner-page/comment-author-02.png" alt>
+                                                        <img src="/assets/img/inner-page/comment-author-02.png" alt>
                                                     </div>
                                                     <div class="comment-content">
                                                         <div class="author-name-deg">
@@ -904,7 +909,7 @@
                                             <li>
                                                 <div class="single-comment-area">
                                                     <div class="author-img">
-                                                        <img src="assets/img/inner-page/comment-author-03.png" alt>
+                                                        <img src="/assets/img/inner-page/comment-author-03.png" alt>
                                                     </div>
                                                     <div class="comment-content">
                                                         <div class="author-name-deg">
@@ -931,7 +936,7 @@
                                     <li>
                                         <div class="single-comment-area">
                                             <div class="author-img">
-                                                <img src="assets/img/inner-page/comment-author-04.png" alt>
+                                                <img src="/assets/img/inner-page/comment-author-04.png" alt>
                                             </div>
                                             <div class="comment-content">
                                                 <div class="author-name-deg">
@@ -955,7 +960,7 @@
                                     <li>
                                         <div class="single-comment-area">
                                             <div class="author-img">
-                                                <img src="assets/img/inner-page/comment-author-05.png" alt>
+                                                <img src="/assets/img/inner-page/comment-author-05.png" alt>
                                             </div>
                                             <div class="comment-content">
                                                 <div class="author-name-deg">
@@ -1069,7 +1074,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-01.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-01.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1077,15 +1082,15 @@
                                             <h6><a href="car-deatils.html">Mercedes-Benz-2023</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1105,7 +1110,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-02.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-02.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1113,15 +1118,15 @@
                                             <h6><a href="car-deatils.html">Hyundai Sonata-2022</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1141,7 +1146,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-03.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-03.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1149,15 +1154,15 @@
                                             <h6><a href="car-deatils.html">Lexus RX-2023</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1177,7 +1182,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-04.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-04.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1185,15 +1190,15 @@
                                             <h6><a href="car-deatils.html">Ferrari 458 Italia</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1235,7 +1240,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-01.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-01.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1243,15 +1248,15 @@
                                             <h6><a href="car-deatils.html">Mercedes-Benz-2023</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1271,7 +1276,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-02.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-02.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1279,15 +1284,15 @@
                                             <h6><a href="car-deatils.html">Hyundai Sonata-2022</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1307,7 +1312,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-03.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-03.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1315,15 +1320,15 @@
                                             <h6><a href="car-deatils.html">Lexus RX-2023</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1343,7 +1348,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-04.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-04.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1351,15 +1356,15 @@
                                             <h6><a href="car-deatils.html">Ferrari 458 Italia</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1401,7 +1406,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-01.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-01.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1409,15 +1414,15 @@
                                             <h6><a href="car-deatils.html">Mercedes-Benz-2023</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1437,7 +1442,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-02.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-02.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1445,15 +1450,15 @@
                                             <h6><a href="car-deatils.html">Hyundai Sonata-2022</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1473,7 +1478,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-03.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-03.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1481,15 +1486,15 @@
                                             <h6><a href="car-deatils.html">Lexus RX-2023</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1509,7 +1514,7 @@
                                                 </svg>
                                             </a>
                                             <div class="car-img">
-                                                <img class="img-fluid" src="assets/img/inner-page/sb-img-04.png"
+                                                <img class="img-fluid" src="/assets/img/inner-page/sb-img-04.png"
                                                     alt="image">
                                             </div>
                                         </div>
@@ -1517,15 +1522,15 @@
                                             <h6><a href="car-deatils.html">Ferrari 458 Italia</a></h6>
                                             <ul class="features">
                                                 <li>
-                                                    <img src="assets/img/home4/icon/menual.svg" alt>
+                                                    <img src="/assets/img/home4/icon/menual.svg" alt>
                                                     Automatic
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/fuel.svg" alt>
+                                                    <img src="/assets/img/home4/icon/fuel.svg" alt>
                                                     Petrol
                                                 </li>
                                                 <li>
-                                                    <img src="assets/img/home4/icon/electric.svg" alt>
+                                                    <img src="/assets/img/home4/icon/electric.svg" alt>
                                                     Electric
                                                 </li>
                                             </ul>
@@ -1573,11 +1578,12 @@
                 <div class="col-lg-12 position-relative">
                     <div class="swiper upcoming-car-slider mb-50">
                         <div class="swiper-wrapper">
+                            @foreach ($allproduct as $item)
                             <div class="swiper-slide">
                                 <div class="product-card">
                                     <div class="product-img">
                                         <div class="number-of-img">
-                                            <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                            <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                             10
                                         </div>
                                         <a href="#" class="fav">
@@ -1605,29 +1611,29 @@
                                         <div class="swiper product-img-slider">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-11.png" alt="image">
+                                                    <img src="{{asset('uploads/'. $item->featured_image)}}" alt="image">
                                                 </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-11.png" alt="image">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-11.png" alt="image">
-                                                </div>
+                                                {{-- <div class="swiper-slide">
+                                                    <img src="/assets/img/home1/product-img-11.png" alt="image">
+                                                </div> --}}
+                                                {{-- <div class="swiper-slide">
+                                                    <img src="/assets/img/home1/product-img-11.png" alt="image">
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-content">
-                                        <h5><a href="car-deatils.html">Mercedes-Benz C-Class-2023</a></h5>
-                                        <div class="price-location">
+                                        <h5><a href="{{route('car_details',['id' => $item->id])}}">{{$item->name}}</a></h5>
+                                        {{-- <div class="price-location">
                                             <div class="price">
                                                 <strong>$7,656.00</strong>
                                             </div>
                                             <div class="location">
                                                 <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <ul class="features">
-                                            <li>
+                                            {{-- <li>
                                                 <svg width="13" height="13" viewBox="0 0 13 13"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <mask id="mask0_611_14491" style="mask-type:alpha"
@@ -1643,7 +1649,7 @@
                                                     </g>
                                                 </svg>
                                                 2500 miles
-                                            </li>
+                                            </li> --}}
                                             <li>
                                                 <svg width="13" height="13" viewBox="0 0 13 13"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -1665,7 +1671,7 @@
                                                             d="M11.1187 9.54713C11.2462 9.54713 11.3495 9.45618 11.3495 9.344C11.3495 9.23181 11.2462 9.14087 11.1187 9.14087C10.9913 9.14087 10.8879 9.23181 10.8879 9.344C10.8879 9.45618 10.9913 9.54713 11.1187 9.54713Z" />
                                                     </g>
                                                 </svg>
-                                                Petrol + Gas
+                                                {{ $item->fuel_type }}
                                             </li>
                                             <li>
                                                 <svg width="13" height="13" viewBox="0 0 13 13"
@@ -1682,11 +1688,11 @@
                                                             d="M12.35 4.89575H11.9167C11.5583 4.89575 11.2667 5.2042 11.2667 5.58324V6.27072H10.8333V4.20827C10.8333 3.70274 10.4446 3.29162 9.96667 3.29162H8.88333V2.83329H10.1833C10.5417 2.83329 10.8333 2.52484 10.8333 2.14581V1.68749C10.8333 1.30845 10.5417 1 10.1833 1H5.85C5.49163 1 5.2 1.30845 5.2 1.68749V2.14581C5.2 2.52484 5.49163 2.83329 5.85 2.83329H7.15V3.29162H5.86863C5.66627 3.29162 5.46932 3.36701 5.31397 3.50405L4.37515 4.3311C4.29737 4.39972 4.19932 4.43735 4.09803 4.43743H3.03333C2.55537 4.43743 2.16667 4.84854 2.16667 5.35408V6.27072H1.73333V4.89575C1.73333 4.51672 1.4417 4.20827 1.08333 4.20827H0.65C0.291633 4.20827 0 4.51672 0 4.89575V9.47899C0 9.85802 0.291633 10.1665 0.65 10.1665H1.08333C1.4417 10.1665 1.73333 9.85802 1.73333 9.47899V8.10402H2.16667V9.47899C2.16667 9.98452 2.55537 10.3956 3.03333 10.3956H3.73945C3.89458 10.3956 4.03888 10.4841 4.11558 10.6266L4.60807 11.5378C4.68391 11.6781 4.79344 11.7947 4.92557 11.8759C5.0577 11.957 5.20775 11.9998 5.36055 12H9.22892C9.35599 12.0002 9.48154 11.9707 9.59662 11.9137C9.7117 11.8567 9.81349 11.7736 9.89473 11.6702L10.6325 10.7339C10.7622 10.569 10.8332 10.3614 10.8333 10.147V8.10425H11.2667V8.79173C11.2667 9.17077 11.5583 9.47922 11.9167 9.47922H12.35C12.7084 9.47922 13 9.17077 13 8.79173V5.58347C13 5.20443 12.7084 4.89575 12.35 4.89575ZM1.3 9.47899C1.3 9.53977 1.27717 9.59805 1.23654 9.64103C1.19591 9.68401 1.1408 9.70815 1.08333 9.70815H0.65C0.592536 9.70815 0.537426 9.68401 0.496794 9.64103C0.456161 9.59805 0.433333 9.53977 0.433333 9.47899V4.89575C0.433333 4.83497 0.456161 4.77669 0.496794 4.73371C0.537426 4.69073 0.592536 4.66659 0.65 4.66659H1.08333C1.1408 4.66659 1.19591 4.69073 1.23654 4.73371C1.27717 4.77669 1.3 4.83497 1.3 4.89575V9.47899ZM1.73333 7.64569V6.72905H2.16667V7.64569H1.73333ZM5.63333 2.14581V1.68749C5.63333 1.62671 5.65616 1.56842 5.69679 1.52544C5.73743 1.48247 5.79254 1.45832 5.85 1.45832H10.1833C10.2408 1.45832 10.2959 1.48247 10.3365 1.52544C10.3772 1.56842 10.4 1.62671 10.4 1.68749V2.14581C10.4 2.20659 10.3772 2.26488 10.3365 2.30785C10.2959 2.35083 10.2408 2.37497 10.1833 2.37497H5.85C5.79254 2.37497 5.73743 2.35083 5.69679 2.30785C5.65616 2.26488 5.63333 2.20659 5.63333 2.14581ZM7.58333 2.83329H8.45V3.29162H7.58333V2.83329ZM10.4 10.1468C10.4 10.2538 10.3643 10.3578 10.2995 10.4401L9.56193 11.3764C9.52126 11.4281 9.47034 11.4697 9.41279 11.4982C9.35524 11.5267 9.29247 11.5415 9.22892 11.5414H5.36055C5.28417 11.5414 5.20916 11.52 5.14311 11.4794C5.07706 11.4389 5.02232 11.3806 4.98442 11.3105L4.49193 10.3993C4.41609 10.259 4.30656 10.1424 4.17443 10.0612C4.0423 9.98006 3.89225 9.93724 3.73945 9.93708H3.03333C2.79435 9.93708 2.6 9.73153 2.6 9.47876V5.35385C2.6 5.10108 2.79435 4.89552 3.03333 4.89552H4.09803C4.3004 4.89552 4.49735 4.82013 4.6527 4.68309L5.59152 3.85604C5.66929 3.78742 5.76735 3.7498 5.86863 3.74971H9.96667C10.2057 3.74971 10.4 3.95527 10.4 4.20804V10.1465V10.1468ZM10.8333 7.64569V6.72905H11.2667V7.64569H10.8333ZM12.5667 8.7915C12.5667 8.85228 12.5438 8.91057 12.5032 8.95355C12.4626 8.99652 12.4075 9.02067 12.35 9.02067H11.9167C11.8592 9.02067 11.8041 8.99652 11.7635 8.95355C11.7228 8.91057 11.7 8.85228 11.7 8.7915V5.58324C11.7 5.52246 11.7228 5.46417 11.7635 5.4212C11.8041 5.37822 11.8592 5.35408 11.9167 5.35408H12.35C12.4075 5.35408 12.4626 5.37822 12.5032 5.4212C12.5438 5.46417 12.5667 5.52246 12.5667 5.58324V8.7915Z" />
                                                     </g>
                                                 </svg>
-                                                Electric
+                                                {{ $item->vehicle_class }}
                                             </li>
                                         </ul>
                                         <div class="content-btm">
-                                            <a class="view-btn2" href="car-deatils.html">
+                                            <a class="view-btn2" href="{{route('car_details',['id' => $item->id])}}">
                                                 <svg width="35" height="21" viewBox="0 0 35 21"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M11 20C5.47715 20 1 15.7467 1 10.5C1 5.25329 5.47715 1 11 1"
@@ -1704,11 +1710,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                            @endforeach
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card">
                                     <div class="product-img">
                                         <div class="number-of-img">
-                                            <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                            <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                             10
                                         </div>
                                         <a href="#" class="fav">
@@ -1736,13 +1743,13 @@
                                         <div class="swiper product-img-slider">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-12.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-12.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-12.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-12.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-12.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-12.png" alt="image">
                                                 </div>
                                             </div>
                                         </div>
@@ -1834,12 +1841,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card">
                                     <div class="product-img">
                                         <div class="number-of-img">
-                                            <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                            <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                             10
                                         </div>
                                         <a href="#" class="fav">
@@ -1867,16 +1874,16 @@
                                         <div class="swiper product-img-slider">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-13.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-13.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-13.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-13.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-13.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-13.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-13.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-13.png" alt="image">
                                                 </div>
                                             </div>
                                         </div>
@@ -1968,12 +1975,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card">
                                     <div class="product-img">
                                         <div class="number-of-img">
-                                            <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                            <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                             10
                                         </div>
                                         <a href="#" class="fav">
@@ -2001,16 +2008,16 @@
                                         <div class="swiper product-img-slider">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-11.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-11.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-11.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-11.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-11.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-11.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-11.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-11.png" alt="image">
                                                 </div>
                                             </div>
                                         </div>
@@ -2102,12 +2109,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card">
                                     <div class="product-img">
                                         <div class="number-of-img">
-                                            <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                            <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                             10
                                         </div>
                                         <a href="#" class="fav">
@@ -2135,13 +2142,13 @@
                                         <div class="swiper product-img-slider">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-12.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-12.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-12.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-12.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-12.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-12.png" alt="image">
                                                 </div>
                                             </div>
                                         </div>
@@ -2233,12 +2240,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
+                            </div> --}}
+                            {{-- <div class="swiper-slide">
                                 <div class="product-card">
                                     <div class="product-img">
                                         <div class="number-of-img">
-                                            <img src="assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                            <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
                                             10
                                         </div>
                                         <a href="#" class="fav">
@@ -2266,13 +2273,13 @@
                                         <div class="swiper product-img-slider">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-13.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-13.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-13.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-13.png" alt="image">
                                                 </div>
                                                 <div class="swiper-slide">
-                                                    <img src="assets/img/home1/product-img-13.png" alt="image">
+                                                    <img src="/assets/img/home1/product-img-13.png" alt="image">
                                                 </div>
                                             </div>
                                         </div>
@@ -2364,7 +2371,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -2380,7 +2387,7 @@
                         </div>
                         <div class="view-btn-area">
                             <p>There will be 100+ Similar Car</p>
-                            <a class="view-btn" href="single-brand-category.html">View More</a>
+                            <a class="view-btn" href="{{route('s_category',['id' => $product->brand_id])}}">View More</a>
                         </div>
                         <div class="slider-btn next-2 d-md-flex d-none">
                             <svg width="11" height="19" viewBox="0 0 8 13"
@@ -2409,12 +2416,12 @@
                     <div class="customer-feedback-left">
                         <a href="#" class="trustpilot">
                             <h5>Excellent!</h5>
-                            <img class="star" src="assets/img/home1/icon/trustpilot-star3.svg" alt>
+                            <img class="star" src="/assets/img/home1/icon/trustpilot-star3.svg" alt>
                             <span>Based On <strong>2348</strong> Reviews</span>
-                            <img class="logo" src="assets/img/home1/icon/trustpilot-log3.svg" alt>
+                            <img class="logo" src="/assets/img/home1/icon/trustpilot-log3.svg" alt>
                         </a>
                         <a href="#" class="google">
-                            <img class="logo" src="assets/img/home1/icon/google3.svg" alt>
+                            <img class="logo" src="/assets/img/home1/icon/google3.svg" alt>
                             <div class="star">
                                 <ul>
                                     <li class="active"><i class="bi bi-star-fill"></i></li>
@@ -2448,7 +2455,7 @@
                                                 <span>Great Services!</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/google3.svg" alt>
+                                                <img src="/assets/img/home1/icon/google3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency to the actively encourage customers to leave
@@ -2462,11 +2469,11 @@
                                     <div class="feedback-card">
                                         <div class="feedback-top">
                                             <div class="stat-area">
-                                                <img src="assets/img/home1/icon/trustpilot-star.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-star.svg" alt>
                                                 <span>Trusted Company</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/trustpilot-log3.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-log3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency customer feedback is an invaluable source of
@@ -2493,7 +2500,7 @@
                                                 <span>Great Services!</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/google3.svg" alt>
+                                                <img src="/assets/img/home1/icon/google3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency to the actively encourage customers to leave
@@ -2507,11 +2514,11 @@
                                     <div class="feedback-card">
                                         <div class="feedback-top">
                                             <div class="stat-area">
-                                                <img src="assets/img/home1/icon/trustpilot-star.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-star.svg" alt>
                                                 <span>Trusted Company</span>
                                             </div>
                                             <div class="logo">
-                                                <img src="assets/img/home1/icon/trustpilot-log3.svg" alt>
+                                                <img src="/assets/img/home1/icon/trustpilot-log3.svg" alt>
                                             </div>
                                         </div>
                                         <p>Drivco-Agency customer feedback is an invaluable source of
@@ -2557,18 +2564,18 @@
                     </div>
                     <div class="partner-slider">
                         <h2 class="marquee_text2">
-                            <img src="assets/img/home1/company-logo-01.png" alt>
-                            <img src="assets/img/home1/company-logo-02.png" alt>
-                            <img src="assets/img/home1/company-logo-03.png" alt>
-                            <img src="assets/img/home1/company-logo-04.png" alt>
-                            <img src="assets/img/home1/company-logo-05.png" alt>
-                            <img src="assets/img/home1/company-logo-06.png" alt>
-                            <img src="assets/img/home1/company-logo-01.png" alt>
-                            <img src="assets/img/home1/company-logo-02.png" alt>
-                            <img src="assets/img/home1/company-logo-03.png" alt>
-                            <img src="assets/img/home1/company-logo-04.png" alt>
-                            <img src="assets/img/home1/company-logo-05.png" alt>
-                            <img src="assets/img/home1/company-logo-06.png" alt>
+                            <img src="/assets/img/home1/company-logo-01.png" alt>
+                            <img src="/assets/img/home1/company-logo-02.png" alt>
+                            <img src="/assets/img/home1/company-logo-03.png" alt>
+                            <img src="/assets/img/home1/company-logo-04.png" alt>
+                            <img src="/assets/img/home1/company-logo-05.png" alt>
+                            <img src="/assets/img/home1/company-logo-06.png" alt>
+                            <img src="/assets/img/home1/company-logo-01.png" alt>
+                            <img src="/assets/img/home1/company-logo-02.png" alt>
+                            <img src="/assets/img/home1/company-logo-03.png" alt>
+                            <img src="/assets/img/home1/company-logo-04.png" alt>
+                            <img src="/assets/img/home1/company-logo-05.png" alt>
+                            <img src="/assets/img/home1/company-logo-06.png" alt>
                         </h2>
                     </div>
                 </div>
@@ -2591,7 +2598,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                     <div class="news-card style-2">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="assets/img/home1/news-01.png" alt></a>
+                            <a href="blog-details.html"><img src="/assets/img/home1/news-01.png" alt></a>
                             <div class="date">
                                 <a href="blog-standard.html">Buying Advice</a>
                             </div>
@@ -2603,7 +2610,7 @@
                             <div class="news-btm d-flex align-items-center justify-content-between">
                                 <div class="author-area">
                                     <div class="author-img">
-                                        <img src="assets/img/home1/author-01.png" alt>
+                                        <img src="/assets/img/home1/author-01.png" alt>
                                     </div>
                                     <div class="author-content">
                                         <h6>Mr. Morris Mannu</h6>
@@ -2634,7 +2641,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                     <div class="news-card style-2">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="assets/img/home1/news-02.png" alt></a>
+                            <a href="blog-details.html"><img src="/assets/img/home1/news-02.png" alt></a>
                             <div class="date">
                                 <a href="blog-standard.html">Car Advice</a>
                             </div>
@@ -2645,7 +2652,7 @@
                             <div class="news-btm d-flex align-items-center justify-content-between">
                                 <div class="author-area">
                                     <div class="author-img">
-                                        <img src="assets/img/home1/author-02.png" alt>
+                                        <img src="/assets/img/home1/author-02.png" alt>
                                     </div>
                                     <div class="author-content">
                                         <h6>Mulish Kary</h6>
@@ -2676,7 +2683,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                     <div class="news-card style-2">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="assets/img/home1/news-03.png" alt></a>
+                            <a href="blog-details.html"><img src="/assets/img/home1/news-03.png" alt></a>
                             <div class="date">
                                 <a href="blog-standard.html">Driving Advice</a>
                             </div>
@@ -2687,7 +2694,7 @@
                             <div class="news-btm d-flex align-items-center justify-content-between">
                                 <div class="author-area">
                                     <div class="author-img">
-                                        <img src="assets/img/home1/author-03.png" alt>
+                                        <img src="/assets/img/home1/author-03.png" alt>
                                     </div>
                                     <div class="author-content">
                                         <h6>Daniel Scoot</h6>

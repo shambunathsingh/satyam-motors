@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin\Invoice;
 
 use App\Http\Controllers\Controller;
+use App\Models\ExtProductImage;
 use App\Models\Order\Order;
+use App\Models\Product\Product;
+use App\Models\ProductImages\ProductImages;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Symfony\Component\HttpFoundation\Response;
 use DateTime;
@@ -14,23 +17,14 @@ class InvoiceController extends Controller
 
     public function index()
     {
-        $title = "Carzex - invoices";
+        $title = "Satyam Motors | Invoices";
 
-        // Fetch all orders with related product orders
-        $orders = Order::with('productOrders')->get();
-
-        // Calculate total amount for each order
-        foreach ($orders as $order) {
-            $totalAmount = $order->productOrders->sum(function ($productOrder) {
-                return $productOrder->subtotal;
-            });
-            $order->totalAmount = $totalAmount;
-        }
+        $allproducts = Product::all();
 
         // Return the view with the homepage data
         return view('admin.invoices.index', [
             'title' => $title,
-            'orders' => $orders
+            'products' => $allproducts
         ]);
     }
     public function invoice_template()
@@ -132,21 +126,43 @@ class InvoiceController extends Controller
     }
 
 
-    public function generatePdf()
+    public function generatePdf($id)
     {
+        $logo = (asset('/images/Capture-removebg-preview.png'));
+
+        $product = Product::findOrFail($id);
+
+        $intProductImages = ProductImages::where('product_id', $id)->get();
+        $extProductImages = ExtProductImage::where('product_id', $id)->get();
+
+        // Assuming that intProductImages and extProductImages need to be passed to the view
+        $internalImages = $intProductImages->map(function ($image) {
+            return asset('uploads/' . $image->images); // Adjust the path as necessary
+        })->toArray();
+
+        $externalImages = $extProductImages->map(function ($image) {
+            return asset('uploads/' . $image->images); // Adjust the path as necessary
+        })->toArray();
+
         $date = new DateTime();
         $formattedDate = $date->format('F d, Y');
-        $formattedTime = $date->format('h:i:s a');
+        $formattedTime = $date->format('h:i a');
 
-        $inv = 'test';
+        $inv = $product->name;
         $data = [
-            'title' => 'Carzex - Car Depot',
+            'title' => 'Satyam Motors - Invoice',
             'invoice' => $inv,
             'date' => $formattedDate,
             'time' => $formattedTime,
+            'product' => $product,
+            'logo' => $logo,
+            'internalImages' => $internalImages,
+            'externalImages' => $externalImages,
         ];
 
-        $pdf = Pdf::loadView('generate-invoice-pdf', $data);
-        return $pdf->download('invoice-INV-' . $inv . '.pdf');
+        return view('generate-invoice-pdf', $data);
+
+        // $pdf = Pdf::loadView('generate-invoice-pdf', $data);
+        // return $pdf->stream('Vehicle-Details-' . $inv . '.pdf');
     }
 }

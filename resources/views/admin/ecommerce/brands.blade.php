@@ -123,6 +123,10 @@
                                                 tabindex="0" aria-controls="botble-page-tables-page-table" rowspan="1"
                                                 colspan="1" aria-label="Templateorderby asc" style="">Name
                                             </th>
+                                            <th title="Template" class="text-start column-key-template sorting"
+                                                tabindex="0" aria-controls="botble-page-tables-page-table" rowspan="1"
+                                                colspan="1" aria-label="Templateorderby asc" style="">Icon
+                                            </th>
                                             <th title="Created At" width="100px"
                                                 class="text-center column-key-created_at sorting" tabindex="0"
                                                 aria-controls="botble-page-tables-page-table" rowspan="1"
@@ -156,8 +160,11 @@
                                                     </div>
                                                 </td>
                                                 <td class="column-key-id sorting_1">{{ $item->id }}</td>
-                                                <td class=" text-start column-key-name"><a
+                                                <td class=" text-start column-key-name">
+                                                    <a
                                                         href="{{ route('admin.ecommerce.edit_product_brands', ['id' => $item->id]) }}">{{ $item->name }}</a>
+                                                </td>
+                                                <td class=" text-start column-key-name">
                                                     <img src="{{ asset('uploads/' . $item->icon) }}" alt=""
                                                         width="100" height="100">
                                                 </td>

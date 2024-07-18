@@ -119,7 +119,7 @@
                                                                                     class="required">*</span>
                                                                             </label>
                                                                             <div class="twy_mobile_field_container">
-                                                                                <input type="text" name="twy_mobile"
+                                                                                <input type="text" name="phone"
                                                                                     class="twy_mobile_field twy_mobile"
                                                                                     required="" required>
                                                                                 {{-- <input type="button"

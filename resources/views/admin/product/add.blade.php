@@ -155,7 +155,8 @@
                                                     <p style="color: rgb(195, 207, 216);">Using button <strong>Select
                                                             image</strong> to add more images.</p>
                                                 </div>
-                                                <input type="file" name="int_images[]" multiple style="display: none;">
+                                                <input type="file" name="int_images[]" multiple
+                                                    style="display: none;">
                                                 <ul data-name="images[]" data-allow-thumb="1"
                                                     class="list-unstyled list-gallery-media-images ui-sortable">
                                                     <!-- Existing images go here -->
@@ -175,7 +176,8 @@
                                                     <p style="color: rgb(195, 207, 216);">Using button <strong>Select
                                                             image</strong> to add more images.</p>
                                                 </div>
-                                                <input type="file" name="ext_images[]" multiple style="display: none;">
+                                                <input type="file" name="ext_images[]" multiple
+                                                    style="display: none;">
                                                 <ul data-name="images[]" data-allow-thumb="1"
                                                     class="list-unstyled list-gallery-media-images ui-sortable">
                                                     <!-- Existing images go here -->
@@ -304,7 +306,7 @@
                                         </div>
                                     </div>
                                 </div> --}}
-                                {{-- <div class="widget meta-boxes">
+                                <div class="widget meta-boxes">
                                     <div class="widget-title">
                                         <h4><label for="is_featured" class="control-label">Is
                                                 featured?</label></h4>
@@ -313,7 +315,7 @@
                                         <input class="form-check-input" type="checkbox" role="switch" value="1"
                                             id="flexSwitchCheckChecked" name="is_featured">
                                     </div>
-                                </div> --}}
+                                </div>
                                 <div class="widget meta-boxes">
                                     <div class="widget-title">
                                         <h4><label for="categories[]" class="control-label">Vehicle Category</label></h4>

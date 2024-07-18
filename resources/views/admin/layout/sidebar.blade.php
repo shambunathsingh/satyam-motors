@@ -25,6 +25,11 @@
                                 class="fa fa-archive"></i></span>
                         Products</a>
                 </li>
+                <li class="mainlink"><a href="{{ route('admin.ecommerce.invoices') }}"
+                        class="link-body-emphasis d-inline-flex text-decoration-none rounded"><span><i
+                                class="fa fa-file"></i></span>
+                        Invoices</a>
+                </li>
             </ul>
         </div>
     </div>
