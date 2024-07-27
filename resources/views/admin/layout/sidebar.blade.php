@@ -25,10 +25,20 @@
                                 class="fa fa-archive"></i></span>
                         Products</a>
                 </li>
+                <li class="mainlink"><a href="{{ route('admin.ecommerce.product_enquiry') }}"
+                        class="link-body-emphasis d-inline-flex text-decoration-none rounded"><span><i
+                                class="fa fa-archive"></i></span>
+                        Product Enquiry</a>
+                </li>
                 <li class="mainlink"><a href="{{ route('admin.ecommerce.invoices') }}"
                         class="link-body-emphasis d-inline-flex text-decoration-none rounded"><span><i
                                 class="fa fa-file"></i></span>
                         Invoices</a>
+                </li>
+                <li class="mainlink"><a href="{{ route('admin.ecommerce.all_enquiry') }}"
+                        class="link-body-emphasis d-inline-flex text-decoration-none rounded"><span><i
+                                class="fa fa-question-circle"></i></span>
+                        Enquiries</a>
                 </li>
             </ul>
         </div>

@@ -5,7 +5,7 @@
         <div class="banner-wrapper">
             <div class="container-fluid">
                 <ul class="breadcrumb-list">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ route('front_home') }}">Home</a></li>
                     <li>Blog Standard</li>
                 </ul>
                 <div class="banner-main-content-wrap">
@@ -80,13 +80,13 @@
                 <div class="col-lg-8">
                     <div class="news-card2 mb-50">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="assets/img/inner-page/blog-st-01.png" alt></a>
+                            <a href=""><img src="assets/img/inner-page/blog-st-01.png" alt></a>
                             <div class="date">
-                                <a href="blog-standard.html">Buying Advice</a>
+                                <a href="">Buying Advice</a>
                             </div>
                         </div>
                         <div class="content">
-                            <h4><a href="blog-details.html">The Car Enthusiast: Exploring the World of Cars and
+                            <h4><a href="">The Car Enthusiast: Exploring the World of Cars and
                                     Driving.</a></h4>
                             <p>"The Car Enthusiast: Exploring the World of Cars and Driving." In this captivating
                                 journey, we delve into the fascinating realm of automobiles.</p>
@@ -97,22 +97,22 @@
                                     </div>
                                     <div class="author-content">
                                         <h6>Mulish Kary</h6>
-                                        <a href="blog-standard.html">Posted on - 03 April, 2023</a>
+                                        <a href="">Posted on - 03 April, 2023</a>
                                     </div>
                                 </div>
-                                <a class="view-btn" href="blog-details.html">Read More</a>
+                                <a class="view-btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="news-card2 mb-50">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="assets/img/inner-page/blog-st-01.png" alt></a>
+                            <a href=""><img src="assets/img/inner-page/blog-st-01.png" alt></a>
                             <div class="date">
-                                <a href="blog-standard.html">Buying Advice</a>
+                                <a href="">Buying Advice</a>
                             </div>
                         </div>
                         <div class="content">
-                            <h4><a href="blog-details.html">The Best Car Brands for Performance and Reliability.</a>
+                            <h4><a href="">The Best Car Brands for Performance and Reliability.</a>
                             </h4>
                             <p>"The Car Enthusiast: Exploring the World of Cars and Driving." In this captivating
                                 journey, we delve into the fascinating realm of automobiles.</p>
@@ -123,22 +123,22 @@
                                     </div>
                                     <div class="author-content">
                                         <h6>Mulish Kary</h6>
-                                        <a href="blog-standard.html">Posted on - 03 April, 2023</a>
+                                        <a href="">Posted on - 03 April, 2023</a>
                                     </div>
                                 </div>
-                                <a class="view-btn" href="blog-details.html">Read More</a>
+                                <a class="view-btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="news-card2 mb-50">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="assets/img/inner-page/blog-st-01.png" alt></a>
+                            <a href=""><img src="assets/img/inner-page/blog-st-01.png" alt></a>
                             <div class="date">
-                                <a href="blog-standard.html">Buying Advice</a>
+                                <a href="">Buying Advice</a>
                             </div>
                         </div>
                         <div class="content">
-                            <h4><a href="blog-details.html">The Environmental Impact of Cars and How to Minimize It.</a>
+                            <h4><a href="">The Environmental Impact of Cars and How to Minimize It.</a>
                             </h4>
                             <p>"The Car Enthusiast: Exploring the World of Cars and Driving." In this captivating
                                 journey, we delve into the fascinating realm of automobiles.</p>
@@ -149,22 +149,22 @@
                                     </div>
                                     <div class="author-content">
                                         <h6>Mulish Kary</h6>
-                                        <a href="blog-standard.html">Posted on - 03 April, 2023</a>
+                                        <a href="">Posted on - 03 April, 2023</a>
                                     </div>
                                 </div>
-                                <a class="view-btn" href="blog-details.html">Read More</a>
+                                <a class="view-btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="news-card2 mb-40">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="assets/img/inner-page/blog-st-01.png" alt></a>
+                            <a href=""><img src="assets/img/inner-page/blog-st-01.png" alt></a>
                             <div class="date">
-                                <a href="blog-standard.html">Buying Advice</a>
+                                <a href="">Buying Advice</a>
                             </div>
                         </div>
                         <div class="content">
-                            <h4><a href="blog-details.html">The Environmental Impact of Cars and How to Minimize It.</a>
+                            <h4><a href="">The Environmental Impact of Cars and How to Minimize It.</a>
                             </h4>
                             <p>"The Car Enthusiast: Exploring the World of Cars and Driving." In this captivating
                                 journey, we delve into the fascinating realm of automobiles.</p>
@@ -175,10 +175,10 @@
                                     </div>
                                     <div class="author-content">
                                         <h6>Mulish Kary</h6>
-                                        <a href="blog-standard.html">Posted on - 03 April, 2023</a>
+                                        <a href="">Posted on - 03 April, 2023</a>
                                     </div>
                                 </div>
-                                <a class="view-btn" href="blog-details.html">Read More</a>
+                                <a class="view-btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -222,19 +222,19 @@
                                 <h6>Category</h6>
                             </div>
                             <ul class="wp-block-categoris-cloud">
-                                <li><a href="blog-standard.html"><span>Car Servicing</span> <span
+                                <li><a href=""><span>Car Servicing</span> <span
                                             class="number-of-categoris">(30)</span></a></li>
-                                <li><a href="blog-standard.html"><span>Car Buying Advice</span> <span
+                                <li><a href=""><span>Car Buying Advice</span> <span
                                             class="number-of-categoris">(18)</span> </a></li>
-                                <li><a href="blog-standard.html"><span>Car Rental</span> <span
+                                <li><a href=""><span>Car Rental</span> <span
                                             class="number-of-categoris">(21)</span></a></li>
-                                <li><a href="blog-standard.html"><span>Driving</span> <span
+                                <li><a href=""><span>Driving</span> <span
                                             class="number-of-categoris">(25)</span></a></li>
-                                <li><a href="blog-standard.html"><span>Brand Car</span> <span
+                                <li><a href=""><span>Brand Car</span> <span
                                             class="number-of-categoris">(29)</span></a></li>
-                                <li><a href="blog-standard.html"><span>Tata</span> <span
+                                <li><a href=""><span>Tata</span> <span
                                             class="number-of-categoris">(2,554)</span></a></li>
-                                <li><a href="blog-standard.html"><span>Hyundai</span> <span
+                                <li><a href=""><span>Hyundai</span> <span
                                             class="number-of-categoris">(1,556)</span></a></li>
                             </ul>
                         </div>
@@ -262,12 +262,12 @@
                                         <div class="swiper-slide">
                                             <div class="widget-cnt">
                                                 <div class="wi">
-                                                    <a href="blog-details.html"><img
+                                                    <a href=""><img
                                                             src="assets/img/inner-page/blog-st-01.png" alt="image"></a>
                                                 </div>
                                                 <div class="wc">
-                                                    <a class="date" href="blog-standard.html">May 18, 2023</a>
-                                                    <h6><a href="blog-details.html">The Environmental Impact of Cars and
+                                                    <a class="date" href="">May 18, 2023</a>
+                                                    <h6><a href="">The Environmental Impact of Cars and
                                                             How to Minimize It.</a></h6>
                                                 </div>
                                             </div>
@@ -275,12 +275,12 @@
                                         <div class="swiper-slide">
                                             <div class="widget-cnt">
                                                 <div class="wi">
-                                                    <a href="blog-details.html"><img
+                                                    <a href=""><img
                                                             src="assets/img/inner-page/blog-st-02.png" alt="image"></a>
                                                 </div>
                                                 <div class="wc">
-                                                    <a class="date" href="blog-standard.html">May 18, 2023</a>
-                                                    <h6><a href="blog-details.html">The Environmental Impact of Cars and
+                                                    <a class="date" href="">May 18, 2023</a>
+                                                    <h6><a href="">The Environmental Impact of Cars and
                                                             How to Minimize It.</a></h6>
                                                 </div>
                                             </div>
@@ -288,12 +288,12 @@
                                         <div class="swiper-slide">
                                             <div class="widget-cnt">
                                                 <div class="wi">
-                                                    <a href="blog-details.html"><img
+                                                    <a href=""><img
                                                             src="assets/img/inner-page/blog-st-03.png" alt="image"></a>
                                                 </div>
                                                 <div class="wc">
-                                                    <a class="date" href="blog-standard.html">May 18, 2023</a>
-                                                    <h6><a href="blog-details.html">The Environmental Impact of Cars and
+                                                    <a class="date" href="">May 18, 2023</a>
+                                                    <h6><a href="">The Environmental Impact of Cars and
                                                             How to Minimize It.</a></h6>
                                                 </div>
                                             </div>
@@ -307,13 +307,13 @@
                                 <h6>Popular Tags</h6>
                             </div>
                             <p class="wp-block-tag-cloud">
-                                <a href="blog-standard.html">Car Advice</a>
+                                <a href="">Car Advice</a>
                                 <a href="#">Rental</a>
                                 <a href="#">Hyundai</a>
                                 <a href="#">Driving</a>
                                 <a href="#">Compare</a>
                                 <a href="#">Buying</a>
-                                <a href="car-deatils.html">Toyota</a>
+                                <a href="#">Toyota</a>
                                 <a href="#">Audi</a>
                                 <a href="#">Service</a>
                             </p>

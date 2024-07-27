@@ -24,7 +24,7 @@ class AuthController extends Controller
         ]);
 
         // login code
-        if (Auth::attempt($request->only('email', 'password'))) {
+        if (Auth::guard('web')->attempt($request->only('email', 'password'))) {
             // Redirect to the admin dashboard route
             return redirect()->route('admin.dashboard');
         }
@@ -55,7 +55,7 @@ class AuthController extends Controller
         ]);
 
         // login user here
-        if (Auth::attempt($request->only('email', 'password'))) {
+        if (Auth::guard('web')->attempt($request->only('email', 'password'))) {
             $title = "Carzex - Dashboard";
 
             // Add your admin dashboard logic here

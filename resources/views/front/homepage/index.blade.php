@@ -526,7 +526,7 @@
     <div class="sidebar-menu">
         <div class="mobile-logo-area d-flex justify-content-between align-items-center">
             <div class="mobile-logo-wrap">
-                <!-- <a href="index.html"><img alt="image" src="assets/img/sb-logo.svg"></a> -->
+                <!-- <a href="{{ route('front_home') }}"><img alt="image" src="assets/img/sb-logo.svg"></a> -->
             </div>
             <div class="menu-button menu-close-btn">
                 <i class="bi bi-x"></i>
@@ -791,7 +791,8 @@
         <div class="main-menu">
             <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                 <div class="mobile-logo-wrap">
-                    <a href="index.html"><img alt="image" src="assets/img/home2/icon/home2-logo.svg"></a>
+                    <a href="{{ route('front_home') }}"><img alt="image"
+                            src="assets/img/home2/icon/home2-logo.svg"></a>
                 </div>
             </div>
             <ul class="menu-list">
@@ -801,7 +802,7 @@
             </ul>
         </div>
         <div class="header-logo">
-            <!-- <a href="index.html"><img alt="image" class="img-fluid" src="assets/img/white-logo.svg"></a> -->
+            <!-- <a href="{{ route('front_home') }}"><img alt="image" class="img-fluid" src="assets/img/white-logo.svg"></a> -->
         </div>
         <div class="nav-right d-lg-flex d-none jsutify-content-end align-items-center">
             <div class="header-right">
@@ -872,7 +873,7 @@
                     <h1>Premier Auto Sales</h1>
                     <p>Car dealerships may sell new cars from one or several manufacturers</p>
                     <div class="banner-content-bottom">
-                        <a href="car-listing-left-sidebar.html" class="primary-btn3">
+                        <a href="{{ route('b_category') }}" class="primary-btn3">
                             <svg width="24" height="15" viewBox="0 0 24 15"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -1242,7 +1243,9 @@
                                             {{-- <div class="location">
                                                 <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                             </div> --}}
-                                            <h6><a href="{{ route('car_details', ['id' => $item->id]) }}">{{ $item->name }}</a></h6>
+                                            <h6><a
+                                                    href="{{ route('car_details', ['id' => $item->id]) }}">{{ $item->name }}</a>
+                                            </h6>
                                             <ul class="features">
                                                 {{-- <li>
                                                     <img src="assets/img/home4/icon/miles.svg" alt>
@@ -1258,7 +1261,8 @@
                                                 </li>
                                             </ul>
                                             <div class="button-and-price">
-                                                <a class="primary-btn3" href="{{ route('car_details', ['id' => $item->id]) }}">View
+                                                <a class="primary-btn3"
+                                                    href="{{ route('car_details', ['id' => $item->id]) }}">View
                                                     Details</a>
                                                 {{-- <div class="price-area">
                                                     <span>Great Price</span>
@@ -1692,7 +1696,7 @@
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <img src="{{ asset('uploads/' . $item->featured_image) }}"
-                                                            style="width: 100%; height: 200px;" alt="image">
+                                                                style="width: 100%; height: 200px;" alt="image">
                                                         </div>
                                                         {{-- <div class="swiper-slide">
                                                     <img src="assets/img/home4/letest-car1.png" alt="image">
@@ -1710,7 +1714,9 @@
                                                 {{-- <div class="location">
                                             <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                         </div> --}}
-                                                <h6><a href="{{ route('car_details', ['id' => $item->id]) }}">{{ $item->name }}</a></h6>
+                                                <h6><a
+                                                        href="{{ route('car_details', ['id' => $item->id]) }}">{{ $item->name }}</a>
+                                                </h6>
                                                 <ul class="features">
                                                     {{-- <li>
                                                 <img src="assets/img/home4/icon/miles.svg" alt>
@@ -1726,7 +1732,8 @@
                                                     </li>
                                                 </ul>
                                                 <div class="button-and-price">
-                                                    <a class="primary-btn3" href="{{ route('car_details', ['id' => $item->id]) }}">View
+                                                    <a class="primary-btn3"
+                                                        href="{{ route('car_details', ['id' => $item->id]) }}">View
                                                         Details</a>
                                                     {{-- <div class="price-area">
                                                 <span>Great Price</span>
@@ -3868,7 +3875,7 @@
             </div>
             <div class="footer-center">
                 <div class="footer-logo">
-                    <!-- <a href="index.html"><img src="assets/img/footer-logo.svg" alt></a> -->
+                    <!-- <a href="{{ route('front_home') }}"><img src="assets/img/footer-logo.svg" alt></a> -->
                 </div>
                 <div class="contact-area">
                     <div class="hotline-area">

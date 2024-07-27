@@ -1,6 +1,7 @@
 @extends('admin.layout.app')
 
 @section('content')
+
     <div class="page-content " style="min-height: 758px;">
 
         <div id="main">
@@ -10,8 +11,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active"><span style="color: black; margin-right: 3px;"><i
                                 class="fa fa-home"></i></span>Dashboard</li>
-
-                    <li class="breadcrumb-item ">Invoices</li>
+                    <li class="breadcrumb-item ">Enquiries</li>
 
 
                 </ol>
@@ -36,9 +36,7 @@
                     </div>
                 @endif
 
-                <div id="success-message" class="alert alert-success" role="alert" style="display: none;">
-                    Successfully generated invoices!
-                </div>
+
                 <div class="portlet light bordered portlet-no-padding">
 
 
@@ -85,21 +83,26 @@
                                                 </div>
                                             </div>
                                             <div class="button-grp d-flex">
-                                                {{-- <button class="btn btn-secondary action-item mx-3 btn-info" tabindex="0"
-                                                    aria-controls="botble-ecommerce-tables-invoice-table" type="button"
-                                                    id="generate-invoices-btn">
-                                                    <span>
-                                                        <span data-action="generate-invoices" data-href="">
-                                                            <i class="fas fa-file-export"></i> Generate Invoices
-                                                        </span>
-                                                    </span>
-                                                </button> --}}
+                                                {{-- <a href="{{ route('admin.ecommerce.create_product') }}"
+                                                    class="create d-flex align-items-center">
+                                                    <i class="fa-solid fa-plus btn-icon"></i>
+                                                    <p>Create</p>
+                                                </a> --}}
+                                                {{-- <a class="export d-flex align-items-center" style="cursor: pointer;"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    <i class="fas fa-cloud-upload btn-icon"></i>
+                                                    <p>Import</p>
+                                                </a> --}}
+                                                {{-- <a href="{{ route('admin.ecommerce.export_product') }}"
+                                                    class="export d-flex align-items-center">
+                                                    <i class="fa-solid fa-cloud-download btn-icon"></i>
+                                                    <p>Export</p>
+                                                </a> --}}
                                                 <a class="relode d-flex align-items-center" style="cursor: pointer;"
                                                     onclick="location.reload();">
                                                     <i class="fa-solid fa-rotate-right btn-icon"></i>
                                                     <p>Reload</p>
                                                 </a>
-
                                             </div>
                                         </div>
                                     </div>
@@ -120,82 +123,91 @@
                                                 colspan="1" style="width: 10px;" aria-label=""><input
                                                     class="table-check-all" data-set=".dataTable .checkboxes" name=""
                                                     type="checkbox"></th>
-                                            {{-- <th title="ID" width="20px" class="column-key-id sorting_desc"
+                                            <th title="ID" width="20px" class="column-key-id sorting_desc"
                                                 tabindex="0" aria-controls="botble-page-tables-page-table" rowspan="1"
                                                 colspan="1" style="width: 20px;" aria-sort="descending"
                                                 aria-label="IDorderby asc">ID
-                                            </th> --}}
-                                            <th title="Name" class="text-start column-key-name sorting" tabindex="0"
-                                                aria-controls="botble-page-tables-page-table" rowspan="1" colspan="1"
-                                                aria-label="Nameorderby asc">
-                                                NAME
                                             </th>
-                                            {{-- <th title="Template"
-                                                class="text-start text-primary column-key-template sorting" tabindex="0"
-                                                aria-controls="botble-page-tables-page-table" rowspan="1"
-                                                colspan="1" aria-label="Templateorderby asc" style="">CODE
-                                            </th> --}}
-                                            {{-- <th title="Template" class="text-start column-key-template sorting"
-                                                tabindex="0" aria-controls="botble-page-tables-page-table"
-                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">AMOUNT
-                                            </th> --}}
-
                                             <th title="Template" class="text-start column-key-template sorting"
                                                 tabindex="0" aria-controls="botble-page-tables-page-table" rowspan="1"
-                                                colspan="1" aria-label="Templateorderby asc" style="">CREATED AT
+                                                colspan="1" aria-label="Templateorderby asc" style="">Name
+                                            </th>
+                                            <th title="Template" class="text-start column-key-template sorting"
+                                                tabindex="0" aria-controls="botble-page-tables-page-table"
+                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
+                                                style="">Contact
+                                            </th>
+                                            <th title="Template" class="text-start column-key-template sorting"
+                                                tabindex="0" aria-controls="botble-page-tables-page-table"
+                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
+                                                style="">Email
+                                            </th>
+                                            <th title="Template" class="text-start column-key-template sorting"
+                                                tabindex="0" aria-controls="botble-page-tables-page-table"
+                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
+                                                style="">Enquiry
                                             </th>
                                             <th title="Created At" width="100px"
                                                 class="text-center column-key-created_at sorting" tabindex="0"
-                                                aria-controls="botble-page-tables-page-table" rowspan="1" colspan="1"
-                                                style="width: 100px;" aria-label="Created Atorderby asc">
-                                                STATUS
-                                            </th>
-
-                                            <th title="Template" class="text-end column-key-template sorting"
-                                                tabindex="0" aria-controls="botble-page-tables-page-table"
-                                                rowspan="1" colspan="1" aria-label="Templateorderby asc"
-                                                style="">OPERATIONS
-                                            </th>
+                                                aria-controls="botble-page-tables-page-table" rowspan="1"
+                                                colspan="1" style="width: 100px;" aria-label="Created Atorderby asc">
+                                                Created At</th>
+                                            {{-- <th title="Status" width="100px"
+                                                class="text-center column-key-status sorting" tabindex="0"
+                                                aria-controls="botble-page-tables-page-table" rowspan="1"
+                                                colspan="1" style="width: 100px;" aria-label="Statusorderby asc">
+                                                Status</th>
+                                            <th title="<img src=&quot;{{ asset('storage/posts/us.png') }}&quot; title=&quot;English&quot; width=&quot;16&quot; alt=&quot;English&quot;>"
+                                                class="text-center language-header no-sort sorting_disabled"
+                                                width="40px" rowspan="1" colspan="1" style="width: 40px;"
+                                                aria-label=""><img
+                                                    src="{{ asset('storage/posts/us.png') }}"
+                                                    title="English" width="16" alt="English"></th> --}}
+                                            <th title="Operations" width="134px" class="text-center sorting_disabled"
+                                                rowspan="1" colspan="1" style="width: 134px;"
+                                                aria-label="Operations">Operations</th>
                                         </tr>
-
-
                                     </thead>
                                     <tbody>
-
-                                        @foreach ($products as $order)
+                                        @foreach ($enquiries as $item)
                                             <tr role="row" class="odd">
                                                 <td class="text-start no-sort dtr-control">
                                                     <div class="text-start">
                                                         <div class="checkbox checkbox-primary table-checkbox">
                                                             <input type="checkbox" class="checkboxes"
-                                                                name="{{ $order->id }}[]" value="">
+                                                                name="{{ $item->id }}[]" value="">
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="text-start column-key-template">
-                                                    {{ $order->name }}
+                                                <td class="column-key-id sorting_1">{{ $item->id }}</td>
+                                                <td class=" text-start column-key-name">
+                                                    {{ $item->name }}
                                                 </td>
-                                                <td class="text-start column-key-created_at">
-                                                    {{ $order->created_at->format('d-m-Y') }}
+                                                <td class=" text-start column-key-template" style="">
+                                                    {{ $item->phone }}
                                                 </td>
-                                                <td class="text-center column-key-payment_status">
-                                                    <span
-                                                        class="label-primary bg-primary status-label">{{ $order->status }}</span>
+                                                <td class=" text-start column-key-template" style="">
+                                                    {{ $item->email }}
                                                 </td>
-
-                                                <td class="text-end column-key-template">
+                                                <td class=" text-start column-key-template" style="">
+                                                    {{ $item->content }}
+                                                </td>
+                                                <td class=" text-center column-key-created_at" style="">
+                                                    {{ $item->created_at->format('d-m-Y') }}
+                                                </td>
+                                                <td class=" text-center">
                                                     <div class="table-actions">
+
+                                                        <a href="" class="btn btn-icon btn-sm btn-primary"
+                                                            data-bs-toggle="tooltip" data-bs-original-title="Edit"><i
+                                                                class="fa fa-edit"></i></a>
+
                                                         <a href=""
-                                                            class="btn btn-icon btn-sm btn-success"
-                                                            style="background-color: green;" data-bs-toggle="tooltip"
-                                                            data-bs-original-title="Whatsapp">
-                                                            <i class="fa fa-message"></i>
-                                                        </a>
-                                                        <a href="{{ route('generatePdf', ['id' => $order->id]) }}" target="__blank"
-                                                            class="btn btn-icon btn-sm btn-primary"
-                                                            data-bs-toggle="tooltip" data-bs-original-title="PDF">
-                                                            <i class="fa fa-file"></i>
+                                                            class="btn btn-icon btn-sm btn-danger deleteDialog"
+                                                            data-bs-toggle="tooltip" data-section="" role="button"
+                                                            data-bs-original-title="Delete"
+                                                            onclick="return confirm('Are you sure you want to delete this product?');">
+                                                            <i class="fa fa-trash"></i>
                                                         </a>
                                                     </div>
                                                 </td>
@@ -271,14 +283,14 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Import Locationsheet</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Import Productsheet</h5>
                         <button type="button" class="btn btn-info close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="card-body">
-                            <form action="{{ route('admin.importLocation.import_location') }}" method="POST"
+                            <form action="{{ route('admin.ecommerce.import_product') }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="input-group">
@@ -300,27 +312,11 @@
 
 
     </div>
-
-
 @endsection
 
 @section('scripts')
     <!-- jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#generate-invoices-btn').click(function() {
-                // Show success message
-                $('#success-message').show();
-
-                // Hide success message after 10 seconds
-                setTimeout(function() {
-                    $('#success-message').fadeOut('slow');
-                }, 1000); // 10000 milliseconds = 10 seconds
-            });
-        });
-    </script>
 @endsection

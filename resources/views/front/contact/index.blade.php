@@ -1,11 +1,24 @@
 @extends('front.layout.app')
 
+<style>
+    #success {
+        color: green;
+        font-weight: bold;
+        display: none;
+    }
+
+    #error {
+        color: red;
+        font-weight: bold;
+        display: none;
+    }
+</style>
 @section('content')
     <div class="inner-page-banner">
         <div class="banner-wrapper">
             <div class="container-fluid">
                 <ul class="breadcrumb-list">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ route('front_home') }}">Home</a></li>
                     <li>Contact Us</li>
                 </ul>
                 <div class="banner-main-content-wrap">
@@ -251,45 +264,60 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="inquiry-form">
-                        <form>
+                        <form action="{{ route('save_contact_enquiry') }}" method="POST">
+                            @csrf
+                            @method('post')
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-inner mb-30">
                                         <label>Full Name*</label>
-                                        <input type="text" placeholder="Jackson Mile">
+                                        <input type="text" name="name" placeholder="Jackson Mile" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-inner mb-30">
                                         <label>Phone*</label>
-                                        <input type="text" placeholder="Ex- +880-13* ** ***">
+                                        <input type="text" name="phone" placeholder="Ex- +880-13* ** ***"
+                                            maxlength="10" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-inner mb-30">
                                         <label>Email <span>(Optional)</span></label>
-                                        <input type="email" placeholder="Ex- info@gmail.com">
+                                        <input type="email" name="email" placeholder="Ex- info@gmail.com">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-inner mb-30">
                                         <label>Subject*</label>
-                                        <input type="email" placeholder="Subject">
+                                        <input type="text" name="subject" placeholder="Subject" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-inner mb-30">
                                         <label>Short Notes*</label>
-                                        <textarea placeholder="Write Something..."></textarea>
+                                        <textarea name="content" placeholder="Write Something..." required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="col-md-12">
                                         <div class="form-inner">
-                                            <button type="submit" class="primary-btn3">Submit Now</button>
+                                            <button type="submit" class="primary-btn3">Submit
+                                                Now</button>
                                         </div>
                                     </div>
                                 </div>
+                                @if ($errors->any())
+                                    <p id="error" style="display: block;">Something is wrong! Please check again.</p>
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                                @if (session('success'))
+                                    <p id="success" style="display: block;">{{ session('success') }}</p>
+                                @endif
                             </div>
                         </form>
                     </div>

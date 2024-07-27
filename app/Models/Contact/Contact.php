@@ -9,18 +9,14 @@ use App\Models\Contact\ContactReply;
 class Contact extends Model
 {
     use HasFactory;
-    protected $table = 'Contacts';
+    protected $table = 'form_enquiry';
 
     protected $fillable = [
         'name',
         'email',
         'phone',
-        'address',
         'subject',
         'content',
-        'status',
-        'created_at',
-        'updated_at',
     ];
 
     /**

@@ -111,7 +111,8 @@ class EcommerceController extends Controller
         $product_images = ProductImages::where('product_id', $id)->get();
         $ext_product_images = ExtProductImage::where('product_id', $id)->get();
 
-        return view('admin.product.edit',
+        return view(
+            'admin.product.edit',
             compact('product'),
             [
                 'title' => $title,
@@ -461,5 +462,21 @@ class EcommerceController extends Controller
 
         // Pass the variables to the view using the compact function
         return view('admin.ecommerce.reports', compact('title'));
+    }
+
+
+    // Enquires
+    public function enquiries()
+    {
+        $title = "Satyam Motors | Enquiries";
+
+        $enquiry = Contact::all();
+
+        // Pass the variables to the view using the compact function
+        return view(
+            'admin.ecommerce.enquiries',
+            compact('title'),
+            ['enquiries' => $enquiry]
+        );
     }
 }

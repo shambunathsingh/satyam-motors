@@ -11,6 +11,7 @@ use App\Models\ImageTest;
 use App\Models\Product\Product;
 use App\Models\ProductCollection\ProductCollection;
 use App\Models\ProductDiscount\ProductDiscount;
+use App\Models\ProductEnquiry\ProductEnquiry;
 use App\Models\ProductFeature\ProductFeatures;
 use App\Models\ProductImages\ProductImages;
 use App\Models\ProductLabel\ProductLabel;
@@ -291,7 +292,7 @@ class ProductController extends Controller
         $product->reg_rto = $request->reg_rto;
         // $product->slug = Product::generateSlug($request->name);
 
-        
+
         if ($request->hasFile('featured_image')) {
             $featured_image_file = $request->file('featured_image');
             if ($featured_image_file->isValid()) {
@@ -317,13 +318,13 @@ class ProductController extends Controller
         $product->documents = $request->documents;
         $product->brand_id = $request->brand_id;
         $product->status = $request->status;
-        
-        
+
+
         // dd($request);
         // exit;
-        
+
         $product->save();
-        
+
         if ($request->hasFile('int_images')) {
             foreach ($request->file('int_images') as $file) {
                 if ($file->isValid()) {
@@ -335,7 +336,7 @@ class ProductController extends Controller
                 }
             }
         }
-        
+
         if ($request->hasFile('ext_images')) {
             foreach ($request->file('ext_images') as $file) {
                 if ($file->isValid()) {
@@ -1075,5 +1076,28 @@ class ProductController extends Controller
         }
 
         return response()->json(['success' => false]);
+    }
+
+
+    // Product Enquiry
+    public function product_enquiry()
+    {
+        $title = "Satyam Motors | Product Enquiries";
+        $enquiry_list = ProductEnquiry::all();
+
+        // Create an array to hold product names keyed by product_id
+        $productNames = [];
+        foreach ($enquiry_list as $enquiry) {
+            $productNames[$enquiry->product_id] = Product::where('id', $enquiry->product_id)->pluck('name')->first();
+        }
+
+        return view(
+            'admin.productenquiry.index',
+            [
+                'title' => $title,
+                'enquiries' => $enquiry_list,
+                'productNames' => $productNames
+            ]
+        );
     }
 }

@@ -5,7 +5,7 @@
         <div class="banner-wrapper">
             <div class="container-fluid">
                 <ul class="breadcrumb-list">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ route('front_home') }}">Home</a></li>
                     <li>About</li>
                 </ul>
                 <div class="banner-main-content-wrap">
@@ -542,7 +542,7 @@
                                     </div>
                                     <div class="view-btn-area">
                                         <p>Thousand of People Reviews to Us</p>
-                                        <a class="view-btn" href="customer-review.html">View All Review</a>
+                                        <a class="view-btn" href="{{ route('customer_review') }}">View All Review</a>
                                     </div>
                                     <div class="slider-btn next-4 d-md-flex d-none">
                                         <svg width="11" height="19" viewBox="0 0 8 13"

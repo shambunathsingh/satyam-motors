@@ -1,6 +1,26 @@
 @extends('front.layout.app')
 
 @section('content')
+
+    @if ($errors->any())
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+
     <div class="inner-page-banner">
         <div class="banner-wrapper">
             <div class="container-fluid">
@@ -162,7 +182,7 @@
                                         <div class="product-img">
                                             <div class="number-of-img">
                                                 <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
-                                                10
+                                                {{ $ext_productImg_count }}
                                             </div>
                                             <a href="#" class="fav">
                                                 <svg width="14" height="13" viewBox="0 0 14 14"
@@ -188,18 +208,21 @@
                                             </div>
                                             <div class="swiper product-img-slider">
                                                 <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        {{-- <img src="/assets/img/inner-page/product-img-02.png" alt="image"> --}}
-                                                        <img src="{{ asset('uploads/' . $product->featured_image) }}" alt="image">
-                                                    </div>
-                                                    {{-- <div class="swiper-slide">
-                                                        <img src="/assets/img/inner-page/product-img-03.png"
-                                                            alt="image">
-                                                    </div> --}}
-                                                    {{-- <div class="swiper-slide">
-                                                        <img src="/assets/img/inner-page/product-img-04.png"
-                                                            alt="image">
-                                                    </div> --}}
+                                                    @if ($ext_productImg_count == 0)
+                                                        <div class="swiper-slide">
+                                                            {{-- <img src="/assets/img/inner-page/product-img-02.png" alt="image"> --}}
+                                                            <img src="{{ asset('uploads/' . $product->featured_image) }}"
+                                                                alt="image">
+                                                        </div>
+                                                    @else
+                                                        @foreach ($ext_productImg as $item)
+                                                            <div class="swiper-slide">
+                                                                {{-- <img src="/assets/img/inner-page/product-img-02.png" alt="image"> --}}
+                                                                <img src="{{ asset('uploads/' . $item->images) }}"
+                                                                    alt="image">
+                                                            </div>
+                                                        @endforeach
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -209,7 +232,7 @@
                                         <div class="product-img">
                                             <div class="number-of-img">
                                                 <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
-                                                10
+                                                {{ $int_productImg_count }}
                                             </div>
                                             <a href="#" class="fav">
                                                 <svg width="14" height="13" viewBox="0 0 14 14"
@@ -235,17 +258,21 @@
                                             </div>
                                             <div class="swiper product-img-slider">
                                                 <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        {{-- <img src="/assets/img/inner-page/interior-01.png" alt="image"> --}}
-                                                        <img src="{{ asset('uploads/' . $product->featured_image) }}"
-                                                            alt="image">
-                                                    </div>
-                                                    {{-- <div class="swiper-slide">
-                                                        <img src="/assets/img/inner-page/interior-02.png" alt="image">
-                                                    </div> --}}
-                                                    {{-- <div class="swiper-slide">
-                                                        <img src="/assets/img/inner-page/interior-03.png" alt="image">
-                                                    </div> --}}
+                                                    @if ($int_productImg_count == 0)
+                                                        <div class="swiper-slide">
+                                                            {{-- <img src="/assets/img/inner-page/product-img-02.png" alt="image"> --}}
+                                                            <img src="{{ asset('uploads/' . $product->featured_image) }}"
+                                                                alt="image">
+                                                        </div>
+                                                    @else
+                                                        @foreach ($int_productImg as $item)
+                                                            <div class="swiper-slide">
+                                                                {{-- <img src="/assets/img/inner-page/product-img-02.png" alt="image"> --}}
+                                                                <img src="{{ asset('uploads/' . $item->images) }}"
+                                                                    alt="image">
+                                                            </div>
+                                                        @endforeach
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -258,69 +285,6 @@
                                             </video>
                                         </div>
                                     </div>
-                                    {{-- <div class="tab-pane fade" id="color-clip" role="tabpanel"
-                                        aria-labelledby="color-clip-tab">
-                                        <div class="product-img2">
-                                            <div class="slider-btn-group">
-                                                <div class="product-stand-next swiper-arrow">
-                                                    <svg width="8" height="13" viewBox="0 0 8 13"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                    </svg>
-                                                </div>
-                                                <div class="product-stand-prev swiper-arrow">
-                                                    <svg width="8" height="13" viewBox="0 0 8 13"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="swiper product-img-slider">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="car-color-wrap">
-                                                            <div class="car-img">
-                                                                <img src="/assets/img/inner-page/color-car-05.png" alt>
-                                                            </div>
-                                                            <div class="content">
-                                                                <h5>Lamborghini Murciélago (Black)</h5>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="car-color-wrap">
-                                                            <div class="car-img">
-                                                                <img src="/assets/img/inner-page/color-car-06.png" alt>
-                                                            </div>
-                                                            <div class="content">
-                                                                <h5>Lamborghini Murciélago (Blue)</h5>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="car-color-wrap">
-                                                            <div class="car-img">
-                                                                <img src="/assets/img/inner-page/color-car-07.png" alt>
-                                                            </div>
-                                                            <div class="content">
-                                                                <h5>Lamborghini Murciélago (Pink)</h5>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="car-color-wrap">
-                                                            <div class="car-img">
-                                                                <img src="/assets/img/inner-page/color-car-08.png" alt>
-                                                            </div>
-                                                            <div class="content">
-                                                                <h5>Lamborghini Murciélago (Orange)</h5>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> --}}
                                 </div>
                                 <ul class="nav nav-tabs" id="myTab5" role="tablist">
                                     <li class="nav-item" role="presentation">
@@ -349,7 +313,7 @@
                                                             d="M4.81734 6.25912L5.28867 5.78252L7.53867 8.05734L7.067 8.53394L4.81734 6.25912ZM6.03967 5.81791L6.511 5.34131L7.975 6.82167L7.50367 7.29828L6.03967 5.81791ZM11.7773 6.26013L12.2487 5.78353L14.4987 8.05835L14.027 8.53495L11.7773 6.26013ZM13 5.81892L13.4713 5.34198L14.9353 6.82235L14.464 7.29895L13 5.81892ZM12.9197 13.5042C13.0081 13.5042 13.0929 13.4687 13.1554 13.4055C13.2179 13.3423 13.253 13.2566 13.253 13.1672V11.9875C13.253 11.8981 13.2179 11.8123 13.1554 11.7491C13.0929 11.6859 13.0081 11.6504 12.9197 11.6504H10.8837C10.6406 11.6504 10.4074 11.748 10.2355 11.9219C10.0636 12.0957 9.967 12.3315 9.967 12.5773C9.967 12.8231 10.0636 13.0589 10.2355 13.2327C10.4074 13.4066 10.6406 13.5042 10.8837 13.5042H12.9197ZM10.6337 12.5773C10.6338 12.5103 10.6602 12.4461 10.7071 12.3987C10.7539 12.3514 10.8174 12.3247 10.8837 12.3245H12.5863V12.8301H10.8837C10.8174 12.8299 10.7539 12.8032 10.7071 12.7559C10.6602 12.7085 10.6338 12.6443 10.6337 12.5773ZM5.24634 11.6504H3.21C2.96689 11.6504 2.73373 11.748 2.56182 11.9219C2.38991 12.0957 2.29333 12.3315 2.29333 12.5773C2.29333 12.8231 2.38991 13.0589 2.56182 13.2327C2.73373 13.4066 2.96689 13.5042 3.21 13.5042H5.24567C5.33407 13.5042 5.41886 13.4687 5.48137 13.4055C5.54388 13.3423 5.579 13.2566 5.579 13.1672V11.9875C5.579 11.8982 5.54397 11.8125 5.48161 11.7494C5.41924 11.6862 5.33463 11.6506 5.24634 11.6504ZM4.913 12.8301H3.21C3.1437 12.8301 3.08011 12.8035 3.03322 12.7561C2.98634 12.7087 2.96 12.6444 2.96 12.5773C2.96 12.5103 2.98634 12.446 3.03322 12.3986C3.08011 12.3511 3.1437 12.3245 3.21 12.3245H4.91234L4.913 12.8301Z" />
                                                     </g>
                                                 </svg>
-                                                Exterior(10)
+                                                Exterior({{ $ext_productImg_count }})
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="30"
                                                 viewBox="0 0 19 30">
@@ -384,7 +348,7 @@
                                                             d="M7.36451 13.2402H12.8159V13.9026H7.36451V13.2402ZM7.36451 5.51517H12.8159V6.1775H7.36451V5.51517ZM16.0687 20.2603H4.11135C3.39867 20.2596 2.7154 19.9916 2.21146 19.5153C1.70752 19.039 1.42408 18.3932 1.42334 17.7196V15.4537C1.42371 15.1339 1.55826 14.8273 1.79747 14.6012C2.03668 14.375 2.36103 14.2477 2.69937 14.2473H4.12957C4.38221 14.2479 4.63037 14.3104 4.84988 14.4286C5.06938 14.5468 5.25276 14.7168 5.38213 14.9219L6.03556 15.9647H14.1444L14.7982 14.9219C14.9275 14.7168 15.1108 14.5468 15.3303 14.4286C15.5497 14.3104 15.7978 14.2479 16.0504 14.2473H17.4806C17.819 14.2477 18.1433 14.375 18.3825 14.6012C18.6218 14.8273 18.7563 15.1339 18.7567 15.4537V17.7196C18.7559 18.3932 18.4725 19.039 17.9686 19.5153C17.4646 19.9916 16.7813 20.2596 16.0687 20.2603ZM2.69937 14.9096C2.54682 14.9099 2.4006 14.9673 2.29276 15.0693C2.18492 15.1713 2.12426 15.3095 2.12407 15.4537V17.7196C2.12463 18.2176 2.33418 18.695 2.70675 19.0472C3.07931 19.3993 3.58446 19.5974 4.11135 19.5979H16.0687C16.5956 19.5974 17.1007 19.3993 17.4733 19.0472C17.8458 18.695 18.0554 18.2176 18.0559 17.7196V15.4537C18.0558 15.3095 17.9951 15.1713 17.8873 15.0693C17.7794 14.9673 17.6332 14.9099 17.4806 14.9096H16.0504C15.9194 14.91 15.7907 14.9424 15.6769 15.0038C15.563 15.0651 15.468 15.1533 15.4009 15.2597L14.6448 16.4648C14.6138 16.5142 14.5697 16.5552 14.5168 16.5836C14.464 16.6121 14.4043 16.627 14.3435 16.6271H5.83551C5.7747 16.627 5.71495 16.6121 5.66212 16.5836C5.60929 16.5552 5.5652 16.5142 5.53419 16.4648L4.77915 15.2597C4.71211 15.1532 4.61703 15.0651 4.50319 15.0037C4.38934 14.9424 4.26062 14.9099 4.12957 14.9096H2.69937ZM11.8418 2.41282H8.33817C8.24525 2.41282 8.15613 2.37793 8.09043 2.31583C8.02472 2.25372 7.98781 2.16949 7.98781 2.08166V0.591418C7.98781 0.503588 8.02472 0.419355 8.09043 0.35725C8.15613 0.295144 8.24525 0.260254 8.33817 0.260254H11.8418C11.9348 0.260254 12.0239 0.295144 12.0896 0.35725C12.1553 0.419355 12.1922 0.503588 12.1922 0.591418V2.08166C12.1922 2.16949 12.1553 2.25372 12.0896 2.31583C12.0239 2.37793 11.9348 2.41282 11.8418 2.41282ZM8.68854 1.75049H11.4915V0.922582H8.68854V1.75049Z" />
                                                     </g>
                                                 </svg>
-                                                Interior(15)
+                                                Interior({{ $int_productImg_count }})
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="30"
                                                 viewBox="0 0 19 30">
@@ -484,7 +448,7 @@
                                             <img src="/assets/img/inner-page/icon/fuel.svg" alt>
                                         </div>
                                         <div class="content">
-                                            <h6>{{$product->fuel_type}}</h6>
+                                            <h6>{{ $product->fuel_type }}</h6>
                                             {{-- <span>Fuel Type</span> --}}
                                         </div>
                                     </li>
@@ -624,22 +588,21 @@
                                 </div>
                                 <div class="overview-content">
                                     <ul>
-                                        <li><span>Make</span> lamborghini</li>
-                                        <li><span>Model</span> lamborghini ave11</li>
-                                        <li><span>Year/Month</span> 2023</li>
-                                        <li><span>Mileage</span> 25,100 miles</li>
-                                        <li><span>Door’s</span> 4 doors</li>
-                                        <li><span>Engine</span> 22,231 cc</li>
-                                        <li><span>Color’s</span> sky blue</li>
+                                        <li><span>Make</span> {{ $product->make }}</li>
+                                        <li><span>Model</span> {{ $product->model }}</li>
+                                        {{-- <li><span>Registered</span> {{ $product->reg_date ? $product->reg_date->format('d F Y') : '' }}</li> --}}
+                                        <li><span>Registered</span> {{ $product->reg_date }}</li>
+                                        <li><span>Vehicle Class</span> {{ $product->vehicle_class }}</li>
+                                        <li><span>Wheel Base</span> {{ $product->wheel_base }}</li>
+                                        <li><span>RC Blacklist</span> {{ $product->rc_blacklist_status }}</li>
                                     </ul>
                                     <ul>
-                                        <li><span>Repaire</span> no</li>
-                                        <li><span>Steering</span> right</li>
-                                        <li><span>Steating Catacity</span> 08</li>
-                                        <li><span>Fuel Type</span> petrol+gas</li>
-                                        <li><span>No. of Cylinder</span> 03</li>
-                                        <li><span>Transmission</span> Manual</li>
-                                        <li><span>Wheel’s</span> 04</li>
+                                        <li><span>Registration No</span> {{ $product->reg_no }}</li>
+                                        <li><span>RTO</span> {{ $product->reg_rto }}</li>
+                                        {{-- <li><span>Manufactured</span> {{ $product->manfacture_date ? $product->manfacture_date->format('d F Y') : ''}}</li> --}}
+                                        <li><span>Manufactured</span> {{ $product->manfacture_date }}</li>
+                                        <li><span>Fuel Type</span> {{ $product->fuel_type }}</li>
+                                        <li><span>Fuel Norm</span> {{ $product->fuel_norm }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -824,7 +787,7 @@
                                 </div> --}}
                             </div>
                         </div>
-                        <div class="single-item mb-50" id="qus-ans">
+                        {{-- <div class="single-item mb-50" id="qus-ans">
                             <div class="user-qustion-area">
                                 <div class="section-title-and-filter mb-30">
                                     <div class="title">
@@ -986,7 +949,7 @@
                                     <a class="primary-btn3" href="#">Load More Question</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -1008,14 +971,18 @@
                                 <h4>To More inquiry </h4>
                                 <p>If choose this car to contact easily with us.</p>
                             </div>
-                            <form>
+
+                            <form id="enquiryForm" action="{{ route('car_enquiry', ['id' => $product->id]) }}"
+                                method="post">
+                                @csrf
+                                @method('post')
                                 <div class="form-inner mb-20">
                                     <label>Name*</label>
-                                    <input type="text" placeholder="Ex- Jhon Numan">
+                                    <input type="text" name="name" placeholder="Ex- Jhon Numan">
                                 </div>
                                 <div class="form-inner mb-20">
                                     <label>Email*</label>
-                                    <input type="email" placeholder="Ex- info@gmail.com">
+                                    <input type="email" name="email" placeholder="Ex- info@gmail.com">
                                 </div>
                                 <div class="form-inner mb-20">
                                     <label>Phone</label>
@@ -1023,7 +990,7 @@
                                 </div>
                                 <div class="form-inner mb-20">
                                     <label>Message*</label>
-                                    <textarea placeholder="Write your message..."></textarea>
+                                    <textarea name="mssg" placeholder="Write your message..."></textarea>
                                 </div>
                                 <div class="form-inner">
                                     <button class="primary-btn3" type="submit">
@@ -1036,7 +1003,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="recent-car-area">
+                        {{-- <div class="recent-car-area">
                             <div class="title mb-30">
                                 <h5>Recent Used Car</h5>
                             </div>
@@ -1557,7 +1524,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -1579,52 +1546,55 @@
                     <div class="swiper upcoming-car-slider mb-50">
                         <div class="swiper-wrapper">
                             @foreach ($allproduct as $item)
-                            <div class="swiper-slide">
-                                <div class="product-card">
-                                    <div class="product-img">
-                                        <div class="number-of-img">
-                                            <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
-                                            10
-                                        </div>
-                                        <a href="#" class="fav">
-                                            <svg width="14" height="13" viewBox="0 0 14 14"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <div class="slider-btn-group">
-                                            <div class="product-stand-next swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
-                                                </svg>
+                                <div class="swiper-slide">
+                                    <div class="product-card">
+                                        <div class="product-img">
+                                            <div class="number-of-img">
+                                                <img src="/assets/img/home1/icon/gallery-icon-1.svg" alt>
+                                                10
                                             </div>
-                                            <div class="product-stand-prev swiper-arrow">
-                                                <svg width="8" height="13" viewBox="0 0 8 13"
+                                            <a href="#" class="fav">
+                                                <svg width="14" height="13" viewBox="0 0 14 14"
                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                    <path
+                                                        d="M7.00012 2.40453L6.37273 1.75966C4.90006 0.245917 2.19972 0.76829 1.22495 2.67141C0.767306 3.56653 0.664053 4.8589 1.4997 6.50827C2.30473 8.09639 3.97953 9.99864 7.00012 12.0706C10.0207 9.99864 11.6946 8.09639 12.5005 6.50827C13.3362 4.85803 13.2338 3.56653 12.7753 2.67141C11.8005 0.76829 9.10019 0.245042 7.62752 1.75879L7.00012 2.40453ZM7.00012 13.125C-6.41666 4.25953 2.86912 -2.65995 6.84612 1.00016C6.89862 1.04829 6.95024 1.09816 7.00012 1.14979C7.04949 1.09821 7.10087 1.04859 7.15413 1.00104C11.1302 -2.6617 20.4169 4.25865 7.00012 13.125Z">
+                                                    </path>
                                                 </svg>
-                                            </div>
-                                        </div>
-                                        <div class="swiper product-img-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="{{asset('uploads/'. $item->featured_image)}}" alt="image">
+                                            </a>
+                                            <div class="slider-btn-group">
+                                                <div class="product-stand-next swiper-arrow">
+                                                    <svg width="8" height="13" viewBox="0 0 8 13"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
+                                                    </svg>
                                                 </div>
-                                                {{-- <div class="swiper-slide">
+                                                <div class="product-stand-prev swiper-arrow">
+                                                    <svg width="8" height="13" viewBox="0 0 8 13"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="swiper product-img-slider">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="{{ asset('uploads/' . $item->featured_image) }}"
+                                                            alt="image">
+                                                    </div>
+                                                    {{-- <div class="swiper-slide">
                                                     <img src="/assets/img/home1/product-img-11.png" alt="image">
                                                 </div> --}}
-                                                {{-- <div class="swiper-slide">
+                                                    {{-- <div class="swiper-slide">
                                                     <img src="/assets/img/home1/product-img-11.png" alt="image">
                                                 </div> --}}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h5><a href="{{route('car_details',['id' => $item->id])}}">{{$item->name}}</a></h5>
-                                        {{-- <div class="price-location">
+                                        <div class="product-content">
+                                            <h5><a
+                                                    href="{{ route('car_details', ['id' => $item->id]) }}">{{ $item->name }}</a>
+                                            </h5>
+                                            {{-- <div class="price-location">
                                             <div class="price">
                                                 <strong>$7,656.00</strong>
                                             </div>
@@ -1632,8 +1602,8 @@
                                                 <a href="#"><i class="bi bi-geo-alt"></i> Panama City</a>
                                             </div>
                                         </div> --}}
-                                        <ul class="features">
-                                            {{-- <li>
+                                            <ul class="features">
+                                                {{-- <li>
                                                 <svg width="13" height="13" viewBox="0 0 13 13"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <mask id="mask0_611_14491" style="mask-type:alpha"
@@ -1650,66 +1620,68 @@
                                                 </svg>
                                                 2500 miles
                                             </li> --}}
-                                            <li>
-                                                <svg width="13" height="13" viewBox="0 0 13 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <mask id="mask0_611_14392" style="mask-type:alpha"
-                                                        maskUnits="userSpaceOnUse" x="0" y="0" width="13"
-                                                        height="13">
-                                                        <rect width="13" height="13" />
-                                                    </mask>
-                                                    <g mask="url(#mask0_611_14392)">
+                                                <li>
+                                                    <svg width="13" height="13" viewBox="0 0 13 13"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <mask id="mask0_611_14392" style="mask-type:alpha"
+                                                            maskUnits="userSpaceOnUse" x="0" y="0" width="13"
+                                                            height="13">
+                                                            <rect width="13" height="13" />
+                                                        </mask>
+                                                        <g mask="url(#mask0_611_14392)">
+                                                            <path
+                                                                d="M6.42663 3.45316H10.8878C10.949 3.45316 11.0077 3.43176 11.051 3.39366C11.0943 3.35557 11.1186 3.3039 11.1186 3.25003V1.82813C11.1186 1.77426 11.0943 1.72259 11.051 1.6845C11.0077 1.6464 10.949 1.625 10.8878 1.625H7.19516C7.15154 1.62499 7.10882 1.63587 7.07193 1.65636C7.03505 1.67685 7.00551 1.70612 6.98676 1.74078L6.21823 3.16268C6.20147 3.19365 6.1939 3.22784 6.19621 3.26208C6.19852 3.29632 6.21064 3.32948 6.23145 3.35848C6.25226 3.38748 6.28107 3.41138 6.3152 3.42793C6.34933 3.44448 6.38766 3.45316 6.42663 3.45316ZM7.34102 2.03126H10.657V3.0469H6.79197L7.34102 2.03126Z" />
+                                                            <path
+                                                                d="M1.49911 3.21956C1.56073 3.24028 1.64058 3.21936 1.67497 3.2027L1.87622 3.10601L2.16332 3.56955C1.79404 3.78793 1.49148 4.08293 1.28231 4.42852C1.07314 4.77412 0.963791 5.1597 0.963905 5.55127V11.5781C0.963905 12.3622 1.68859 13 2.57944 13H10.8879C11.7787 13 12.5034 12.3622 12.5034 11.5781V1.42187C12.5034 0.861847 11.9858 0.406229 11.3495 0.406229H7.42603C7.03602 0.404981 6.6534 0.499924 6.32156 0.680298C5.98972 0.860671 5.72194 1.11926 5.54855 1.42675L5.17444 2.08732L4.57947 2.3778L4.30759 1.93944L4.51115 1.84174C4.56484 1.81594 4.60469 1.77244 4.62196 1.72079C4.63923 1.66914 4.63249 1.61358 4.60324 1.5663L3.82986 0.316853C3.74165 0.175448 3.59347 0.0704953 3.41766 0.0249036C3.24185 -0.0206881 3.05269 -0.00321658 2.89147 0.0735044L0.862588 1.04649C0.53025 1.20635 0.405854 1.57645 0.586101 1.87261L1.36156 3.12186C1.37608 3.1453 1.39574 3.16598 1.41938 3.18272C1.44303 3.19945 1.4702 3.2119 1.49934 3.21936L1.49911 3.21956ZM3.11164 0.430605C3.16571 0.406431 3.22823 0.401358 3.2864 0.416425C3.34458 0.431492 3.39402 0.465558 3.42459 0.511653L4.08742 1.58255L3.58084 1.82529L3.24804 1.28984C3.21792 1.24381 3.16853 1.21 3.11043 1.19564C3.05234 1.18128 2.99016 1.18752 2.93723 1.21302C2.8843 1.23852 2.84482 1.28125 2.82725 1.33206C2.80968 1.38287 2.81541 1.43771 2.84323 1.48484L3.17557 2.01948L2.56697 2.31117L2.2351 1.77714C2.20498 1.73112 2.15559 1.69731 2.09749 1.68295C2.0394 1.66859 1.97723 1.67483 1.92429 1.70033C1.87136 1.72583 1.83188 1.76856 1.81431 1.81936C1.79674 1.87017 1.80248 1.92502 1.83029 1.97215L2.16171 2.50536L1.85845 2.6508L1.85729 2.65121L1.65604 2.74851L0.992292 1.67924C0.963266 1.63183 0.956605 1.57627 0.973751 1.52457C0.990897 1.47288 1.03047 1.4292 1.08392 1.40298L3.11164 0.430605ZM3.60391 3.33778L5.46085 2.41212C5.5017 2.39222 5.53448 2.36175 5.55548 2.32519L5.96144 1.60834C6.09866 1.36989 6.30803 1.16942 6.56646 1.02903C6.82489 0.888634 7.12234 0.81377 7.42603 0.812689H11.3495C11.7312 0.812689 12.0418 1.0861 12.0418 1.42208V11.5783C12.0418 12.1383 11.5242 12.5939 10.8879 12.5939H2.57944C1.94315 12.5939 1.42549 12.1383 1.42549 11.5783V5.55148C1.42528 5.19819 1.53251 4.8513 1.73603 4.5468C1.93955 4.2423 2.23196 3.99128 2.5829 3.81981C2.63616 3.7938 2.67559 3.75032 2.69258 3.69883C2.70957 3.64735 2.70275 3.59205 2.6736 3.54497L2.28149 2.91182L3.9021 2.13424L4.17743 2.57808L3.37359 2.98596C3.34732 2.99928 3.32429 3.01703 3.30582 3.03818C3.28735 3.05934 3.27379 3.08349 3.26593 3.10926C3.25806 3.13502 3.25604 3.1619 3.25998 3.18836C3.26392 3.21481 3.27374 3.24032 3.28889 3.26344C3.33158 3.32864 3.47629 3.38795 3.60415 3.33798L3.60391 3.33778Z" />
+                                                            <path
+                                                                d="M9.50334 9.46291V6.58418L10.8205 5.42492C10.8419 5.40607 10.8589 5.38369 10.8705 5.35904C10.8822 5.3344 10.8881 5.30799 10.8881 5.28131C10.8881 5.25463 10.8822 5.22822 10.8705 5.20357C10.8589 5.17893 10.8419 5.15654 10.8205 5.1377L9.8973 4.32518C9.87589 4.3063 9.85046 4.29132 9.82246 4.2811C9.79446 4.27089 9.76445 4.26562 9.73414 4.26562C9.70382 4.26562 9.67381 4.27089 9.64581 4.2811C9.61781 4.29132 9.59238 4.3063 9.57097 4.32518L8.25385 5.48444H5.21388L3.89676 4.32518C3.87534 4.3063 3.84991 4.29132 3.82191 4.2811C3.79391 4.27089 3.7639 4.26562 3.73359 4.26562C3.70328 4.26562 3.67326 4.27089 3.64527 4.2811C3.61727 4.29132 3.59183 4.3063 3.57042 4.32518L2.64726 5.1377C2.62581 5.15654 2.60879 5.17893 2.59718 5.20357C2.58557 5.22822 2.57959 5.25463 2.57959 5.28131C2.57959 5.30799 2.58557 5.3344 2.59718 5.35904C2.60879 5.38369 2.62581 5.40607 2.64726 5.42492L3.96438 6.58418V9.46291L2.64726 10.6222C2.62581 10.641 2.60879 10.6634 2.59718 10.688C2.58557 10.7127 2.57959 10.7391 2.57959 10.7658C2.57959 10.7925 2.58557 10.8189 2.59718 10.8435C2.60879 10.8682 2.62581 10.8905 2.64726 10.9094L3.57042 11.7219C3.59183 11.7408 3.61727 11.7558 3.64527 11.766C3.67326 11.7762 3.70328 11.7815 3.73359 11.7815C3.7639 11.7815 3.79391 11.7762 3.82191 11.766C3.84991 11.7558 3.87534 11.7408 3.89676 11.7219L5.21388 10.5627H8.25385L9.57097 11.7219C9.59235 11.7408 9.61777 11.7559 9.64578 11.7661C9.67378 11.7764 9.70381 11.7816 9.73414 11.7816C9.76446 11.7816 9.79449 11.7764 9.82249 11.7661C9.8505 11.7559 9.87592 11.7408 9.8973 11.7219L10.8205 10.9094C10.8419 10.8905 10.8589 10.8682 10.8705 10.8435C10.8822 10.8189 10.8881 10.7925 10.8881 10.7658C10.8881 10.7391 10.8822 10.7127 10.8705 10.688C10.8589 10.6634 10.8419 10.641 10.8205 10.6222L9.50334 9.46291ZM9.73414 11.2911L8.51256 10.2159C8.46929 10.1778 8.4106 10.1564 8.34939 10.1564H5.11833C5.08802 10.1564 5.058 10.1616 5.03 10.1718C5.002 10.182 4.97656 10.197 4.95516 10.2159L3.73359 11.2911L3.13676 10.7658L4.35834 9.69062C4.40162 9.65254 4.42595 9.60088 4.42596 9.54701V6.50008C4.42599 6.4734 4.42003 6.44698 4.40843 6.42234C4.39682 6.39769 4.3798 6.37531 4.35834 6.35647L3.13676 5.28131L3.73359 4.75602L4.95516 5.83118C4.99843 5.86927 5.05712 5.89068 5.11833 5.89069H8.34939C8.41055 5.89069 8.4694 5.86937 8.51256 5.83118L9.73414 4.75602L10.331 5.28131L9.10939 6.35647C9.0661 6.39455 9.04178 6.44621 9.04176 6.50008V9.54701C9.04176 9.60084 9.066 9.65264 9.10939 9.69062L10.331 10.7658L9.73414 11.2911Z" />
+                                                            <path
+                                                                d="M8.11844 6.5H5.34895C5.28774 6.5 5.22904 6.5214 5.18576 6.55949C5.14248 6.59759 5.11816 6.64926 5.11816 6.70313V9.3438C5.11816 9.39767 5.14248 9.44934 5.18576 9.48743C5.22904 9.52553 5.28774 9.54693 5.34895 9.54693H7.19528C7.25649 9.54693 7.31519 9.52553 7.35847 9.48743C7.40175 9.44934 7.42607 9.39767 7.42607 9.3438C7.42607 9.28993 7.40175 9.23826 7.35847 9.20017C7.31519 9.16207 7.25649 9.14067 7.19528 9.14067H5.57974V6.90626H7.88765V8.53129C7.88765 8.58516 7.91196 8.63683 7.95524 8.67492C7.99853 8.71301 8.05723 8.73441 8.11844 8.73441C8.17965 8.73441 8.23835 8.71301 8.28163 8.67492C8.32491 8.63683 8.34923 8.58516 8.34923 8.53129V6.70313C8.34923 6.64926 8.32491 6.59759 8.28163 6.55949C8.23835 6.5214 8.17965 6.5 8.11844 6.5ZM11.1187 6.5C11.0575 6.5 10.9988 6.5214 10.9555 6.55949C10.9122 6.59759 10.8879 6.64926 10.8879 6.70313V8.53129C10.8879 8.58516 10.9122 8.63683 10.9555 8.67492C10.9988 8.71301 11.0575 8.73441 11.1187 8.73441C11.1799 8.73441 11.2386 8.71301 11.2819 8.67492C11.3252 8.63683 11.3495 8.58516 11.3495 8.53129V6.70313C11.3495 6.64926 11.3252 6.59759 11.2819 6.55949C11.2386 6.5214 11.1799 6.5 11.1187 6.5Z" />
+                                                            <path
+                                                                d="M11.1187 9.54713C11.2462 9.54713 11.3495 9.45618 11.3495 9.344C11.3495 9.23181 11.2462 9.14087 11.1187 9.14087C10.9913 9.14087 10.8879 9.23181 10.8879 9.344C10.8879 9.45618 10.9913 9.54713 11.1187 9.54713Z" />
+                                                        </g>
+                                                    </svg>
+                                                    {{ $item->fuel_type }}
+                                                </li>
+                                                <li>
+                                                    <svg width="13" height="13" viewBox="0 0 13 13"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <mask id="mask0_611_14323" style="mask-type:alpha"
+                                                            maskUnits="userSpaceOnUse" x="0" y="0" width="13"
+                                                            height="13">
+                                                            <rect width="13" height="13" />
+                                                        </mask>
+                                                        <g mask="url(#mask0_611_14323)">
+                                                            <path
+                                                                d="M8.28713 6.95811H7.8187L8.04511 5.25406C8.05414 5.18229 8.0395 5.10942 8.00367 5.04772C7.96783 4.98603 7.91299 4.93928 7.84838 4.91536C7.71188 4.86288 7.56173 4.91605 7.49608 5.02788L5.69038 7.50535C5.65489 7.56344 5.63505 7.63066 5.63299 7.69979C5.63093 7.76892 5.64673 7.83733 5.67868 7.89767C5.74498 8.02486 5.87281 8.10369 6.01256 8.10369H6.481L6.25458 9.80774C6.24555 9.87951 6.26019 9.95238 6.29602 10.0141C6.33186 10.0758 6.3867 10.1225 6.45131 10.1464C6.48728 10.1604 6.52433 10.1668 6.56051 10.1668C6.66148 10.1668 6.7553 10.1162 6.80361 10.0339L8.60931 7.55645C8.6448 7.49836 8.66464 7.43113 8.6667 7.36201C8.66876 7.29288 8.65297 7.22446 8.62101 7.16412C8.58787 7.10133 8.53941 7.0491 8.48068 7.01286C8.42196 6.97663 8.35512 6.95772 8.28713 6.95811ZM6.75226 9.35537L6.94488 7.90684C6.94922 7.87436 6.94692 7.84127 6.93813 7.80981C6.92934 7.77836 6.91427 7.74926 6.89394 7.7245C6.8736 7.69973 6.84848 7.67987 6.82026 7.66626C6.79204 7.65264 6.76139 7.6456 6.73038 7.64559H6.13433L7.54743 5.70665L7.35481 7.15519C7.35047 7.18767 7.35277 7.22075 7.36156 7.25221C7.37035 7.28367 7.38542 7.31276 7.40575 7.33753C7.42609 7.36229 7.45121 7.38215 7.47943 7.39577C7.50765 7.40938 7.5383 7.41643 7.56931 7.41643H8.16536L6.75226 9.35537Z" />
+                                                            <path
+                                                                d="M12.35 4.89575H11.9167C11.5583 4.89575 11.2667 5.2042 11.2667 5.58324V6.27072H10.8333V4.20827C10.8333 3.70274 10.4446 3.29162 9.96667 3.29162H8.88333V2.83329H10.1833C10.5417 2.83329 10.8333 2.52484 10.8333 2.14581V1.68749C10.8333 1.30845 10.5417 1 10.1833 1H5.85C5.49163 1 5.2 1.30845 5.2 1.68749V2.14581C5.2 2.52484 5.49163 2.83329 5.85 2.83329H7.15V3.29162H5.86863C5.66627 3.29162 5.46932 3.36701 5.31397 3.50405L4.37515 4.3311C4.29737 4.39972 4.19932 4.43735 4.09803 4.43743H3.03333C2.55537 4.43743 2.16667 4.84854 2.16667 5.35408V6.27072H1.73333V4.89575C1.73333 4.51672 1.4417 4.20827 1.08333 4.20827H0.65C0.291633 4.20827 0 4.51672 0 4.89575V9.47899C0 9.85802 0.291633 10.1665 0.65 10.1665H1.08333C1.4417 10.1665 1.73333 9.85802 1.73333 9.47899V8.10402H2.16667V9.47899C2.16667 9.98452 2.55537 10.3956 3.03333 10.3956H3.73945C3.89458 10.3956 4.03888 10.4841 4.11558 10.6266L4.60807 11.5378C4.68391 11.6781 4.79344 11.7947 4.92557 11.8759C5.0577 11.957 5.20775 11.9998 5.36055 12H9.22892C9.35599 12.0002 9.48154 11.9707 9.59662 11.9137C9.7117 11.8567 9.81349 11.7736 9.89473 11.6702L10.6325 10.7339C10.7622 10.569 10.8332 10.3614 10.8333 10.147V8.10425H11.2667V8.79173C11.2667 9.17077 11.5583 9.47922 11.9167 9.47922H12.35C12.7084 9.47922 13 9.17077 13 8.79173V5.58347C13 5.20443 12.7084 4.89575 12.35 4.89575ZM1.3 9.47899C1.3 9.53977 1.27717 9.59805 1.23654 9.64103C1.19591 9.68401 1.1408 9.70815 1.08333 9.70815H0.65C0.592536 9.70815 0.537426 9.68401 0.496794 9.64103C0.456161 9.59805 0.433333 9.53977 0.433333 9.47899V4.89575C0.433333 4.83497 0.456161 4.77669 0.496794 4.73371C0.537426 4.69073 0.592536 4.66659 0.65 4.66659H1.08333C1.1408 4.66659 1.19591 4.69073 1.23654 4.73371C1.27717 4.77669 1.3 4.83497 1.3 4.89575V9.47899ZM1.73333 7.64569V6.72905H2.16667V7.64569H1.73333ZM5.63333 2.14581V1.68749C5.63333 1.62671 5.65616 1.56842 5.69679 1.52544C5.73743 1.48247 5.79254 1.45832 5.85 1.45832H10.1833C10.2408 1.45832 10.2959 1.48247 10.3365 1.52544C10.3772 1.56842 10.4 1.62671 10.4 1.68749V2.14581C10.4 2.20659 10.3772 2.26488 10.3365 2.30785C10.2959 2.35083 10.2408 2.37497 10.1833 2.37497H5.85C5.79254 2.37497 5.73743 2.35083 5.69679 2.30785C5.65616 2.26488 5.63333 2.20659 5.63333 2.14581ZM7.58333 2.83329H8.45V3.29162H7.58333V2.83329ZM10.4 10.1468C10.4 10.2538 10.3643 10.3578 10.2995 10.4401L9.56193 11.3764C9.52126 11.4281 9.47034 11.4697 9.41279 11.4982C9.35524 11.5267 9.29247 11.5415 9.22892 11.5414H5.36055C5.28417 11.5414 5.20916 11.52 5.14311 11.4794C5.07706 11.4389 5.02232 11.3806 4.98442 11.3105L4.49193 10.3993C4.41609 10.259 4.30656 10.1424 4.17443 10.0612C4.0423 9.98006 3.89225 9.93724 3.73945 9.93708H3.03333C2.79435 9.93708 2.6 9.73153 2.6 9.47876V5.35385C2.6 5.10108 2.79435 4.89552 3.03333 4.89552H4.09803C4.3004 4.89552 4.49735 4.82013 4.6527 4.68309L5.59152 3.85604C5.66929 3.78742 5.76735 3.7498 5.86863 3.74971H9.96667C10.2057 3.74971 10.4 3.95527 10.4 4.20804V10.1465V10.1468ZM10.8333 7.64569V6.72905H11.2667V7.64569H10.8333ZM12.5667 8.7915C12.5667 8.85228 12.5438 8.91057 12.5032 8.95355C12.4626 8.99652 12.4075 9.02067 12.35 9.02067H11.9167C11.8592 9.02067 11.8041 8.99652 11.7635 8.95355C11.7228 8.91057 11.7 8.85228 11.7 8.7915V5.58324C11.7 5.52246 11.7228 5.46417 11.7635 5.4212C11.8041 5.37822 11.8592 5.35408 11.9167 5.35408H12.35C12.4075 5.35408 12.4626 5.37822 12.5032 5.4212C12.5438 5.46417 12.5667 5.52246 12.5667 5.58324V8.7915Z" />
+                                                        </g>
+                                                    </svg>
+                                                    {{ $item->vehicle_class }}
+                                                </li>
+                                            </ul>
+                                            <div class="content-btm">
+                                                <a class="view-btn2"
+                                                    href="{{ route('car_details', ['id' => $item->id]) }}">
+                                                    <svg width="35" height="21" viewBox="0 0 35 21"
+                                                        xmlns="http://www.w3.org/2000/svg">
                                                         <path
-                                                            d="M6.42663 3.45316H10.8878C10.949 3.45316 11.0077 3.43176 11.051 3.39366C11.0943 3.35557 11.1186 3.3039 11.1186 3.25003V1.82813C11.1186 1.77426 11.0943 1.72259 11.051 1.6845C11.0077 1.6464 10.949 1.625 10.8878 1.625H7.19516C7.15154 1.62499 7.10882 1.63587 7.07193 1.65636C7.03505 1.67685 7.00551 1.70612 6.98676 1.74078L6.21823 3.16268C6.20147 3.19365 6.1939 3.22784 6.19621 3.26208C6.19852 3.29632 6.21064 3.32948 6.23145 3.35848C6.25226 3.38748 6.28107 3.41138 6.3152 3.42793C6.34933 3.44448 6.38766 3.45316 6.42663 3.45316ZM7.34102 2.03126H10.657V3.0469H6.79197L7.34102 2.03126Z" />
+                                                            d="M11 20C5.47715 20 1 15.7467 1 10.5C1 5.25329 5.47715 1 11 1"
+                                                            stroke-linecap="round" />
                                                         <path
-                                                            d="M1.49911 3.21956C1.56073 3.24028 1.64058 3.21936 1.67497 3.2027L1.87622 3.10601L2.16332 3.56955C1.79404 3.78793 1.49148 4.08293 1.28231 4.42852C1.07314 4.77412 0.963791 5.1597 0.963905 5.55127V11.5781C0.963905 12.3622 1.68859 13 2.57944 13H10.8879C11.7787 13 12.5034 12.3622 12.5034 11.5781V1.42187C12.5034 0.861847 11.9858 0.406229 11.3495 0.406229H7.42603C7.03602 0.404981 6.6534 0.499924 6.32156 0.680298C5.98972 0.860671 5.72194 1.11926 5.54855 1.42675L5.17444 2.08732L4.57947 2.3778L4.30759 1.93944L4.51115 1.84174C4.56484 1.81594 4.60469 1.77244 4.62196 1.72079C4.63923 1.66914 4.63249 1.61358 4.60324 1.5663L3.82986 0.316853C3.74165 0.175448 3.59347 0.0704953 3.41766 0.0249036C3.24185 -0.0206881 3.05269 -0.00321658 2.89147 0.0735044L0.862588 1.04649C0.53025 1.20635 0.405854 1.57645 0.586101 1.87261L1.36156 3.12186C1.37608 3.1453 1.39574 3.16598 1.41938 3.18272C1.44303 3.19945 1.4702 3.2119 1.49934 3.21936L1.49911 3.21956ZM3.11164 0.430605C3.16571 0.406431 3.22823 0.401358 3.2864 0.416425C3.34458 0.431492 3.39402 0.465558 3.42459 0.511653L4.08742 1.58255L3.58084 1.82529L3.24804 1.28984C3.21792 1.24381 3.16853 1.21 3.11043 1.19564C3.05234 1.18128 2.99016 1.18752 2.93723 1.21302C2.8843 1.23852 2.84482 1.28125 2.82725 1.33206C2.80968 1.38287 2.81541 1.43771 2.84323 1.48484L3.17557 2.01948L2.56697 2.31117L2.2351 1.77714C2.20498 1.73112 2.15559 1.69731 2.09749 1.68295C2.0394 1.66859 1.97723 1.67483 1.92429 1.70033C1.87136 1.72583 1.83188 1.76856 1.81431 1.81936C1.79674 1.87017 1.80248 1.92502 1.83029 1.97215L2.16171 2.50536L1.85845 2.6508L1.85729 2.65121L1.65604 2.74851L0.992292 1.67924C0.963266 1.63183 0.956605 1.57627 0.973751 1.52457C0.990897 1.47288 1.03047 1.4292 1.08392 1.40298L3.11164 0.430605ZM3.60391 3.33778L5.46085 2.41212C5.5017 2.39222 5.53448 2.36175 5.55548 2.32519L5.96144 1.60834C6.09866 1.36989 6.30803 1.16942 6.56646 1.02903C6.82489 0.888634 7.12234 0.81377 7.42603 0.812689H11.3495C11.7312 0.812689 12.0418 1.0861 12.0418 1.42208V11.5783C12.0418 12.1383 11.5242 12.5939 10.8879 12.5939H2.57944C1.94315 12.5939 1.42549 12.1383 1.42549 11.5783V5.55148C1.42528 5.19819 1.53251 4.8513 1.73603 4.5468C1.93955 4.2423 2.23196 3.99128 2.5829 3.81981C2.63616 3.7938 2.67559 3.75032 2.69258 3.69883C2.70957 3.64735 2.70275 3.59205 2.6736 3.54497L2.28149 2.91182L3.9021 2.13424L4.17743 2.57808L3.37359 2.98596C3.34732 2.99928 3.32429 3.01703 3.30582 3.03818C3.28735 3.05934 3.27379 3.08349 3.26593 3.10926C3.25806 3.13502 3.25604 3.1619 3.25998 3.18836C3.26392 3.21481 3.27374 3.24032 3.28889 3.26344C3.33158 3.32864 3.47629 3.38795 3.60415 3.33798L3.60391 3.33778Z" />
+                                                            d="M14.2597 3C14.1569 3 14.0583 3.04166 13.9856 3.11582C13.9129 3.18997 13.8721 3.29055 13.8721 3.39542C13.8721 3.50029 13.9129 3.60086 13.9856 3.67502C14.0583 3.74917 14.1569 3.79083 14.2597 3.79083H15.8104C15.9132 3.79083 16.0118 3.74917 16.0845 3.67502C16.1572 3.60086 16.198 3.50029 16.198 3.39542C16.198 3.29055 16.1572 3.18997 16.0845 3.11582C16.0118 3.04166 15.9132 3 15.8104 3H14.2597ZM16.7795 3C16.6767 3 16.5781 3.04166 16.5054 3.11582C16.4327 3.18997 16.3919 3.29055 16.3919 3.39542C16.3919 3.50029 16.4327 3.60086 16.5054 3.67502C16.5781 3.74917 16.6767 3.79083 16.7795 3.79083H21.3346C21.4374 3.79083 21.536 3.74917 21.6087 3.67502C21.6814 3.60086 21.7222 3.50029 21.7222 3.39542C21.7222 3.29055 21.6814 3.18997 21.6087 3.11582C21.536 3.04166 21.4374 3 21.3346 3H16.7795Z" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M15.2292 5.76953C15.1264 5.76953 15.0278 5.81119 14.9551 5.88535C14.8824 5.9595 14.8415 6.06008 14.8415 6.16495C14.8415 6.26982 14.8824 6.3704 14.9551 6.44455C15.0278 6.51871 15.1264 6.56037 15.2292 6.56037H24.1454C25.653 6.56037 26.5822 6.79999 27.3256 7.18493C27.9575 7.51194 28.4672 7.9467 29.1055 8.49119C29.2375 8.60368 29.3749 8.72073 29.5201 8.84271L29.6101 8.91824L29.726 8.93069C33.2653 9.31069 34.0622 10.5309 34.2246 11.1557V12.6893C34.2246 12.7942 34.1838 12.8948 34.1111 12.9689C34.0384 13.0431 33.9398 13.0847 33.8369 13.0847H32.8356C32.6511 11.9627 31.6943 11.1077 30.5418 11.1077C29.3893 11.1077 28.4325 11.9627 28.248 13.0847H21.2058C21.0212 11.9627 20.0645 11.1077 18.912 11.1077C17.7594 11.1077 16.8027 11.9627 16.6182 13.0847H14.7446C14.6418 13.0847 14.5432 13.1264 14.4705 13.2006C14.3978 13.2747 14.3569 13.3753 14.3569 13.4802C14.3569 13.585 14.3978 13.6856 14.4705 13.7598C14.5432 13.8339 14.6418 13.8756 14.7446 13.8756H16.6182C16.8027 14.9976 17.7594 15.8527 18.912 15.8527C20.0645 15.8527 21.0212 14.9976 21.2058 13.8756H28.248C28.4325 14.9976 29.3893 15.8527 30.5418 15.8527C31.6943 15.8527 32.6511 14.9976 32.8356 13.8756H33.8369C34.1454 13.8756 34.4412 13.7506 34.6593 13.5281C34.8774 13.3057 34.9999 13.0039 34.9999 12.6893V11.0626L34.99 11.0187C34.7431 9.92754 33.5791 8.57502 29.9239 8.15706C29.8217 8.07086 29.7215 7.98505 29.6227 7.90063C28.9828 7.35397 28.3942 6.851 27.6766 6.4795C26.7966 6.02418 25.7391 5.76953 24.1454 5.76953H15.2292ZM28.9912 13.4802C28.9912 13.0607 29.1545 12.6584 29.4453 12.3618C29.7361 12.0651 30.1306 11.8985 30.5418 11.8985C30.9531 11.8985 31.3475 12.0651 31.6383 12.3618C31.9291 12.6584 32.0925 13.0607 32.0925 13.4802C32.0925 13.8996 31.9291 14.302 31.6383 14.5986C31.3475 14.8952 30.9531 15.0618 30.5418 15.0618C30.1306 15.0618 29.7361 14.8952 29.4453 14.5986C29.1545 14.302 28.9912 13.8996 28.9912 13.4802ZM18.912 11.8985C18.5007 11.8985 18.1063 12.0651 17.8155 12.3618C17.5247 12.6584 17.3613 13.0607 17.3613 13.4802C17.3613 13.8996 17.5247 14.302 17.8155 14.5986C18.1063 14.8952 18.5007 15.0618 18.912 15.0618C19.3232 15.0618 19.7176 14.8952 20.0084 14.5986C20.2992 14.302 20.4626 13.8996 20.4626 13.4802C20.4626 13.0607 20.2992 12.6584 20.0084 12.3618C19.7176 12.0651 19.3232 11.8985 18.912 11.8985Z" />
                                                         <path
-                                                            d="M9.50334 9.46291V6.58418L10.8205 5.42492C10.8419 5.40607 10.8589 5.38369 10.8705 5.35904C10.8822 5.3344 10.8881 5.30799 10.8881 5.28131C10.8881 5.25463 10.8822 5.22822 10.8705 5.20357C10.8589 5.17893 10.8419 5.15654 10.8205 5.1377L9.8973 4.32518C9.87589 4.3063 9.85046 4.29132 9.82246 4.2811C9.79446 4.27089 9.76445 4.26562 9.73414 4.26562C9.70382 4.26562 9.67381 4.27089 9.64581 4.2811C9.61781 4.29132 9.59238 4.3063 9.57097 4.32518L8.25385 5.48444H5.21388L3.89676 4.32518C3.87534 4.3063 3.84991 4.29132 3.82191 4.2811C3.79391 4.27089 3.7639 4.26562 3.73359 4.26562C3.70328 4.26562 3.67326 4.27089 3.64527 4.2811C3.61727 4.29132 3.59183 4.3063 3.57042 4.32518L2.64726 5.1377C2.62581 5.15654 2.60879 5.17893 2.59718 5.20357C2.58557 5.22822 2.57959 5.25463 2.57959 5.28131C2.57959 5.30799 2.58557 5.3344 2.59718 5.35904C2.60879 5.38369 2.62581 5.40607 2.64726 5.42492L3.96438 6.58418V9.46291L2.64726 10.6222C2.62581 10.641 2.60879 10.6634 2.59718 10.688C2.58557 10.7127 2.57959 10.7391 2.57959 10.7658C2.57959 10.7925 2.58557 10.8189 2.59718 10.8435C2.60879 10.8682 2.62581 10.8905 2.64726 10.9094L3.57042 11.7219C3.59183 11.7408 3.61727 11.7558 3.64527 11.766C3.67326 11.7762 3.70328 11.7815 3.73359 11.7815C3.7639 11.7815 3.79391 11.7762 3.82191 11.766C3.84991 11.7558 3.87534 11.7408 3.89676 11.7219L5.21388 10.5627H8.25385L9.57097 11.7219C9.59235 11.7408 9.61777 11.7559 9.64578 11.7661C9.67378 11.7764 9.70381 11.7816 9.73414 11.7816C9.76446 11.7816 9.79449 11.7764 9.82249 11.7661C9.8505 11.7559 9.87592 11.7408 9.8973 11.7219L10.8205 10.9094C10.8419 10.8905 10.8589 10.8682 10.8705 10.8435C10.8822 10.8189 10.8881 10.7925 10.8881 10.7658C10.8881 10.7391 10.8822 10.7127 10.8705 10.688C10.8589 10.6634 10.8419 10.641 10.8205 10.6222L9.50334 9.46291ZM9.73414 11.2911L8.51256 10.2159C8.46929 10.1778 8.4106 10.1564 8.34939 10.1564H5.11833C5.08802 10.1564 5.058 10.1616 5.03 10.1718C5.002 10.182 4.97656 10.197 4.95516 10.2159L3.73359 11.2911L3.13676 10.7658L4.35834 9.69062C4.40162 9.65254 4.42595 9.60088 4.42596 9.54701V6.50008C4.42599 6.4734 4.42003 6.44698 4.40843 6.42234C4.39682 6.39769 4.3798 6.37531 4.35834 6.35647L3.13676 5.28131L3.73359 4.75602L4.95516 5.83118C4.99843 5.86927 5.05712 5.89068 5.11833 5.89069H8.34939C8.41055 5.89069 8.4694 5.86937 8.51256 5.83118L9.73414 4.75602L10.331 5.28131L9.10939 6.35647C9.0661 6.39455 9.04178 6.44621 9.04176 6.50008V9.54701C9.04176 9.60084 9.066 9.65264 9.10939 9.69062L10.331 10.7658L9.73414 11.2911Z" />
-                                                        <path
-                                                            d="M8.11844 6.5H5.34895C5.28774 6.5 5.22904 6.5214 5.18576 6.55949C5.14248 6.59759 5.11816 6.64926 5.11816 6.70313V9.3438C5.11816 9.39767 5.14248 9.44934 5.18576 9.48743C5.22904 9.52553 5.28774 9.54693 5.34895 9.54693H7.19528C7.25649 9.54693 7.31519 9.52553 7.35847 9.48743C7.40175 9.44934 7.42607 9.39767 7.42607 9.3438C7.42607 9.28993 7.40175 9.23826 7.35847 9.20017C7.31519 9.16207 7.25649 9.14067 7.19528 9.14067H5.57974V6.90626H7.88765V8.53129C7.88765 8.58516 7.91196 8.63683 7.95524 8.67492C7.99853 8.71301 8.05723 8.73441 8.11844 8.73441C8.17965 8.73441 8.23835 8.71301 8.28163 8.67492C8.32491 8.63683 8.34923 8.58516 8.34923 8.53129V6.70313C8.34923 6.64926 8.32491 6.59759 8.28163 6.55949C8.23835 6.5214 8.17965 6.5 8.11844 6.5ZM11.1187 6.5C11.0575 6.5 10.9988 6.5214 10.9555 6.55949C10.9122 6.59759 10.8879 6.64926 10.8879 6.70313V8.53129C10.8879 8.58516 10.9122 8.63683 10.9555 8.67492C10.9988 8.71301 11.0575 8.73441 11.1187 8.73441C11.1799 8.73441 11.2386 8.71301 11.2819 8.67492C11.3252 8.63683 11.3495 8.58516 11.3495 8.53129V6.70313C11.3495 6.64926 11.3252 6.59759 11.2819 6.55949C11.2386 6.5214 11.1799 6.5 11.1187 6.5Z" />
-                                                        <path
-                                                            d="M11.1187 9.54713C11.2462 9.54713 11.3495 9.45618 11.3495 9.344C11.3495 9.23181 11.2462 9.14087 11.1187 9.14087C10.9913 9.14087 10.8879 9.23181 10.8879 9.344C10.8879 9.45618 10.9913 9.54713 11.1187 9.54713Z" />
-                                                    </g>
-                                                </svg>
-                                                {{ $item->fuel_type }}
-                                            </li>
-                                            <li>
-                                                <svg width="13" height="13" viewBox="0 0 13 13"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <mask id="mask0_611_14323" style="mask-type:alpha"
-                                                        maskUnits="userSpaceOnUse" x="0" y="0" width="13"
-                                                        height="13">
-                                                        <rect width="13" height="13" />
-                                                    </mask>
-                                                    <g mask="url(#mask0_611_14323)">
-                                                        <path
-                                                            d="M8.28713 6.95811H7.8187L8.04511 5.25406C8.05414 5.18229 8.0395 5.10942 8.00367 5.04772C7.96783 4.98603 7.91299 4.93928 7.84838 4.91536C7.71188 4.86288 7.56173 4.91605 7.49608 5.02788L5.69038 7.50535C5.65489 7.56344 5.63505 7.63066 5.63299 7.69979C5.63093 7.76892 5.64673 7.83733 5.67868 7.89767C5.74498 8.02486 5.87281 8.10369 6.01256 8.10369H6.481L6.25458 9.80774C6.24555 9.87951 6.26019 9.95238 6.29602 10.0141C6.33186 10.0758 6.3867 10.1225 6.45131 10.1464C6.48728 10.1604 6.52433 10.1668 6.56051 10.1668C6.66148 10.1668 6.7553 10.1162 6.80361 10.0339L8.60931 7.55645C8.6448 7.49836 8.66464 7.43113 8.6667 7.36201C8.66876 7.29288 8.65297 7.22446 8.62101 7.16412C8.58787 7.10133 8.53941 7.0491 8.48068 7.01286C8.42196 6.97663 8.35512 6.95772 8.28713 6.95811ZM6.75226 9.35537L6.94488 7.90684C6.94922 7.87436 6.94692 7.84127 6.93813 7.80981C6.92934 7.77836 6.91427 7.74926 6.89394 7.7245C6.8736 7.69973 6.84848 7.67987 6.82026 7.66626C6.79204 7.65264 6.76139 7.6456 6.73038 7.64559H6.13433L7.54743 5.70665L7.35481 7.15519C7.35047 7.18767 7.35277 7.22075 7.36156 7.25221C7.37035 7.28367 7.38542 7.31276 7.40575 7.33753C7.42609 7.36229 7.45121 7.38215 7.47943 7.39577C7.50765 7.40938 7.5383 7.41643 7.56931 7.41643H8.16536L6.75226 9.35537Z" />
-                                                        <path
-                                                            d="M12.35 4.89575H11.9167C11.5583 4.89575 11.2667 5.2042 11.2667 5.58324V6.27072H10.8333V4.20827C10.8333 3.70274 10.4446 3.29162 9.96667 3.29162H8.88333V2.83329H10.1833C10.5417 2.83329 10.8333 2.52484 10.8333 2.14581V1.68749C10.8333 1.30845 10.5417 1 10.1833 1H5.85C5.49163 1 5.2 1.30845 5.2 1.68749V2.14581C5.2 2.52484 5.49163 2.83329 5.85 2.83329H7.15V3.29162H5.86863C5.66627 3.29162 5.46932 3.36701 5.31397 3.50405L4.37515 4.3311C4.29737 4.39972 4.19932 4.43735 4.09803 4.43743H3.03333C2.55537 4.43743 2.16667 4.84854 2.16667 5.35408V6.27072H1.73333V4.89575C1.73333 4.51672 1.4417 4.20827 1.08333 4.20827H0.65C0.291633 4.20827 0 4.51672 0 4.89575V9.47899C0 9.85802 0.291633 10.1665 0.65 10.1665H1.08333C1.4417 10.1665 1.73333 9.85802 1.73333 9.47899V8.10402H2.16667V9.47899C2.16667 9.98452 2.55537 10.3956 3.03333 10.3956H3.73945C3.89458 10.3956 4.03888 10.4841 4.11558 10.6266L4.60807 11.5378C4.68391 11.6781 4.79344 11.7947 4.92557 11.8759C5.0577 11.957 5.20775 11.9998 5.36055 12H9.22892C9.35599 12.0002 9.48154 11.9707 9.59662 11.9137C9.7117 11.8567 9.81349 11.7736 9.89473 11.6702L10.6325 10.7339C10.7622 10.569 10.8332 10.3614 10.8333 10.147V8.10425H11.2667V8.79173C11.2667 9.17077 11.5583 9.47922 11.9167 9.47922H12.35C12.7084 9.47922 13 9.17077 13 8.79173V5.58347C13 5.20443 12.7084 4.89575 12.35 4.89575ZM1.3 9.47899C1.3 9.53977 1.27717 9.59805 1.23654 9.64103C1.19591 9.68401 1.1408 9.70815 1.08333 9.70815H0.65C0.592536 9.70815 0.537426 9.68401 0.496794 9.64103C0.456161 9.59805 0.433333 9.53977 0.433333 9.47899V4.89575C0.433333 4.83497 0.456161 4.77669 0.496794 4.73371C0.537426 4.69073 0.592536 4.66659 0.65 4.66659H1.08333C1.1408 4.66659 1.19591 4.69073 1.23654 4.73371C1.27717 4.77669 1.3 4.83497 1.3 4.89575V9.47899ZM1.73333 7.64569V6.72905H2.16667V7.64569H1.73333ZM5.63333 2.14581V1.68749C5.63333 1.62671 5.65616 1.56842 5.69679 1.52544C5.73743 1.48247 5.79254 1.45832 5.85 1.45832H10.1833C10.2408 1.45832 10.2959 1.48247 10.3365 1.52544C10.3772 1.56842 10.4 1.62671 10.4 1.68749V2.14581C10.4 2.20659 10.3772 2.26488 10.3365 2.30785C10.2959 2.35083 10.2408 2.37497 10.1833 2.37497H5.85C5.79254 2.37497 5.73743 2.35083 5.69679 2.30785C5.65616 2.26488 5.63333 2.20659 5.63333 2.14581ZM7.58333 2.83329H8.45V3.29162H7.58333V2.83329ZM10.4 10.1468C10.4 10.2538 10.3643 10.3578 10.2995 10.4401L9.56193 11.3764C9.52126 11.4281 9.47034 11.4697 9.41279 11.4982C9.35524 11.5267 9.29247 11.5415 9.22892 11.5414H5.36055C5.28417 11.5414 5.20916 11.52 5.14311 11.4794C5.07706 11.4389 5.02232 11.3806 4.98442 11.3105L4.49193 10.3993C4.41609 10.259 4.30656 10.1424 4.17443 10.0612C4.0423 9.98006 3.89225 9.93724 3.73945 9.93708H3.03333C2.79435 9.93708 2.6 9.73153 2.6 9.47876V5.35385C2.6 5.10108 2.79435 4.89552 3.03333 4.89552H4.09803C4.3004 4.89552 4.49735 4.82013 4.6527 4.68309L5.59152 3.85604C5.66929 3.78742 5.76735 3.7498 5.86863 3.74971H9.96667C10.2057 3.74971 10.4 3.95527 10.4 4.20804V10.1465V10.1468ZM10.8333 7.64569V6.72905H11.2667V7.64569H10.8333ZM12.5667 8.7915C12.5667 8.85228 12.5438 8.91057 12.5032 8.95355C12.4626 8.99652 12.4075 9.02067 12.35 9.02067H11.9167C11.8592 9.02067 11.8041 8.99652 11.7635 8.95355C11.7228 8.91057 11.7 8.85228 11.7 8.7915V5.58324C11.7 5.52246 11.7228 5.46417 11.7635 5.4212C11.8041 5.37822 11.8592 5.35408 11.9167 5.35408H12.35C12.4075 5.35408 12.4626 5.37822 12.5032 5.4212C12.5438 5.46417 12.5667 5.52246 12.5667 5.58324V8.7915Z" />
-                                                    </g>
-                                                </svg>
-                                                {{ $item->vehicle_class }}
-                                            </li>
-                                        </ul>
-                                        <div class="content-btm">
-                                            <a class="view-btn2" href="{{route('car_details',['id' => $item->id])}}">
-                                                <svg width="35" height="21" viewBox="0 0 35 21"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M11 20C5.47715 20 1 15.7467 1 10.5C1 5.25329 5.47715 1 11 1"
-                                                        stroke-linecap="round" />
-                                                    <path
-                                                        d="M14.2597 3C14.1569 3 14.0583 3.04166 13.9856 3.11582C13.9129 3.18997 13.8721 3.29055 13.8721 3.39542C13.8721 3.50029 13.9129 3.60086 13.9856 3.67502C14.0583 3.74917 14.1569 3.79083 14.2597 3.79083H15.8104C15.9132 3.79083 16.0118 3.74917 16.0845 3.67502C16.1572 3.60086 16.198 3.50029 16.198 3.39542C16.198 3.29055 16.1572 3.18997 16.0845 3.11582C16.0118 3.04166 15.9132 3 15.8104 3H14.2597ZM16.7795 3C16.6767 3 16.5781 3.04166 16.5054 3.11582C16.4327 3.18997 16.3919 3.29055 16.3919 3.39542C16.3919 3.50029 16.4327 3.60086 16.5054 3.67502C16.5781 3.74917 16.6767 3.79083 16.7795 3.79083H21.3346C21.4374 3.79083 21.536 3.74917 21.6087 3.67502C21.6814 3.60086 21.7222 3.50029 21.7222 3.39542C21.7222 3.29055 21.6814 3.18997 21.6087 3.11582C21.536 3.04166 21.4374 3 21.3346 3H16.7795Z" />
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M15.2292 5.76953C15.1264 5.76953 15.0278 5.81119 14.9551 5.88535C14.8824 5.9595 14.8415 6.06008 14.8415 6.16495C14.8415 6.26982 14.8824 6.3704 14.9551 6.44455C15.0278 6.51871 15.1264 6.56037 15.2292 6.56037H24.1454C25.653 6.56037 26.5822 6.79999 27.3256 7.18493C27.9575 7.51194 28.4672 7.9467 29.1055 8.49119C29.2375 8.60368 29.3749 8.72073 29.5201 8.84271L29.6101 8.91824L29.726 8.93069C33.2653 9.31069 34.0622 10.5309 34.2246 11.1557V12.6893C34.2246 12.7942 34.1838 12.8948 34.1111 12.9689C34.0384 13.0431 33.9398 13.0847 33.8369 13.0847H32.8356C32.6511 11.9627 31.6943 11.1077 30.5418 11.1077C29.3893 11.1077 28.4325 11.9627 28.248 13.0847H21.2058C21.0212 11.9627 20.0645 11.1077 18.912 11.1077C17.7594 11.1077 16.8027 11.9627 16.6182 13.0847H14.7446C14.6418 13.0847 14.5432 13.1264 14.4705 13.2006C14.3978 13.2747 14.3569 13.3753 14.3569 13.4802C14.3569 13.585 14.3978 13.6856 14.4705 13.7598C14.5432 13.8339 14.6418 13.8756 14.7446 13.8756H16.6182C16.8027 14.9976 17.7594 15.8527 18.912 15.8527C20.0645 15.8527 21.0212 14.9976 21.2058 13.8756H28.248C28.4325 14.9976 29.3893 15.8527 30.5418 15.8527C31.6943 15.8527 32.6511 14.9976 32.8356 13.8756H33.8369C34.1454 13.8756 34.4412 13.7506 34.6593 13.5281C34.8774 13.3057 34.9999 13.0039 34.9999 12.6893V11.0626L34.99 11.0187C34.7431 9.92754 33.5791 8.57502 29.9239 8.15706C29.8217 8.07086 29.7215 7.98505 29.6227 7.90063C28.9828 7.35397 28.3942 6.851 27.6766 6.4795C26.7966 6.02418 25.7391 5.76953 24.1454 5.76953H15.2292ZM28.9912 13.4802C28.9912 13.0607 29.1545 12.6584 29.4453 12.3618C29.7361 12.0651 30.1306 11.8985 30.5418 11.8985C30.9531 11.8985 31.3475 12.0651 31.6383 12.3618C31.9291 12.6584 32.0925 13.0607 32.0925 13.4802C32.0925 13.8996 31.9291 14.302 31.6383 14.5986C31.3475 14.8952 30.9531 15.0618 30.5418 15.0618C30.1306 15.0618 29.7361 14.8952 29.4453 14.5986C29.1545 14.302 28.9912 13.8996 28.9912 13.4802ZM18.912 11.8985C18.5007 11.8985 18.1063 12.0651 17.8155 12.3618C17.5247 12.6584 17.3613 13.0607 17.3613 13.4802C17.3613 13.8996 17.5247 14.302 17.8155 14.5986C18.1063 14.8952 18.5007 15.0618 18.912 15.0618C19.3232 15.0618 19.7176 14.8952 20.0084 14.5986C20.2992 14.302 20.4626 13.8996 20.4626 13.4802C20.4626 13.0607 20.2992 12.6584 20.0084 12.3618C19.7176 12.0651 19.3232 11.8985 18.912 11.8985Z" />
-                                                    <path
-                                                        d="M11 8.14151C11 8.03664 11.0408 7.93606 11.1135 7.86191C11.1862 7.78775 11.2848 7.74609 11.3877 7.74609H15.7489C15.8517 7.74609 15.9503 7.78775 16.023 7.86191C16.0957 7.93606 16.1365 8.03664 16.1365 8.14151C16.1365 8.24638 16.0957 8.34696 16.023 8.42111C15.9503 8.49527 15.8517 8.53693 15.7489 8.53693H11.3877C11.2848 8.53693 11.1862 8.49527 11.1135 8.42111C11.0408 8.34696 11 8.24638 11 8.14151ZM26.6836 8.65278C26.7563 8.72694 26.7971 8.82749 26.7971 8.93234C26.7971 9.03719 26.7563 9.13775 26.6836 9.2119L26.6532 9.24294C26.2897 9.61367 25.7968 9.82197 25.2828 9.82203H19.1409C19.0381 9.82203 18.9395 9.78037 18.8668 9.70622C18.7941 9.63206 18.7532 9.53149 18.7532 9.42662C18.7532 9.32174 18.7941 9.22117 18.8668 9.14701C18.9395 9.07286 19.0381 9.0312 19.1409 9.0312H25.2826C25.4354 9.03122 25.5866 9.00055 25.7277 8.94095C25.8688 8.88134 25.997 8.79397 26.105 8.68382L26.1355 8.65278C26.2082 8.57866 26.3068 8.53701 26.4096 8.53701C26.5123 8.53701 26.6109 8.57866 26.6836 8.65278ZM19.5286 17.7304C19.5286 17.6255 19.5694 17.5249 19.6421 17.4508C19.7148 17.3766 19.8134 17.335 19.9162 17.335H21.5638C21.6666 17.335 21.7652 17.3766 21.8379 17.4508C21.9106 17.5249 21.9514 17.6255 21.9514 17.7304C21.9514 17.8352 21.9106 17.9358 21.8379 18.01C21.7652 18.0841 21.6666 18.1258 21.5638 18.1258H19.9162C19.8134 18.1258 19.7148 18.0841 19.6421 18.01C19.5694 17.9358 19.5286 17.8352 19.5286 17.7304ZM22.2422 17.7304C22.2422 17.6255 22.283 17.5249 22.3557 17.4508C22.4284 17.3766 22.527 17.335 22.6299 17.335H26.991C27.0939 17.335 27.1925 17.3766 27.2652 17.4508C27.3379 17.5249 27.3787 17.6255 27.3787 17.7304C27.3787 17.8352 27.3379 17.9358 27.2652 18.01C27.1925 18.0841 27.0939 18.1258 26.991 18.1258H22.6299C22.527 18.1258 22.4284 18.0841 22.3557 18.01C22.283 17.9358 22.2422 17.8352 22.2422 17.7304Z" />
-                                                </svg>
-                                                View Details
-                                            </a>
+                                                            d="M11 8.14151C11 8.03664 11.0408 7.93606 11.1135 7.86191C11.1862 7.78775 11.2848 7.74609 11.3877 7.74609H15.7489C15.8517 7.74609 15.9503 7.78775 16.023 7.86191C16.0957 7.93606 16.1365 8.03664 16.1365 8.14151C16.1365 8.24638 16.0957 8.34696 16.023 8.42111C15.9503 8.49527 15.8517 8.53693 15.7489 8.53693H11.3877C11.2848 8.53693 11.1862 8.49527 11.1135 8.42111C11.0408 8.34696 11 8.24638 11 8.14151ZM26.6836 8.65278C26.7563 8.72694 26.7971 8.82749 26.7971 8.93234C26.7971 9.03719 26.7563 9.13775 26.6836 9.2119L26.6532 9.24294C26.2897 9.61367 25.7968 9.82197 25.2828 9.82203H19.1409C19.0381 9.82203 18.9395 9.78037 18.8668 9.70622C18.7941 9.63206 18.7532 9.53149 18.7532 9.42662C18.7532 9.32174 18.7941 9.22117 18.8668 9.14701C18.9395 9.07286 19.0381 9.0312 19.1409 9.0312H25.2826C25.4354 9.03122 25.5866 9.00055 25.7277 8.94095C25.8688 8.88134 25.997 8.79397 26.105 8.68382L26.1355 8.65278C26.2082 8.57866 26.3068 8.53701 26.4096 8.53701C26.5123 8.53701 26.6109 8.57866 26.6836 8.65278ZM19.5286 17.7304C19.5286 17.6255 19.5694 17.5249 19.6421 17.4508C19.7148 17.3766 19.8134 17.335 19.9162 17.335H21.5638C21.6666 17.335 21.7652 17.3766 21.8379 17.4508C21.9106 17.5249 21.9514 17.6255 21.9514 17.7304C21.9514 17.8352 21.9106 17.9358 21.8379 18.01C21.7652 18.0841 21.6666 18.1258 21.5638 18.1258H19.9162C19.8134 18.1258 19.7148 18.0841 19.6421 18.01C19.5694 17.9358 19.5286 17.8352 19.5286 17.7304ZM22.2422 17.7304C22.2422 17.6255 22.283 17.5249 22.3557 17.4508C22.4284 17.3766 22.527 17.335 22.6299 17.335H26.991C27.0939 17.335 27.1925 17.3766 27.2652 17.4508C27.3379 17.5249 27.3787 17.6255 27.3787 17.7304C27.3787 17.8352 27.3379 17.9358 27.2652 18.01C27.1925 18.0841 27.0939 18.1258 26.991 18.1258H22.6299C22.527 18.1258 22.4284 18.0841 22.3557 18.01C22.283 17.9358 22.2422 17.8352 22.2422 17.7304Z" />
+                                                    </svg>
+                                                    View Details
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             @endforeach
                             {{-- <div class="swiper-slide">
                                 <div class="product-card">
@@ -2380,18 +2352,17 @@
                 <div class="col-lg-12 divider">
                     <div class="slider-btn-group style-2 justify-content-md-between justify-content-center">
                         <div class="slider-btn prev-2 d-md-flex d-none">
-                            <svg width="11" height="19" viewBox="0 0 8 13"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg width="11" height="19" viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z"></path>
                             </svg>
                         </div>
                         <div class="view-btn-area">
                             <p>There will be 100+ Similar Car</p>
-                            <a class="view-btn" href="{{route('s_category',['id' => $product->brand_id])}}">View More</a>
+                            <a class="view-btn" href="{{ route('s_category', ['id' => $product->brand_id]) }}">View
+                                More</a>
                         </div>
                         <div class="slider-btn next-2 d-md-flex d-none">
-                            <svg width="11" height="19" viewBox="0 0 8 13"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg width="11" height="19" viewBox="0 0 8 13" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z"></path>
                             </svg>
                         </div>
@@ -2542,7 +2513,7 @@
                                     </div>
                                     <div class="view-btn-area">
                                         <p>Thousand of People Reviews to Us</p>
-                                        <a class="view-btn" href="customer-review.html">View All Review</a>
+                                        <a class="view-btn" href="{{route('customer_review')}}">View All Review</a>
                                     </div>
                                     <div class="slider-btn next-4 d-md-flex d-none">
                                         <svg width="11" height="19" viewBox="0 0 8 13"
@@ -2598,13 +2569,13 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                     <div class="news-card style-2">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="/assets/img/home1/news-01.png" alt></a>
+                            <a href=""><img src="/assets/img/home1/news-01.png" alt></a>
                             <div class="date">
-                                <a href="blog-standard.html">Buying Advice</a>
+                                <a href="">Buying Advice</a>
                             </div>
                         </div>
                         <div class="content">
-                            <h6><a href="blog-details.html">The Car Enthusiast: Exploring the World of Cars and
+                            <h6><a href="">The Car Enthusiast: Exploring the World of Cars and
                                     Driving.</a>
                             </h6>
                             <div class="news-btm d-flex align-items-center justify-content-between">
@@ -2614,15 +2585,15 @@
                                     </div>
                                     <div class="author-content">
                                         <h6>Mr. Morris Mannu</h6>
-                                        <a href="blog-standard.html">Posted on - 03 April, 2023</a>
+                                        <a href="">Posted on - 03 April, 2023</a>
                                     </div>
                                 </div>
                                 <div class="social-area">
                                     <ul class="social-icons">
                                         <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
                                         <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/"><i
-                                                    class="bx bxl-pinterest-alt"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a>
+                                        </li>
                                         <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
                                         </li>
                                     </ul>
@@ -2641,13 +2612,13 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                     <div class="news-card style-2">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="/assets/img/home1/news-02.png" alt></a>
+                            <a href=""><img src="/assets/img/home1/news-02.png" alt></a>
                             <div class="date">
-                                <a href="blog-standard.html">Car Advice</a>
+                                <a href="">Car Advice</a>
                             </div>
                         </div>
                         <div class="content">
-                            <h6><a href="blog-details.html">The Best Car Brands for Performance and Reliability.</a>
+                            <h6><a href="">The Best Car Brands for Performance and Reliability.</a>
                             </h6>
                             <div class="news-btm d-flex align-items-center justify-content-between">
                                 <div class="author-area">
@@ -2656,15 +2627,15 @@
                                     </div>
                                     <div class="author-content">
                                         <h6>Mulish Kary</h6>
-                                        <a href="blog-standard.html">Posted on - 03 April, 2023</a>
+                                        <a href="">Posted on - 03 April, 2023</a>
                                     </div>
                                 </div>
                                 <div class="social-area">
                                     <ul class="social-icons">
                                         <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
                                         <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/"><i
-                                                    class="bx bxl-pinterest-alt"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a>
+                                        </li>
                                         <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
                                         </li>
                                     </ul>
@@ -2683,13 +2654,13 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                     <div class="news-card style-2">
                         <div class="news-img">
-                            <a href="blog-details.html"><img src="/assets/img/home1/news-03.png" alt></a>
+                            <a href=""><img src="/assets/img/home1/news-03.png" alt></a>
                             <div class="date">
-                                <a href="blog-standard.html">Driving Advice</a>
+                                <a href="">Driving Advice</a>
                             </div>
                         </div>
                         <div class="content">
-                            <h6><a href="blog-details.html">The Environmental Impact of Cars and How to Minimize It.</a>
+                            <h6><a href="">The Environmental Impact of Cars and How to Minimize It.</a>
                             </h6>
                             <div class="news-btm d-flex align-items-center justify-content-between">
                                 <div class="author-area">
@@ -2698,15 +2669,15 @@
                                     </div>
                                     <div class="author-content">
                                         <h6>Daniel Scoot</h6>
-                                        <a href="blog-standard.html">Posted on - 03 April, 2023</a>
+                                        <a href="">Posted on - 03 April, 2023</a>
                                     </div>
                                 </div>
                                 <div class="social-area">
                                     <ul class="social-icons">
                                         <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
                                         <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/"><i
-                                                    class="bx bxl-pinterest-alt"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a>
+                                        </li>
                                         <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
                                         </li>
                                     </ul>

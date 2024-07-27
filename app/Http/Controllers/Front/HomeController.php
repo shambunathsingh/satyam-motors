@@ -6,12 +6,15 @@ use App\Http\Controllers\Controller;
 use App\Models\Brand\Brands;
 use App\Models\Cart\Cart;
 use App\Models\Category\Category;
+use App\Models\ExtProductImage;
 use App\Models\Page\Page;
 use App\Models\Page\PageInfo;
 use App\Models\Post\Post;
 use App\Models\PostCategory\PostCategory;
 use App\Models\Product\Product;
+use App\Models\ProductEnquiry\ProductEnquiry;
 use App\Models\ProductFeature\ProductFeatures;
+use App\Models\ProductImages\ProductImages;
 use App\Models\Video\Video;
 use App\Models\WishList\WishList;
 use Illuminate\Http\Request;
@@ -54,7 +57,9 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('front.homepage.about');
+        $title = "Contact";
+
+        return view('front.homepage.about',['title' => $title]);
     }
 
     public function brandCategory()
@@ -96,15 +101,54 @@ class HomeController extends Controller
         $allProducts = Product::all();
         $product = Product::findOrFail($id);
 
-        // dd($product);
+        $intProductcount = ProductImages::where('product_id', $id)->count();
+        $intProductImg = ProductImages::where('product_id', $id)->get();
+
+        $extProductcount = ExtProductImage::where('product_id', $id)->count();
+        $extProductImg = ExtProductImage::where('product_id', $id)->get();
+
+        // dd($intProductcount, $intProductImg, $extProductcount, $extProductImg);
         // exit;
 
-        return view('front.homepage.car_details', ['title' => $title, 'product' => $product, 'allproduct' => $allProducts]);
+        return view('front.homepage.car_details',
+            [
+                'title' => $title,
+                'product' => $product,
+                'allproduct' => $allProducts,
+                'int_productImg_count' => $intProductcount,
+                'int_productImg' => $intProductImg,
+                'ext_productImg_count' => $extProductcount,
+                'ext_productImg' => $extProductImg,
+            ]
+        );
+    }
+
+    public function carEnquiry(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'email' => '',
+            'phone' => '',
+            'mssg' => '',
+        ]);
+
+        $penquiry = new ProductEnquiry;
+        $penquiry->product_id = $id;
+        $penquiry->name = $request->name;
+        $penquiry->email = $request->email;
+        $penquiry->phone = $request->phone;
+        $penquiry->mssg = $request->mssg;
+
+        $penquiry->save();
+
+        return redirect()->back()->with('Success', 'Your enquiry has been successfully generated.');
     }
 
     public function faq()
     {
-        return view('front.homepage.faq');
+        $title = "FAQs";
+
+        return view('front.homepage.faq', ['title' => $title]);
     }
 
     public function error()
@@ -114,12 +158,16 @@ class HomeController extends Controller
 
     public function customerReview()
     {
-        return view('front.homepage.customer_review');
+        $title = "Reviews";
+
+        return view('front.homepage.customer_review', ['title' => $title]);
     }
 
     public function returnExchange()
     {
-        return view('front.homepage.return_exchange');
+        $title = "Returns & Exchange";
+
+        return view('front.homepage.return_exchange', ['title' => $title]);
     }
 
     public function blogStandard()

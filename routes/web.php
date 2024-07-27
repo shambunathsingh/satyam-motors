@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Blog\BlogController;
 use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\City\CitiesController;
+use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Country\CountryController;
 use App\Http\Controllers\Admin\Customer\CustomerController;
 use App\Http\Controllers\Admin\Ecommerce\EcommerceController;
@@ -91,61 +92,63 @@ Route::get('admin/edit_customer/{id}', [AccountController::class, 'editCustomer'
 Route::post('admin/update_customer/{id}', [AccountController::class, 'updateCustomer'])->name('updateCustomer');
 
 
-Route::middleware(['guest:web'])->group(function () {
-    Route::get('', [HomeController::class, 'index'])->name('front_home');
-    Route::get('about-us', [HomeController::class, 'about'])->name('about');
-    Route::get('contact-us', [HomeController::class, 'contact'])->name('contact');
-    Route::get('brand-category', [HomeController::class, 'brandCategory'])->name('b_category');
-    Route::get('single-brand-category/{id}', [HomeController::class, 'singeleBrandCategory'])->name('s_category');
-    Route::get('car-listing-no-sidebar', [HomeController::class, 'carListingNoSidebar'])->name('car_list_no_sidebar');
-    Route::get('car-detail/{id}', [HomeController::class, 'carDetails'])->name('car_details');
-    Route::get('faq', [HomeController::class, 'faq'])->name('faq');
-    Route::get('error', [HomeController::class, 'error'])->name('page_error');
-    Route::get('customer-review', [HomeController::class, 'customerReview'])->name('customer_review');
-    Route::get('return-exchange', [HomeController::class, 'returnExchange'])->name('return_exhcange');
-    Route::get('blog-standard', [HomeController::class, 'blogStandard'])->name('blog_standard');
-    Route::get('blog-details', [HomeController::class, 'blogDetail'])->name('blog_detail');
+
+Route::get('', [HomeController::class, 'index'])->name('front_home');
+Route::get('about-us', [HomeController::class, 'about'])->name('about');
+Route::get('contact-us', [HomeController::class, 'contact'])->name('contact');
+Route::post('/save-form', [ContactController::class, 'saveForm'])->name('save_contact_enquiry');
+Route::get('brand-category', [HomeController::class, 'brandCategory'])->name('b_category');
+Route::get('single-brand-category/{id}', [HomeController::class, 'singeleBrandCategory'])->name('s_category');
+Route::get('car-listing-no-sidebar', [HomeController::class, 'carListingNoSidebar'])->name('car_list_no_sidebar');
+Route::get('car-detail/{id}', [HomeController::class, 'carDetails'])->name('car_details');
+Route::post('car-enquiry/{id}', [HomeController::class, 'carEnquiry'])->name('car_enquiry');
+Route::get('faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('error', [HomeController::class, 'error'])->name('page_error');
+Route::get('customer-review', [HomeController::class, 'customerReview'])->name('customer_review');
+Route::get('return-exchange', [HomeController::class, 'returnExchange'])->name('return_exhcange');
+Route::get('blog-standard', [HomeController::class, 'blogStandard'])->name('blog_standard');
+Route::get('blog-details', [HomeController::class, 'blogDetail'])->name('blog_detail');
 
 
-    // Product Section
-    Route::get('product-category', [FrontProductController::class, 'allproducts'])->name('allproducts');
-    Route::get('product-category/{parentCategory}', [FrontProductController::class, 'show'])->name('product-category.show');
-    Route::get('product-category/{parentCategory}/{categoryName}', [FrontProductController::class, 'showWithParent'])->name('product-category.showWithParent');
-    Route::get('product/{slug}', [FrontProductController::class, 'single_product'])->name('single_product');
-    Route::post('/price_filter', [FrontProductController::class, 'priceFilter'])->name('price_filter');
+// Product Section
+Route::get('product-category', [FrontProductController::class, 'allproducts'])->name('allproducts');
+Route::get('product-category/{parentCategory}', [FrontProductController::class, 'show'])->name('product-category.show');
+Route::get('product-category/{parentCategory}/{categoryName}', [FrontProductController::class, 'showWithParent'])->name('product-category.showWithParent');
+Route::get('product/{slug}', [FrontProductController::class, 'single_product'])->name('single_product');
+Route::post('/price_filter', [FrontProductController::class, 'priceFilter'])->name('price_filter');
 
-    // Add to Cart
-    Route::get('add-to-cart={id}', [CartController::class, 'add_to_cart'])->name('add_to_cart');
-    Route::get('cart', [CartController::class, 'cart'])->name('cart');
-    Route::post('/store-cart', function (Request $request) {
-        $allCartItems = $request->input('allCartItems');
+// Add to Cart
+Route::get('add-to-cart={id}', [CartController::class, 'add_to_cart'])->name('add_to_cart');
+Route::get('cart', [CartController::class, 'cart'])->name('cart');
+Route::post('/store-cart', function (Request $request) {
+    $allCartItems = $request->input('allCartItems');
 
-        // Store cartItems in Laravel session
-        session(['cart' => $allCartItems]);
+    // Store cartItems in Laravel session
+    session(['cart' => $allCartItems]);
 
-        // Alternatively, you can store it in the database or any other storage
-        // YourModel::create(['cart_items' => json_encode($cartItems)]);
+    // Alternatively, you can store it in the database or any other storage
+    // YourModel::create(['cart_items' => json_encode($cartItems)]);
 
-        return response()->json(['message' => 'Cart data stored successfully']);
-    });
-
-    // Account Section
-    Route::get('my-account', [AccountController::class, 'index'])->name('myaccount');
-    Route::get('overview', [AccountController::class, 'overview'])->name('overview');
-    Route::POST('overview/{id}', [AccountController::class, 'updateprofile'])->name('updateprofile');
-    Route::get('register', [AccountController::class, 'register'])->name('new_register');
-    Route::post('create-user', [AccountController::class, 'registerUser'])->name('register_newUser');
-    Route::post('customer-login', [AccountController::class, 'login'])->name('login_newUser');
-    Route::post('guest-login', [AccountController::class, 'guestlogin'])->name('guest_login');
-
-    // My Wishlist Section
-    Route::post('add-to-wishlist/{id}', [WishlistController::class, 'add_to_wishlist'])->name('add_wishlist');
-    Route::get('delete-wishlist/{id}', [WishlistController::class, 'delete_wishlist'])->name('delete_wishlist');
-    Route::get('wishlist', [WishlistController::class, 'showAllWishList'])->name('show_wishlist');
-
-    // My Order Section
-    Route::get('my-orders', [CartController::class, 'thankyou'])->name('thankyou');
+    return response()->json(['message' => 'Cart data stored successfully']);
 });
+
+// Account Section
+Route::get('my-account', [AccountController::class, 'index'])->name('myaccount');
+Route::get('overview', [AccountController::class, 'overview'])->name('overview');
+Route::POST('overview/{id}', [AccountController::class, 'updateprofile'])->name('updateprofile');
+Route::get('register', [AccountController::class, 'register'])->name('new_register');
+Route::post('create-user', [AccountController::class, 'registerUser'])->name('register_newUser');
+Route::post('customer-login', [AccountController::class, 'login'])->name('login_newUser');
+Route::post('guest-login', [AccountController::class, 'guestlogin'])->name('guest_login');
+
+// My Wishlist Section
+Route::post('add-to-wishlist/{id}', [WishlistController::class, 'add_to_wishlist'])->name('add_wishlist');
+Route::get('delete-wishlist/{id}', [WishlistController::class, 'delete_wishlist'])->name('delete_wishlist');
+Route::get('wishlist', [WishlistController::class, 'showAllWishList'])->name('show_wishlist');
+
+// My Order Section
+Route::get('my-orders', [CartController::class, 'thankyou'])->name('thankyou');
+
 
 Route::middleware(['auth:customer'])->group(function () {
     // Route::get('my-account', [AccountController::class, 'index'])->name('myaccount');
@@ -180,7 +183,7 @@ Route::group(['middleware' => 'guest'], function () {
     // Route::post('admin/register', [AuthController::class, 'register'])->name('register')->middleware('throttle:2,1');
 });
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth:web'], function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     // Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dhome');
 
@@ -315,6 +318,13 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('update-product/{id}', [ProductController::class, 'update_product'])->name('update_product');
             Route::get('delete-product/{id}', [ProductController::class, 'delete_product'])->name('delete_product');
             Route::post('delete-product-image', [ProductController::class, 'destroy_image'])->name('delete_productImage');
+
+            // all product enquiry
+            Route::get('product-enquiries', [ProductController::class, 'product_enquiry'])->name('product_enquiry');
+
+
+            // all enquiry
+            Route::get('enquiries', [EcommerceController::class, 'enquiries'])->name('all_enquiry');
 
 
             // product tag

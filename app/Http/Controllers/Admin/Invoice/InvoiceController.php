@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Invoice;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category\Category;
 use App\Models\ExtProductImage;
 use App\Models\Order\Order;
 use App\Models\Product\Product;
@@ -135,6 +136,7 @@ class InvoiceController extends Controller
         $intProductImages = ProductImages::where('product_id', $id)->get();
         $extProductImages = ExtProductImage::where('product_id', $id)->get();
 
+        $productCategories = Category::where('id', $product->categories)->pluck('name');
         // Assuming that intProductImages and extProductImages need to be passed to the view
         $internalImages = $intProductImages->map(function ($image) {
             return asset('uploads/' . $image->images); // Adjust the path as necessary
@@ -155,11 +157,15 @@ class InvoiceController extends Controller
             'date' => $formattedDate,
             'time' => $formattedTime,
             'product' => $product,
+            'category' => $productCategories,
             'logo' => $logo,
             'internalImages' => $internalImages,
             'externalImages' => $externalImages,
         ];
 
+        // dd($data);
+        // exit;
+        
         return view('generate-invoice-pdf', $data);
 
         // $pdf = Pdf::loadView('generate-invoice-pdf', $data);

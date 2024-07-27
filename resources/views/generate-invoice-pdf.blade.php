@@ -163,7 +163,7 @@
 
         .img1 img {
             width: 100%;
-            height: 195px;
+            height: 240px;
             /* background-color: rgb(201, 202, 202); */
         }
 
@@ -472,7 +472,7 @@
                         <td>
                             <p><b>Vehicle Category</b><br></p>
                         </td>
-                        <td>duyhtdrujru846745</td>
+                        <td>{{ $category->first() }}</td>
                         <td>
                             <div><b>PUCC Number</b></div>
                         </td>
@@ -623,7 +623,6 @@
                         <div class="img1">
                             <img src="{{ $image }}" alt="">
                         </div>
-                        <p>Lorem, ipsum dolor.</p>
                     </div>
                 @endforeach
                 {{-- <div class="imgb">
@@ -718,7 +717,6 @@
                         <div class="img1">
                             <img src="{{ $image }}" alt="">
                         </div>
-                        <p>Lorem, ipsum dolor.</p>
                     </div>
                 @endforeach
                 {{-- <div class="imgb">
@@ -804,7 +802,7 @@
         <div class="mdlprt">
             <div class="tpprt">
                 <div class="lftprt">
-                    <h2>Lorem ipsum dolor sit.</h2>
+                    <h2>{{ $product->name }}</h2>
                     <div class="img">
                         <img src="{{ asset('uploads/' . $product->featured_image) }}" alt="" width="100%"
                             height="300px" style="background-color: #00ff00;">
@@ -823,7 +821,7 @@
                         <div class="icnbx">
                             <p><i class="fa-solid fa-location-pin"></i></p>
                             <div class="icntx">
-                                <strong>Lorem. lorem</strong>
+                                <strong>{{ $product->reg_rto }}</strong>
                                 <p>RTO</p>
                             </div>
                         </div>
@@ -831,8 +829,8 @@
                         <div class="icnbxx">
                             <p><i class="fa-solid fa-id-card"></i></p>
                             <div class="icntx">
-                                <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <strong>{{ $product->reg_no }}</strong>
+                                <p>Reg No.</p>
                             </div>
                         </div>
                     </div>
@@ -840,16 +838,16 @@
                         <div class="icnbx">
                             <p><i class="fa-solid fa-calendar-days"></i></p>
                             <div class="icntx">
-                                <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <strong>{{ $product->manfacture_date }}</strong>
+                                <p>Manufacturing Date</p>
                             </div>
                         </div>
 
                         <div class="icnbxx">
                             <p><i class="fa-solid fa-calendar-days"></i></p>
                             <div class="icntx">
-                                <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <strong>{{ $product->reg_date }}</strong>
+                                <p>Registration Date</p>
                             </div>
                         </div>
                     </div>
@@ -859,7 +857,7 @@
                             <p><i class="fa-solid fa-user"></i></p>
                             <div class="icntx">
                                 <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <p>No. of Owners</p>
                             </div>
                         </div>
 
@@ -867,7 +865,7 @@
                             <p><i class="fa-solid fa-gauge"></i></p>
                             <div class="icntx">
                                 <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <p>Odometer Reading</p>
                             </div>
                         </div>
                     </div>
@@ -876,8 +874,8 @@
                         <div class="icnbx">
                             <p><i class="fa-solid fa-gas-pump"></i></p>
                             <div class="icntx">
-                                <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <strong>{{ $product->fuel_type }}</strong>
+                                <p>Fuel Type</p>
                             </div>
                         </div>
 
@@ -885,7 +883,7 @@
                             <p><i class="fa-solid fa-gear"></i></p>
                             <div class="icntx">
                                 <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <p>Transmission</p>
                             </div>
                         </div>
                     </div>
@@ -895,15 +893,15 @@
                             <p><i class="fa-solid fa-palette"></i></p>
                             <div class="icntx">
                                 <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <p>Color</p>
                             </div>
                         </div>
 
                         <div class="icnbxx">
                             <p><i class="fa-solid fa-car"></i></p>
                             <div class="icntx">
-                                <strong>Lorem. lorem</strong>
-                                <p>RTO</p>
+                                <strong>{{ $category->first() }}</strong>
+                                <p>Vehicle Type</p>
                             </div>
                         </div>
                     </div>
@@ -913,99 +911,95 @@
 
         <div class="thrdfrdprt">
             <div class="thrdbx">
-                <h2>Lorem, ipsum dolor.
-                </h2>
-                <p>Lorem, ipsum.</p>
+                <h2>{{ $product->engine_no }}</h2>
+                <p>Engine Number</p>
+            </div>
+            <div class="thrdbx">
+                <h2>{{ $product->chasis_no }}</h2>
+                <p>Chasis Number</p>
+            </div>
+            <div class="thrdbx">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>Loan No/Ref No</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>RC Available</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Type of Insurance</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Insurance Validity Date</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Insurance Expiry Date</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Is the car under Hypothecation</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>If Yes Name of the Financer</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>CNG LPG Fitment</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>CNG LPG Fitment Endorsement RC</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>CNG LPG Removal</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Road tax paid</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Road tax validity</p>
+            </div>
+            <div class="thrdbx">
+                <h2>{{ $product->owner_name }}</h2>
+                <p>Customer Name</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Client Name</p>
             </div>
             <div class="thrdbx">
                 <h2>Lorem, ipsum dolor.
                 </h2>
-                <p>Lorem, ipsum.</p>
-            </div>
-            <div class="thrdbx">
-                <h2>Lorem, ipsum dolor.
-                </h2>
-                <p>Lorem, ipsum.</p>
-            </div>
-            <div class="thrdbx">
-                <h2>Lorem, ipsum dolor.
-                </h2>
-                <p>Lorem, ipsum.</p>
-            </div>
-            <div class="thrdbx">
-                <h2>Lorem, ipsum dolor.
-                </h2>
-                <p>Lorem, ipsum.</p>
+                <p>Key Available</p>
             </div>
         </div>
         <div class="thrdbxl">
             <h2>Lorem, ipsum dolorm, ipsum dolorm, ipsum dolorm, ipsum dolorm, ipsum dolorm, ipsum dolorm,
             </h2>
-            <p>Lorem, ipsum.</p>
+            <p>Yard location/Inspection Site</p>
         </div>
 
 
-        <div class="frthprtr">
+        {{-- <div class="frthprtr">
             <div class="frthhdn">
                 <div class="onfgt">
                     <h3><strong>Summary</strong></h3>
@@ -1077,10 +1071,10 @@
 
 
 
-        </div>
+        </div> --}}
 
 
-        <div class="sixthprt">
+        {{-- <div class="sixthprt">
             <div class="gtfhb">
                 <div class="boxd"></div>
                 <h3>good</h3>
@@ -1101,7 +1095,11 @@
                 <div class="boxd"></div>
                 <h3>Poor</h3>
             </div>
-        </div>
+        </div> --}}
+
+
+
+
         <div class="btnprt">
             <div class="doi">
                 <p>Date of inspection:- <span>{{ $date }} | {{ $time }}</span></p>

@@ -15,7 +15,7 @@
                     <li><a href="{{ route('front_home') }}">Home</a></li>
                 </ul>
             </li>
-            <li class="position-inherit">
+            {{-- <li class="position-inherit">
                 <a href="#" class="drop-down">NEW CAR</a>
                 <i class="bi bi-plus dropdown-icon d-lg-none d-block"></i>
                 <div class="mega-menu">
@@ -89,8 +89,8 @@
                         </li>
                     </ul>
                 </div>
-            </li>
-            <li class="position-inherit">
+            </li> --}}
+            {{-- <li class="position-inherit">
                 <a href="#" class="drop-down">USED CAR</a>
                 <i class="bi bi-plus dropdown-icon d-lg-none d-block"></i>
                 <div class="mega-menu">
@@ -164,8 +164,8 @@
                         </li>
                     </ul>
                 </div>
-            </li>
-            <li class="menu-item-has-children active">
+            </li> --}}
+            {{-- <li class="menu-item-has-children active">
                 <a href="javascript:void(0);" class="drop-down">Pages</a><i class="bi bi-plus dropdown-icon"></i>
                 <ul class="sub-menu">
                     <li><a href="{{ route('about') }}">About Us</a></li>
@@ -187,17 +187,19 @@
                         <li><a href="{{ route('blog_standard') }}">Blog Standard</a></li>
                         <li><a href="{{ route('blog_detail') }}">Blog Details</a></li>
                     </ul>
-            </li>
-            <li><a href="{{ route('faq') }}">FAQ's</a></li>
-            <li><a href="{{ route('page_error') }}">Error</a></li>
-            <li><a href="{{ route('customer_review') }}">Customer Review </a></li>
-            <li><a href="{{ route('return_exhcange') }}">Return & Exchange</a></li>
+            </li> --}}
+            {{-- <li><a href="{{ route('faq') }}">FAQ's</a></li> --}}
+            <li><a href="{{ route('about') }}">About Us</a></li>
+            {{-- <li><a href="{{ route('page_error') }}">Error</a></li> --}}
+            {{-- <li><a href="{{ route('customer_review') }}">Customer Review </a></li> --}}
+            {{-- <li><a href="{{ route('return_exhcange') }}">Return & Exchange</a></li> --}}
+            <li><a href="{{ route('contact') }}">CONTACT US</a></li>
         </ul>
-        </li>
-        <li>
+        {{-- </li> --}}
+        {{-- <li>
             <a href="{{ route('contact') }}" class="drop-down">CONTACT US</a>
-        </li>
-        </ul>
+        </li> --}}
+        {{-- </ul> --}}
         <div class="topbar-right d-lg-none d-block">
             <a href="#">
                 <svg width="16" height="16" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">

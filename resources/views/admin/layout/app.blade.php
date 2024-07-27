@@ -20,6 +20,10 @@
     {{-- ckeditor cdn --}}
     <script src="/assets/vendor/ckeditor/editor.js"></script>
 
+    {{-- jQuery Datatable cdn --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.2/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.1.2/js/dataTables.js"></script>
+
 </head>
 
 

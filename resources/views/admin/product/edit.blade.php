@@ -150,7 +150,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label for="images[]" class="control-label">Images</label>
+                                        <label for="images[]" class="control-label">Interior Images</label>
                                         <div class="gallery-images-wrapper list-images">
                                             <div class="images-wrapper">
                                                 <div data-name="images[]"
@@ -489,7 +489,8 @@
                         // Create an li element for each image
                         var $li = $('<li></li>');
                         var $img = $('<img>').attr('src', e.target.result).css({
-                            'width': '120px',
+                            'width': '150px',
+                            'height': '150px',
                             'margin': '5px'
                         });
                         $li.append($img);
